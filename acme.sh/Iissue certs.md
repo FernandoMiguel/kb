@@ -9,6 +9,11 @@ acme.sh --update-account --accountemail "foobar@example.com"
 
 
 ## issue
+
+### with Cloudflare API
+Based on https://github.com/Neilpang/acme.sh/tree/master/dnsapi#1-use-cloudflare-domain-api-to-automatically-issue-cert
+
+
 get Cloudflare API key from https://www.cloudflare.com/a/account/my-account
 
 ```
@@ -22,3 +27,6 @@ acme.sh --issue --dns dns_cf -d example.com --dnssleep 10 --ocsp \
 --reloadcmd "service nginx reload"
 
 ```
+
+### with AWS Route 53 API
+Follow https://github.com/Neilpang/acme.sh/wiki/How-to-use-Amazon-Route53-API
