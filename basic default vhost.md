@@ -17,8 +17,8 @@ server {
     listen [::]:443 ssl http2;
 
     # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
-    ssl_certificate /path/to/signed_cert_plus_intermediates;
-    ssl_certificate_key /path/to/private_key;
+    ssl_certificate /etc/ssl/private/DOMAIN.TLD.fullchain.pem;
+    ssl_certificate_key /etc/ssl/private/DOMAIN.TLD.key;
     ssl_session_timeout 1d;
     ssl_session_cache shared:SSL:50m;
     ssl_session_tickets off;
@@ -36,11 +36,6 @@ server {
     # fetch OCSP records from URL in ssl_certificate and cache them
     ssl_stapling on;
     ssl_stapling_verify on;
-
-    ## verify chain of trust of OCSP response using Root CA and Intermediate certs
-    ssl_trusted_certificate /path/to/root_CA_cert_plus_intermediates;
-
-    resolver <IP DNS resolver>;
 
     ....
 }
