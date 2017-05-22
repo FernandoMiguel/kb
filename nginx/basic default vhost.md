@@ -8,6 +8,8 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server;
 
+	server_name _;
+    
     # Redirect all HTTP requests to HTTPS with a 301 Moved Permanently response.
     return 301 https://$host$request_uri;
 }
@@ -15,6 +17,8 @@ server {
 server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
+
+    server_name _;
 
     # certs sent to the client in SERVER HELLO are concatenated in ssl_certificate
     ssl_certificate /etc/ssl/private/DOMAIN.TLD.fullchain.pem;
