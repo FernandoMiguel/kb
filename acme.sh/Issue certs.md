@@ -29,8 +29,18 @@ acme.sh --issue --dns dns_cf -d example.com --dnssleep 10 --ocsp \
 
 
 ### with AWS Route 53 API
-Follow https://github.com/Neilpang/acme.sh/wiki/How-to-use-Amazon-Route53-API
+Follow https://github.com/Neilpang/acme.sh/wiki/How-to-use-Amazon-Route53-API to get API keys
 
+```
+export  AWS_ACCESS_KEY_ID=XXXXXXXXXX
+export  AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXX
+
+acme.sh --issue --dns dns_aws -d example.com --dnssleep 10 --ocsp \
+--keylength ec-256 --ecc \
+--key-file /etc/ssl/private/DOMAIN.TLD.key \
+--fullchain-file /etc/ssl/private/DOMAIN.TLD.fullchain.pem \
+--reloadcmd "service nginx reload"
+```
 
 ### with nginx mode
 Based on https://github.com/Neilpang/acme.sh#7-use-nginx-mode
