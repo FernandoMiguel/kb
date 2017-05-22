@@ -1,4 +1,5 @@
 # cat ssh.conf
+```
 stream {
 	upstream ssh {
 		server 127.0.0.1:22;
@@ -10,3 +11,4 @@ stream {
 		proxy_pass ssh;
 	}
 }
+```
