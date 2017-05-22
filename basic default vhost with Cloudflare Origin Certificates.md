@@ -1,4 +1,4 @@
-basic vhost for modern nginx wiht TLS
+basic vhost for modern nginx with TLS certs provided by Cloudflare Origin Certificates
 
 based on
 https://support.cloudflare.com/hc/en-us/articles/218408028-How-to-install-an-Origin-CA-Certificate-Other-
