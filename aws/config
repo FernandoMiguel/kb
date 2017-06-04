@@ -1,0 +1,8 @@
+[default]
+region = eu-west-1
+mfa_serial = arn:aws:iam::ACCOUNTID:mfa/USER
+
+[Orgs-Sandbox-Role]
+mfa_serial = arn:aws:iam::ACCOUNTID:mfa/USER
+role_arn = arn:aws:iam::ACCOUNTID:role/Role
+region = eu-west-1
