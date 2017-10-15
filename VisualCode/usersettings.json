@@ -1,4 +1,5 @@
 {
+    "github-pr.accessToken": "XXX",
     "editor.minimap.enabled": false,
     "files.autoSave": "afterDelay",
     "editor.wordWrap": "on",
@@ -10,5 +11,7 @@
     "telemetry.enableTelemetry": false,
     "spellchecker.language": "en_UK",
     "window.zoomLevel": -1,
-    "terraform.formatOnSave": true
+    "terraform.formatOnSave": true,
+    "git.enableSmartCommit": true,
+    "editor.fontSize": 14
 }
