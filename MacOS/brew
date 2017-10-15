@@ -1,1 +1,2 @@
-aircrack-ng bind  sqlmap aws-shell curl htop terraform youtube-dl awscli duti iftop midnight-commander openssl@1.1 screen terragrunt bash jq ncdu  speedtest-cli testssl bash-completion git nmap rclone wget
+brew install aircrack-ng bind sqlmap aws-shell curl htop terraform youtube-dl awscli duti iftop midnight-commander openssl@1.1 screen terragrunt bash jq ncdu  speedtest-cli testssl bash-completion git nmap rclone wget
+brew cleanup
