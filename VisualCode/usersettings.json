@@ -1,0 +1,14 @@
+{
+    "editor.minimap.enabled": false,
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "editor.tabCompletion": true,
+    "window.restoreWindows": "folders",
+    "window.restoreFullscreen": true,
+    "window.newWindowDimensions": "inherit",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "spellchecker.language": "en_UK",
+    "window.zoomLevel": -1,
+    "terraform.formatOnSave": true
+}
