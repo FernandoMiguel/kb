@@ -5,7 +5,7 @@ region = eu-west-2
 cloudfront = true
 
 
-[user1_billing]
+[profile user1_billing]
 region = eu-west-2
 mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
 
