@@ -35,7 +35,7 @@ Follow https://github.com/Neilpang/acme.sh/wiki/How-to-use-Amazon-Route53-API to
 export  AWS_ACCESS_KEY_ID=XXXXXXXXXX
 export  AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXX
 
-acme.sh --issue --dns dns_aws -d example.com --dnssleep 10 --ocsp \
+acme.sh --issue --dns dns_aws -d example.com --dnssleep 60 --ocsp \
 --keylength ec-256 --ecc \
 --key-file /etc/ssl/private/DOMAIN.TLD.key \
 --fullchain-file /etc/ssl/private/DOMAIN.TLD.fullchain.pem \
