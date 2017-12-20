@@ -1,34 +1,30 @@
-[default]
-region = eu-west-2
+[profile user1-iam]
+region = eu-west-1
+mfa_serial = arn:aws:iam::IAM_ACCOUNTID:mfa/user1
+
+[profile user1-readonlyrole]
+role_arn = arn:aws:iam::IAM_ACCOUNTID:role/readonlyrole
+source_profile = user1-iam
+mfa_serial = arn:aws:iam::IAM_ACCOUNTID:mfa/user1
+
+[profile user1-iam-assumerole_orgs_crossaccount_account_iam]
+role_arn = arn:aws:iam::IAM_ACCOUNTID:role/OrganizationAccountAccessRole
+source_profile = user1-iam
+mfa_serial = arn:aws:iam::IAM_ACCOUNTID:mfa/user1
+
+[profile user1-iam-assumerole_orgs_crossaccount_account02]
+role_arn = arn:aws:iam::ACCOUNT02:role/OrganizationAccountAccessRole
+source_profile = user1-iam
+mfa_serial = arn:aws:iam::IAM_ACCOUNTID:mfa/user1
+
+[profile user1-iam-assumerole_orgs_crossaccount_account03]
+role_arn = arn:aws:iam::ACCOUNT03:role/OrganizationAccountAccessRole
+source_profile = user1-iam
+mfa_serial = arn:aws:iam::IAM_ACCOUNTID:mfa/user1
+
+[profile user2-iam]
+region = eu-west-1
+mfa_serial = arn:aws:iam::IAM_ACCOUNTID:mfa/user2
 
 [preview]
 cloudfront = true
-
-
-[profile user1_billing]
-region = eu-west-2
-mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
-
-[profile user1_billing_assumerole]
-role_arn = arn:aws:iam::BILLING_ACCOUNTID:role/assumerole
-source_profile = user1_billing
-mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
-
-[profile user1_billing_assumerole_orgs_crossaccount_account_iam]
-role_arn = arn:aws:iam::IAM_ACCOUNTID:role/OrganizationAccountAccessRole
-source_profile = user1_billing
-mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
-
-[profile user1_billing_assumerole_orgs_crossaccount_account02]
-role_arn = arn:aws:iam::ACCOUNT02:role/OrganizationAccountAccessRole
-source_profile = user1_billing
-mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
-
-[profile user1_billing_assumerole_orgs_crossaccount_account03]
-role_arn = arn:aws:iam::ACCOUNT03:role/OrganizationAccountAccessRole
-source_profile = user1_billing
-mfa_serial = arn:aws:iam::BILLING_ACCOUNTID:mfa/user1
-
-[user2-iam]
-region = eu-west-2
-mfa_serial = arn:aws:iam::IAM_ACCOUNTID:mfa/user2
