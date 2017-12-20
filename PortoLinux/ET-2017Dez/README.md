@@ -73,6 +73,8 @@ For Public Cloud:
 
 The syntax of Terraform configurations is called HashiCorp Configuration Language (HCL).
 
+[Guide](terraform/README.md)
+
 ### Terragrunt
 
 Terragrunt is a thin wrapper for Terraform that provides extra tools for keeping your Terraform configurations DRY, working with multiple Terraform modules, and managing remote state.
