@@ -67,3 +67,5 @@ For Public Cloud:
 
 * Terraform https://www.terraform.io/
 * Module Registry https://registry.terraform.io/
+
+The syntax of Terraform configurations is called HashiCorp Configuration Language (HCL).
