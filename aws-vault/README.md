@@ -2,13 +2,13 @@
 Official tool at https://github.com/99designs/aws-vault
 
 ## Managment 
-* Add aws-vault roles
+* Add aws-vault profiles
 > $ aws-vault --debug add <PROFILE>
 
 * Rotate aws-vault keys
 > $ aws-vault --debug rotate <PROFILE>
 
-* List aws-vault <PROFILE>s, roles and sessions
+* List aws-vault profiles, roles and sessions
 > $ aws-vault --debug list
 
 * Remove aws-vault keys
