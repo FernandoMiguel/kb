@@ -11,3 +11,20 @@ https://code.visualstudio.com/
 * Native support for code source repositories
 * Extenstions available
 
+## AWS Security
+
+### MFA and STS
+
+* MFA https://docs.aws.amazon.com/IAM/latest/UserGuide/tutorial_users-self-manage-mfa-and-creds.html
+* STS https://docs.aws.amazon.com/STS/latest/APIReference/Welcome.html
+* AWS Organisations https://aws.amazon.com/organizations/
+* Cross Account https://github.com/FernandoMiguel/AWS-Trust-CrossAccounts
+
+#### Cross Account
+
+* https://www.draw.io/#G19-9YsZenbH8DKEt9SO3rUDxIBcmf0JVy
+
+![Diagram](img/MultiAccountDiagram.svg)
+
+
+### AWS-vault
