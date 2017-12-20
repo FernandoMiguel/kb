@@ -1,4 +1,5 @@
 # aws-vault quick guide
+Official tool at https://github.com/99designs/aws-vault
 
 ## Managment 
 * Add aws-vault roles
