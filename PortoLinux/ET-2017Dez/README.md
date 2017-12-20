@@ -11,6 +11,7 @@ https://code.visualstudio.com/
 * Native support for code source repositories
 * Extenstions available
 
+
 ## AWS Security
 
 ### MFA and STS
@@ -26,11 +27,30 @@ https://code.visualstudio.com/
 
 ![Diagram](img/MultiAccountDiagram.svg)
 
-
 ### aws-vault
 
 Securely store and access credentials for AWS. AWS Vault stores IAM credentials in your operating systems secure keystore and then generates temporary credentials from those to expose to your shell and applications. It's designed to be complementary to the aws cli tools, and is aware of your profiles and configuration in ~/.aws/config.
 
 * aws-vault https://github.com/99designs/aws-vault
+* aws config example https://github.com/FernandoMiguel/kb/blob/master/aws/config
 
-*  aws config example https://github.com/FernandoMiguel/kb/blob/master/aws/config
+## Infrastructure as Code
+
+Infrastructure as code (IaC) is the process of managing and provisioning computer data centers through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools. --Wikipedia
+
+Infrastructure as code can be a key attribute of enabling best practices in **DevOps** --Wikipedia
+
+Examples:
+* Ansible
+* Puppet
+* Chef
+
+For Public Cloud:
+* Azure Infrastructure ARM templates
+* AWS Cloudformation
+* Terraform
+
+### Terraform
+
+* Terraform https://www.terraform.io/
+* Module Registry https://registry.terraform.io/
