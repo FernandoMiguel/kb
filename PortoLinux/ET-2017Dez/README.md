@@ -47,8 +47,7 @@ Securely store and access credentials for AWS. AWS Vault stores IAM credentials 
 
 * aws-vault https://github.com/99designs/aws-vault
 * aws config example https://github.com/FernandoMiguel/kb/blob/master/aws/config
-
-[aws-vault cheat guide](.. /../aws-vault/README.md)
+* [aws-vault cheat guide](/kb/blob/PL/aws-vault/README.md)
 
 ## Infrastructure as Code
 
@@ -73,7 +72,10 @@ For Public Cloud:
 
 The syntax of Terraform configurations is called HashiCorp Configuration Language (HCL).
 
-[Guide](terraform/README.md)
+* [Guide](terraform/README.md)
+* Book https://terraformbook.com/
+* awesome terraform https://github.com/shuaibiyy/awesome-terraform
+
 
 ### Terragrunt
 
