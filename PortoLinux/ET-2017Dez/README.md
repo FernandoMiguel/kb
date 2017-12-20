@@ -12,6 +12,7 @@
         - [aws-vault](#aws-vault)
     - [Infrastructure as Code](#infrastructure-as-code)
         - [Terraform](#terraform)
+        - [Terragrunt](#terragrunt)
 
 <!-- /TOC -->
 
@@ -71,3 +72,11 @@ For Public Cloud:
 * Module Registry https://registry.terraform.io/
 
 The syntax of Terraform configurations is called HashiCorp Configuration Language (HCL).
+
+### Terragrunt
+
+Terragrunt is a thin wrapper for Terraform that provides extra tools for keeping your Terraform configurations DRY, working with multiple Terraform modules, and managing remote state.
+
+* https://github.com/gruntwork-io/terragrunt/
+
+DRY don't repeat yourself 
