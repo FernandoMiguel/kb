@@ -22,9 +22,15 @@ https://code.visualstudio.com/
 
 #### Cross Account
 
-* https://www.draw.io/#G19-9YsZenbH8DKEt9SO3rUDxIBcmf0JVy
+* Multi account diagram https://www.draw.io/#G19-9YsZenbH8DKEt9SO3rUDxIBcmf0JVy
 
 ![Diagram](img/MultiAccountDiagram.svg)
 
 
-### AWS-vault
+### aws-vault
+
+Securely store and access credentials for AWS. AWS Vault stores IAM credentials in your operating systems secure keystore and then generates temporary credentials from those to expose to your shell and applications. It's designed to be complementary to the aws cli tools, and is aware of your profiles and configuration in ~/.aws/config.
+
+* aws-vault https://github.com/99designs/aws-vault
+
+*  aws config example https://github.com/FernandoMiguel/kb/blob/master/aws/config
