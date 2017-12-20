@@ -1,6 +1,19 @@
 # Porto Linux - Encontro técnico de Dezembro 2017
-## Apresentações
-### Terraform, VSCode, and AWS Security - Fernando Pereira
+    - Apresentações
+        - Terraform, VSCode, and AWS Security by Fernando Pereira
+
+<!-- TOC -->
+
+- [Porto Linux - Encontro técnico de Dezembro 2017](#porto-linux---encontro-técnico-de-dezembro-2017)
+    - [Visual Studio Code](#visual-studio-code)
+    - [AWS Security](#aws-security)
+        - [MFA and STS](#mfa-and-sts)
+            - [Cross Account](#cross-account)
+        - [aws-vault](#aws-vault)
+    - [Infrastructure as Code](#infrastructure-as-code)
+        - [Terraform](#terraform)
+
+<!-- /TOC -->
 
 ## Visual Studio Code
 Visual Studio Code is a source code editor developed by Microsoft for Windows, Linux and macOS. It includes support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring. --Wikipedia
