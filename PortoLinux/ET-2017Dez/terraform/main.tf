@@ -3,7 +3,7 @@ terraform {
     bucket   = "portolinux-terraform-state"
     role_arn = "arn:aws:iam::ACCOUNTID:role/OrganizationAccountAccessRole"
     acl      = "bucket-owner-full-control"
-    key      = "portolinux/terraform.tfstate"
+    key      = "portolinux/vpc/terraform.tfstate"
     region   = "eu-west-1"
 
   }
