@@ -1,7 +1,7 @@
 basic vhost for modern nginx with TLS
 
 based on
-https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=nginx-1.10.3&openssl=1.0.2g&hsts=yes&profile=modern
+https://mozilla.github.io/server-side-tls/ssl-config-generator/?server=nginx-1.12.2&openssl=1.0.2n&hsts=yes&profile=modern
 
 ```
 server {
@@ -41,6 +41,10 @@ server {
     ssl_stapling on;
     ssl_stapling_verify on;
 
+    ## verify chain of trust of OCSP response using Root CA and Intermediate certs
+    ssl_trusted_certificate /path/to/root_CA_cert_plus_intermediates;
+
+    resolver <IP DNS resolver>;
+
     ....
 }
-```
