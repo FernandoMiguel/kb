@@ -2,7 +2,8 @@
 
 <!-- TOC -->
 
-- [Developer AWS account guide](#developer-aws-account-guide)
+- [MFA AWS account guide](#mfa-aws-account-guide)
+- [Introduction](#introduction)
     - [AWS Web console](#aws-web-console)
         - [First login](#first-login)
     - [aws-vault](#aws-vault)
@@ -12,6 +13,18 @@
         - [more info:](#more-info)
 
 <!-- /TOC -->
+
+# Introduction
+
+Setting up user accounts can be cumberestone. With the multitude of services available on AWS and the easiness of creating new AWS accounts, managing all those user accounts can be overhead.
+
+Ideally, you want to setup all your users in a AWS IAM account, and manage their policies in a single place, allowing for [IAM Roles](https://github.com/FernandoMiguel/AWS-Trust-CrossAccounts) to be assume to grant access to services.
+
+At the same time, you need to securely manage AWS API Access Keys that users have in their devices, and avoid them to be stored in Clear Text, as does aws-cli do by default in `~/.aws/credentials` .
+
+In this short guide, we follow best practices by settings up [Multi Factor Authentication (MFA)](https://github.com/FernandoMiguel/MFAguide) for the users credentials, and using [aws-vault](#aws-vault) to store the Access Keys in a password protected keychain.
+
+
 ## AWS Web console
 
 ### First login
@@ -24,7 +37,7 @@ Access [AWS IAM](https://console.aws.amazon.com/iam/home/users) https://console.
 
 Click `security credentials` and then `Assigned MFA device`. Select `Virtual Device`.
 
-Use [Google Authenticator](https://support.google.com/accounts/answer/1066447?) or [Authy](https://authy.com/download/) to generate the Multi Factor Auth tokens.
+Use [Google Authenticator](https://support.google.com/accounts/answer/1066447) or [Authy](https://authy.com/download/) to generate the Multi Factor Auth tokens.
 
 Log out, login again, entering the new MFA.
 
