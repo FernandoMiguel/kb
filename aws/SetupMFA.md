@@ -15,11 +15,11 @@
 
 # Introduction
 
-Setting up user accounts can be cumberestone. With the multitude of services available on AWS and the easiness of creating new AWS accounts, managing all those user accounts can be overhead.
+Setting up user accounts can be cumbersome. With the multitude of services available on AWS and the ease of creating new AWS accounts, managing all those user accounts can be a lot of overhead.
 
-Ideally, you want to setup all your users in a AWS IAM account, and manage their policies in a single place, allowing for [IAM Roles](https://github.com/FernandoMiguel/AWS-Trust-CrossAccounts) to be assume to grant access to services.
+Ideally, you want to setup all your users in an AWS IAM account, and manage their policies in a single place, allowing for [IAM Roles](https://github.com/FernandoMiguel/AWS-Trust-CrossAccounts) to be assumed to grant access to services.
 
-At the same time, you need to securely manage AWS API Access Keys that users have in their devices, and avoid them to be stored in Clear Text, as does aws-cli do by default in `~/.aws/credentials` .
+At the same time, you need to securely manage AWS API Access Keys that users have in their devices, and avoid them to be stored in Clear Text, as aws-cli does by default in `~/.aws/credentials` .
 
 In this short guide, we follow best practices by settings up [Multi Factor Authentication (MFA)](https://github.com/FernandoMiguel/MFAguide) for the users credentials, and using [aws-vault](#aws-vault) to store the Access Keys in a password protected keychain.
 
