@@ -43,7 +43,7 @@ Then install [aws-vault](https://github.com/99designs/aws-vault)
 
 And aws-cli
 
-`$ brew cask install awscli`
+`$ brew install awscli`
 
 For all other OSs, download and install aws-vault from:
 
@@ -87,7 +87,7 @@ Enter Access Key Id: ABDCDEFDASDASF
 Enter Secret Key: 123456789
 ```
 
-Rotate aws-vault keys:
+If you want to rotate your keys, run:
 
 `$ aws-vault --debug rotate`
 
