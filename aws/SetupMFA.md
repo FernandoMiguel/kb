@@ -2,7 +2,6 @@
 
 <!-- TOC -->
 
-- [MFA AWS account guide](#mfa-aws-account-guide)
 - [Introduction](#introduction)
     - [AWS Web console](#aws-web-console)
         - [First login](#first-login)
