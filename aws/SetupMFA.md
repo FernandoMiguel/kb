@@ -73,9 +73,6 @@ Create and edit  `~/.aws/config`
 Add the folling profiles, replacing YOUR-USERNAME:
 
 ```
-[preview]
-cloudfront=true
-
 [profile iam]
 region=eu-west-1
 mfa_serial=arn:aws:iam::ACCOUNTID:mfa/YOUR-USERNAME
