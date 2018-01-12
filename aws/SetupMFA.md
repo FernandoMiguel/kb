@@ -70,18 +70,18 @@ https://aws.amazon.com/cli/
 
 Create and edit  `~/.aws/config`
 
-Add the folling profiles, replacing YOUR-USERNAME:
+Add the folling profiles, replacing <YOUR-USERNAME> and <REGION>:
 
 ```
 [profile iam]
-region=eu-west-1
-mfa_serial=arn:aws:iam::ACCOUNTID:mfa/YOUR-USERNAME
+region=<REGION>
+mfa_serial=arn:aws:iam::ACCOUNTID:mfa/<YOUR-USERNAME>
 
 [profile another-assumed-role]
-region=eu-west-1
+region=<REGION>
 role_arn=arn:aws:iam::ACCOUNTID:role/another-assumed-role
 source_profile=iam
-mfa_serial=arn:aws:iam::ACCOUNTID:mfa/YOUR-USERNAME
+mfa_serial=arn:aws:iam::ACCOUNTID:mfa/<YOUR-USERNAME>
 ```
 
 If other roles are required, add them to the file, using the same structure, and replacing the profile and role name.
