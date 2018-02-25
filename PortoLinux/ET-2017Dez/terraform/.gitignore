@@ -13,6 +13,15 @@
 terraform.tfvars
 *_override.tf
 
+# TLS in Dockerfile
+Docker/nginx/tls/*
+
+# Google_authenticator codes
+*.google_authenticator
+
+# VS Code settings #
+.vscode/settings.json
+
 # OS generated files #
 ######################
 .DS_Store
