@@ -5,6 +5,9 @@ Official tool at https://github.com/99designs/aws-vault
 * Add aws-vault profiles
 > $ aws-vault --debug add <PROFILE>
 
+* Login to AWS Console
+> $ aws-vault --debug login <PROFILE>
+
 * Rotate aws-vault keys
 > $ aws-vault --debug rotate <PROFILE>
 
@@ -40,3 +43,7 @@ A local EC2 Instance Metadata server is started. This approach has the advantage
 
 # aws config
 [~/.aws/config example](../aws/config)
+
+# Linux setup
+Connor wrote a guide for linux backend:
+https://www.tastycidr.net/using-aws-vault-with-linux/
