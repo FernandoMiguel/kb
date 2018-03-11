@@ -4,12 +4,23 @@
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
+.terraform.tfstate.lock
 
 # Module directory
 .terraform/
 
 # Variable values for development
 terraform.tfvars
+*_override.tf
+
+# TLS in Dockerfile
+Docker/nginx/tls/*
+
+# Google_authenticator codes
+*.google_authenticator
+
+# VS Code settings #
+.vscode/settings.json
 
 # OS generated files #
 ######################
