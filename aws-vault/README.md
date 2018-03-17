@@ -47,3 +47,7 @@ A local EC2 Instance Metadata server is started. This approach has the advantage
 # Linux setup
 Connor wrote a guide for linux backend:
 https://www.tastycidr.net/using-aws-vault-with-linux/
+
+# chrome profile
+to start a new chrome profile per role
+https://github.com/FernandoMiguel/kb/blob/master/Chrome/aws-vault.md
