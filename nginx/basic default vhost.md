@@ -44,7 +44,7 @@ server {
     ## verify chain of trust of OCSP response using Root CA and Intermediate certs
     ssl_trusted_certificate /path/to/root_CA_cert_plus_intermediates;
 
-    resolver <IP DNS resolver>;
+    resolver 8.8.4.4;
 
     ....
 }
