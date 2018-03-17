@@ -21,11 +21,12 @@ export CF_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
 export CF_Email="xxxx@example.com"
 
 acme.sh --issue --dns dns_cf -d example.com --dnssleep 10 \
---config-home /PATH/SOMEWHERE/ \
 --keylength ec-256 \
+--config-home /PATH/SOMEWHERE/ \
 --key-file /etc/ssl/private/DOMAIN.TLD.key \
 --fullchain-file /etc/ssl/private/DOMAIN.TLD.fullchain.pem \
---reloadcmd "service nginx reload"
+--reloadcmd "service nginx reload" \
+--staging
 ```
 
 
@@ -37,11 +38,12 @@ export  AWS_ACCESS_KEY_ID=XXXXXXXXXX
 export  AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXX
 
 acme.sh --issue --dns dns_aws -d example.com --dnssleep 60 \
---config-home /PATH/SOMEWHERE/ \
 --keylength ec-256 \
+--config-home /PATH/SOMEWHERE/ \
 --key-file /etc/ssl/private/DOMAIN.TLD.key \
 --fullchain-file /etc/ssl/private/DOMAIN.TLD.fullchain.pem \
---reloadcmd "service nginx reload"
+--reloadcmd "service nginx reload" \
+--staging
 ```
 
 ### with AWS Route 53 API with aws-vault
@@ -51,11 +53,12 @@ aws-vault --debug exec <PROFILE> --server
 ```
 ```
 acme.sh --issue --dns dns_aws -d example.com --dnssleep 60 \
---config-home /PATH/SOMEWHERE/ \
 --keylength ec-256 \
+--config-home /PATH/SOMEWHERE/ \
 --key-file /etc/ssl/private/DOMAIN.TLD.key \
 --fullchain-file /etc/ssl/private/DOMAIN.TLD.fullchain.pem \
---reloadcmd "service nginx reload"
+--reloadcmd "service nginx reload" \
+--staging
 ```
 
 
@@ -64,11 +67,12 @@ Based on https://github.com/Neilpang/acme.sh#7-use-nginx-mode
 
 ```
 acme.sh --issue --nginx -d example.com \
---config-home /PATH/SOMEWHERE/ \
 --keylength ec-256 \
+--config-home /PATH/SOMEWHERE/ \
 --key-file /etc/ssl/private/DOMAIN.TLD.key \
 --fullchain-file /etc/ssl/private/DOMAIN.TLD.fullchain.pem \
---reloadcmd "service nginx reload"
+--reloadcmd "service nginx reload" \
+--staging
 ```
 make sure your /etc/nginx/sites-enabled/domain.tld.conf has server_name set, or it wont validate
 ```
