@@ -19,4 +19,14 @@ Inspired by https://github.com/blimmer/zsh-aws-vault/blob/master/zsh-aws-vault.p
 ` $ alias awslogin='aws-vault --debug login <PROFILE> --stdout | xargs -t /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --incognito --new-window' `
 
 ### firefox
-` $ alias awslogin='aws-vault --debug login <PROFILE> --stdout | xargs -t /Applications/Firefox.app/Contents/MacOS/firefox --private-window' `
+
+```
+function awslogin() {
+  _OS=$(uname)
+  _FF_LOCATION=""
+  if [[ "${_OS}" == "Linux" ]]; then
+    _FF_LOCATION=$(which firefox)
+  fi
+  aws-vault --debug login $1 --stdout | xargs -t "${_FF_LOCATION}" --private-window
+}
+```
