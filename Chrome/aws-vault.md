@@ -27,6 +27,9 @@ function awslogin() {
   if [[ "${_OS}" == "Linux" ]]; then
     _FF_LOCATION=$(which firefox)
   fi
+  if [[ "${_OS}" == "Darwin" ]]; then
+    _FF_LOCATION=$(which firefox)
+  fi
   aws-vault --debug login $1 --stdout | xargs -t "${_FF_LOCATION}" --private-window
 }
 ```
