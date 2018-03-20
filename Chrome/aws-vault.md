@@ -13,12 +13,10 @@ which allows you to call Roles with:
 
 
 ## Firefox and Chrome in private mode
+Inspired by https://github.com/blimmer/zsh-aws-vault/blob/master/zsh-aws-vault.plugin.zsh
 
 ### chrome
 ` $ alias awslogin='aws-vault --debug login <PROFILE> --stdout | xargs -t /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --incognito --new-window' `
 
 ### firefox
 ` $ alias awslogin='aws-vault --debug login <PROFILE> --stdout | xargs -t /Applications/Firefox.app/Contents/MacOS/firefox --private-window' `
-
-
-/Users/fernando/Library/Application Support/Google
