@@ -20,7 +20,7 @@ api = TwitterAPI( \
 # get a list of already blocked users.
 blockedUsers = list(set(user['screen_name'] for user in api.request('blocks/list', {'include_entities': 'false', 'skip_status':'true'})))
 
-#list of possible varioations on account names
+#list of possible variations on account names
 iph_derp = ("....","...",")
 
 for user in list(iph_derp):
