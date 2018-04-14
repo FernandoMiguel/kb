@@ -23,7 +23,8 @@ server {
     ssl_prefer_server_ciphers on;
 
     # HSTS (ngx_http_headers_module is required) (15768000 seconds = 6 months)
-    add_header Strict-Transport-Security max-age=15768000;
+    add_header Strict-Transport-Security max-age=15768000 always;
+    # https://www.nginx.com/blog/http-strict-transport-security-hsts-and-nginx/
 
     ....
 }

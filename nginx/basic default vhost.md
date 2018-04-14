@@ -9,7 +9,10 @@ server {
     listen [::]:80 default_server;
 
 	server_name _;
-    
+
+    if ( $request_uri ~* "%0A|%0D" ) { return 403; }
+    # https://forum.nginx.org/read.php?2,4732,4732
+
     # Redirect all HTTP requests to HTTPS with a 301 Moved Permanently response.
     return 301 https://$host$request_uri;
 }
