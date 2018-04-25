@@ -10,7 +10,6 @@
     "editor.renderControlCharacters": true,
     "editor.trimAutoWhitespace": true,
     "editor.formatOnSave": true,
-    "terraform.format.enable": true,
     "editor.folding": false,
     "editor.glyphMargin": false,
     "json.format.enable": true,
@@ -27,7 +26,6 @@
     "workbench.editor.labelFormat": "default",
     "workbench.startupEditor": "newUntitledFile",
     "git.autofetch": true,
-    "workbench.colorTheme": "Default Light+",
     "files.associations": {
         "Dockerfile-builder": "dockerfile",
         "Dockerfile-ubuntu": "dockerfile",
@@ -36,6 +34,12 @@
         "Dockerfile-composer": "dockerfile",
         "Dockerfile-php": "dockerfile",
         "Dockerfile-cache": "dockerfile",
-        "Dockerfile-nginx": "dockerfile"
+        "Dockerfile-nginx": "dockerfile",
+        "Dockerfile-compose": "dockerfile",
+        "Dockerfile-dev": "dockerfile"
+    },
+    "workbench.colorTheme": "Default Light+",
+    "[terraform]": {
+        "editor.formatOnSave": true
     }
 }
