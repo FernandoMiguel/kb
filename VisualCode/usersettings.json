@@ -1,5 +1,5 @@
 {
-    "github-pr.accessToken": "XXX",
+    "github-pr.accessToken": "XXXXXX",
     "editor.minimap.enabled": false,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
@@ -12,14 +12,14 @@
     "editor.formatOnSave": true,
     "editor.folding": false,
     "editor.glyphMargin": false,
+    "editor.renderWhitespace": "all",
     "json.format.enable": true,
     "window.restoreWindows": "all",
     "window.restoreFullscreen": true,
-    "window.newWindowDimensions": "inherit",
+    "window.newWindowDimensions": "fullscreen",
     "window.zoomLevel": 0,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "spellchecker.language": "en_UK",
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "markdown.preview.scrollEditorWithPreview": true,
@@ -27,19 +27,23 @@
     "workbench.startupEditor": "newUntitledFile",
     "git.autofetch": true,
     "files.associations": {
-        "Dockerfile-builder": "dockerfile",
-        "Dockerfile-ubuntu": "dockerfile",
-        "Dockerfile-alpine": "dockerfile",
-        "Dockerfile-node": "dockerfile",
-        "Dockerfile-composer": "dockerfile",
-        "Dockerfile-php": "dockerfile",
-        "Dockerfile-cache": "dockerfile",
-        "Dockerfile-nginx": "dockerfile",
-        "Dockerfile-compose": "dockerfile",
-        "Dockerfile-dev": "dockerfile"
+        "Dockerfile-*": "dockerfile"
     },
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Tomorrow Night Blue",
     "[terraform]": {
         "editor.formatOnSave": true
-    }
+    },
+    "terraform.format": {
+        "enable": true,
+        "formatOnSave": true
+    },
+    "terraform.path": "/usr/local/bin/terraform",
+    "terraform.lintPath": "/usr/local/bin/tflint",
+    "terraform.codelens.enabled": true,
+    "terraform.indexing": {
+        "enabled": false,
+        "liveIndexing": false
+    },
+    "git.detectSubmodulesLimit": 50,
+    "git.enableCommitSigning": false
 }
