@@ -1,5 +1,5 @@
 {
-    "github-pr.accessToken": "XXXXXX",
+    "github-pr.accessToken": "XXXXXXXXX",
     "editor.minimap.enabled": false,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
@@ -7,7 +7,7 @@
     "editor.tabCompletion": true,
     "editor.autoIndent": true,
     "editor.fontSize": 14,
-    "editor.renderControlCharacters": true,
+    "editor.renderControlCharacters": false,
     "editor.trimAutoWhitespace": true,
     "editor.formatOnSave": true,
     "editor.folding": false,
@@ -27,7 +27,8 @@
     "workbench.startupEditor": "newUntitledFile",
     "git.autofetch": true,
     "files.associations": {
-        "Dockerfile-*": "dockerfile"
+        "Dockerfile-*": "dockerfile",
+        "*.yml.sample": "yaml"
     },
     "workbench.colorTheme": "Tomorrow Night Blue",
     "[terraform]": {
@@ -42,8 +43,12 @@
     "terraform.codelens.enabled": true,
     "terraform.indexing": {
         "enabled": false,
-        "liveIndexing": false
+        "liveIndexing": true,
     },
-    "git.detectSubmodulesLimit": 50,
-    "git.enableCommitSigning": false
+    "git.enableCommitSigning": false,
+    "git.detectSubmodulesLimit": 100,
+    "editor.foldingStrategy": "indentation",
+    "editor.showFoldingControls": "always",
+    "editor.insertSpaces": false,
+    "breadcrumbs.enabled": false,
 }
