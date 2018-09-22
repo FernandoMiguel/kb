@@ -28,9 +28,8 @@
     "git.autofetch": true,
     "files.associations": {
         "Dockerfile-*": "dockerfile",
-        "*.yml.sample": "yaml"
+        "*.yml.*": "yaml"
     },
-    "workbench.colorTheme": "Tomorrow Night Blue",
     "[terraform]": {
         "editor.formatOnSave": true
     },
@@ -51,4 +50,6 @@
     "editor.showFoldingControls": "always",
     "editor.insertSpaces": false,
     "breadcrumbs.enabled": false,
+    "gitlens.defaultDateStyle": "absolute",
+    "gitlens.settings.mode": "advanced",
 }
