@@ -1,14 +1,29 @@
-export PATH=/usr/local/opt/curl/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin:$PATH
-HOMEBREW_GITHUB_API_TOKEN=XXX
+export PATH=/usr/local/opt/curl/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:/usr/local/bin:/usr/local/opt:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin:/Applications/Sourcetree.app/Contents/MacOS/Sourcetree:/Users/fernando/go/bin:/usr/local/opt/node@8/bin:$PATH
+
+HOMEBREW_GITHUB_API_TOKEN=XX
+GITHUB_TOKEN=XXXX
 
 complete -C aws_completer aws
 alias sshconverter='ssh-keygen -y -f '
 #alias openssl='/usr/local/opt/openssl@1.1/bin/openssl'
 alias fuckmeraki='sudo profiles -R -p com.meraki.sm.629378047925028072'
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
 . "/Users/fernando/.acme.sh/acme.sh.env"
 
-alias nas='ssh nas.fernandomiguel.net -p 4444 -l root'
+alias brewall='brew -v update && brew -v upgrade && brew cask upgrade --greedy && brew cu --all'
+alias brewcleanup='brew cleanup && brew cu --cleanup'
+alias dockerupdateallimages='docker images --format "{{.Repository}}:{{.Tag}}" | xargs -L1 docker pull'
+alias chromeram='diskutil erasevolume HFS+ 'RAMDisk' `hdiutil attach -nomount ram://262144` &&  open -a "Google Chrome Canary" --args --no-first-run -disk-cache-dir=$(mktemp -d /Volumes/RAMDisk/chromecanary.XXXXXX) --user-data-dir=$(mktemp -d /Volumes/RAMDisk/chromecanary.XXXXXX)'
+alias setdns="networksetup -setdnsservers Wi-Fi 127.0.0.1 2606:4700:4007::1001 2606:4700:4700::1111 2620:0:ccd::2 2620:0:ccc::2 2001:4860:4860::8844 2001:4860:4860::8888 2620:fe::fe 1.0.0.1 1.1.1.1 208.67.220.220 208.67.222.222 8.8.4.4 8.8.8.8 149.112.112.112 9.9.9.9"
+alias getdns="networksetup -getdnsservers Wi-Fi && scutil --dns"
+#alias dockeraws="docker run -it --rm -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -e AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECURITY_TOKEN=$AWS_SECURITY_TOKEN -e AWS_REGION=$AWS_REGION -e AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION awscli bash"
+alias dockertty="screen ${HOME}/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty"
+alias awswhoami="aws sts get-caller-identity"
+alias awslogin='aws-vault --debug login $p --stdout | xargs -t /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --no-first-run --new-window -disk-cache-dir=$(mktemp -d /tmp/chromecanary.XXXXXX) --user-data-dir=$(mktemp -d /tmp/chromecanary.XXXXXX)'
 
 alias ls='ls -h'
 alias ll="ls -lah"
@@ -107,7 +122,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -123,3 +138,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+complete -C /usr/local/Cellar/terraform/0.11.8/bin/terraform terraform
