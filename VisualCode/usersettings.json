@@ -1,13 +1,10 @@
 {
-    "github-pr.accessToken": "XXXXXXXXX",
     "editor.minimap.enabled": false,
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "editor.wordWrap": "on",
-    "editor.tabCompletion": true,
-    "editor.autoIndent": true,
+    "editor.tabCompletion": "on",
     "editor.fontSize": 14,
-    "editor.renderControlCharacters": false,
     "editor.trimAutoWhitespace": true,
     "editor.formatOnSave": true,
     "editor.folding": false,
@@ -17,7 +14,6 @@
     "window.restoreWindows": "all",
     "window.restoreFullscreen": true,
     "window.newWindowDimensions": "fullscreen",
-    "window.zoomLevel": 0,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "git.enableSmartCommit": true,
@@ -41,8 +37,8 @@
     "terraform.lintPath": "/usr/local/bin/tflint",
     "terraform.codelens.enabled": true,
     "terraform.indexing": {
-        "enabled": false,
-        "liveIndexing": true,
+        "enabled": true,
+        "liveIndexing": true
     },
     "git.enableCommitSigning": false,
     "git.detectSubmodulesLimit": 100,
@@ -52,4 +48,8 @@
     "breadcrumbs.enabled": false,
     "gitlens.defaultDateStyle": "absolute",
     "gitlens.settings.mode": "advanced",
+    "terraform.telemetry.enabled": false,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Tomorrow Night Blue",
+    "workbench.iconTheme": "vscode-icons"
 }
