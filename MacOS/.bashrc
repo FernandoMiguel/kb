@@ -1,7 +1,4 @@
-export PATH=/usr/local/opt/curl/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:/usr/local/bin:/usr/local/opt:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin:/Applications/Sourcetree.app/Contents/MacOS/Sourcetree:/Users/fernando/go/bin:/usr/local/opt/node@8/bin:$PATH
-
-HOMEBREW_GITHUB_API_TOKEN=XX
-GITHUB_TOKEN=XXXX
+export PATH=/usr/local/opt/curl/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:/usr/local/bin:/usr/local/opt:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin:/Applications/Sourcetree.app/Contents/MacOS:/Users/fernando/go/bin:$PATH
 
 complete -C aws_completer aws
 alias sshconverter='ssh-keygen -y -f '
@@ -14,6 +11,8 @@ fi
 
 . "/Users/fernando/.acme.sh/acme.sh.env"
 
+alias nas='ssh nas.fernandomiguel.net -p 4444 -l root -i ~/.ssh/fmMac5_ed25519'
+alias byte='ssh -i ~/.ssh/fmMac5_ed25519 -l fernandomiguel plex.imperialus.house'
 alias brewall='brew -v update && brew -v upgrade && brew cask upgrade --greedy && brew cu --all'
 alias brewcleanup='brew cleanup && brew cu --cleanup'
 alias dockerupdateallimages='docker images --format "{{.Repository}}:{{.Tag}}" | xargs -L1 docker pull'
@@ -32,7 +31,6 @@ alias lm='ll |more'        #  Pipe through 'more'
 #alias lr='ll -lvrta'
 alias la='ls -lahtr'           #  Show hidden files.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
-
 
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -139,4 +137,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-complete -C /usr/local/Cellar/terraform/0.11.8/bin/terraform terraform
+complete -C /usr/local/Cellar/terraform/0.11.9/bin/terraform terraform
+export HOMEBREW_GITHUB_API_TOKEN=XXXXXX
+export GITHUB_TOKEN=XXX
+export DOCKER_BUILDKIT=1
