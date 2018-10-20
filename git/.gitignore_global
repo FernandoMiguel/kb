@@ -1,5 +1,20 @@
-# docker-compose
-docker-compose-local-services.yml
+# Yopa docker-compose
+docker-compose.local-services.yml
+docker-compose.override.yml
+.data/
+
+/public/build
+/public/build/rev-manifest.json
+/public/v2/assets/js
+/public/v2/assets/css
+!/public/assets/ckeditor
+/coverage
+/report
+storage/properties.BLM
+/src/credentials/*
+!/src/main/resources/application.yml.devsdocker
+/src/main/resources/application.yml*
+/src/main/resources/application.yml
 
 # terraform
 
@@ -18,14 +33,16 @@ terraform.tfvars
 
 # TLS in Dockerfile
 Docker/nginx/tls/*
+Dockerfile/tls/*
 tls/*
 traefik-acme.json
+/docker-compose
 
 # Google_authenticator codes
 *.google_authenticator
 
 # VS Code settings #
-.vscode/settings.json
+.vscode/
 
 # Created by https://www.gitignore.io/api/node
 
@@ -37,8 +54,22 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+
 ## laravel ##
 storage/logs/*
+yconfig201702.json
+
+
+# Build assets
+#
+/assets/assets
+/assets/manifest/rev-manifest.json
+/assets/build
+/assets/css/global
+/assets/css/yopaplus
+/assets/js/angular/angularD3Compile.js
+/assets/**/*.map
+/.sass-cache
 
 # Runtime data
 pids
@@ -66,10 +97,15 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+build/
 
 # Dependency directories
 node_modules/
 jspm_packages/
+vendor
+public/storage
+Homestead.yaml
+Homestead.json
 
 # Typescript v1 declaration files
 typings/
@@ -89,9 +125,46 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variables file
-.env
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
 
+## CRM
+__pycache__
+**/__pycache__
+crm/env
+crm/crm_settings.py
+crm/crm_settings.*.py
+crm/mongod.conf
+crm/logs/*
+crm/.coverage
+!crm/crm_settings.devsdocker.py
+
+# dotenv environment variables file
+venv*
+.env
+_ide_helper.php
+/coverage
+Homestead.yaml
+Homestead.json
+zpg
+public/ip.php
+/nbproject
+npm-debug.log
+.env2
+/storage/worker.log
+/storage/resume/*
+!/storage/resume/.gitkeep
+oracle.sqlite
+refresh_vagrant_db.sh
+**/.php_cs.cache
+refresh_staging_db.sh
+/storage/abandoned_vals
+phpunit.xml
+.env.bak
+_ide_helper.php
 
 # OS generated files #
 ######################
@@ -105,6 +178,12 @@ Thumbs.db
 *~
 *.swp
 *.swo
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
 
 # General
 .AppleDouble
@@ -132,3 +211,43 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+# compiled output
+/dist
+/out-tsc
+
+# IDEs and editors
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.sublime-gulp.cache
+
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# Maven
+!.mvn/wrapper/maven-wrapper.jar
+/target
+/aiven/*
