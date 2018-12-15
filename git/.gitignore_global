@@ -16,9 +16,10 @@ storage/properties.BLM
 /src/main/resources/application.yml*
 /src/main/resources/application.yml
 
-# terraform
+src/credentials/*.json	
+src/credentials/*.pem
 
-# Compiled files
+# terraform
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
@@ -48,7 +49,7 @@ traefik-acme.json
 
 ### Node ###
 # Logs
-logs
+logs/*
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -146,7 +147,6 @@ crm/.coverage
 venv*
 .env
 _ide_helper.php
-/coverage
 Homestead.yaml
 Homestead.json
 zpg
@@ -226,7 +226,6 @@ Temporary Items
 *.sublime-workspace
 .sublime-gulp.cache
 
-
 # e2e
 /e2e/*.js
 /e2e/*.map
@@ -251,3 +250,6 @@ Temporary Items
 !.mvn/wrapper/maven-wrapper.jar
 /target
 /aiven/*
+
+# python
+*.pyc

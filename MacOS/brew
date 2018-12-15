@@ -1,6 +1,6 @@
-brew install aircrack-ng bind sqlmap aws-shell curl htop terraform youtube-dl awscli duti iftop midnight-commander openssl@1.1 screen bash jq ncdu speedtest-cli testssl bash-completion git nmap rclone wget amazon-ecs-cli chamber namebench vault sqlmap docker-ls nmap wifi-password goaccess terraform_landscape openssl
+brew install aircrack-ng bind sqlmap aws-shell curl htop terraform youtube-dl awscli duti iftop midnight-commander openssl@1.1 screen bash jq ncdu speedtest-cli testssl bash-completion git nmap rclone wget amazon-ecs-cli chamber namebench vault sqlmap wifi-password goaccess terraform_landscape openssl p7zip sqlmap bind cloudflared python 
 
 brew tap wata727/tflint
-$ brew install tflint
+brew cask install android-platform-tools aws-vault docker iterm2-beta postman sourcetree tunnelblick-beta tflint
 
 brew cleanup

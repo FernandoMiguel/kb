@@ -24,7 +24,8 @@
     "git.autofetch": true,
     "files.associations": {
         "Dockerfile-*": "dockerfile",
-        "*.yml.*": "yaml"
+        "*.yml.*": "yaml",
+        "*.tpl": "shellscript",
     },
     "[terraform]": {
         "editor.formatOnSave": true
@@ -37,8 +38,13 @@
     "terraform.lintPath": "/usr/local/bin/tflint",
     "terraform.codelens.enabled": true,
     "terraform.indexing": {
-        "enabled": true,
-        "liveIndexing": true
+        "enabled": false,
+        "liveIndexing": false,
+        "delay": 500,
+        "exclude": [
+            ".terraform/**/*",
+            "**/.terraform/**/*"
+        ]
     },
     "git.enableCommitSigning": false,
     "git.detectSubmodulesLimit": 100,
@@ -46,10 +52,21 @@
     "editor.showFoldingControls": "always",
     "editor.insertSpaces": false,
     "breadcrumbs.enabled": false,
-    "gitlens.defaultDateStyle": "absolute",
-    "gitlens.settings.mode": "advanced",
     "terraform.telemetry.enabled": false,
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Tomorrow Night Blue",
-    "workbench.iconTheme": "vscode-icons"
+    "docker.dockerComposeDetached": false,
+    "docker.showExplorer": false,
+    "workbench.iconTheme": "vscode-icons",
+    "vsicons.projectDetection.disableDetect": true,
+    "workbench.statusBar.feedback.visible": false,
+	"spellright.language": [
+		"en"
+	],
+	"spellright.documentTypes": [
+		"markdown",
+		"latex"
+	],
+    "python.pythonPath": "/usr/local/bin/python3",
+    "workbench.colorTheme": "Default Light+",
+    "files.eol": "\n"
 }
