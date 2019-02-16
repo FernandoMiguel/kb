@@ -20,7 +20,7 @@ get Cloudflare API key from https://www.cloudflare.com/a/account/my-account
 export CF_Key="sdfsdfsdfljlbjkljlkjsdfoiwje"
 export CF_Email="xxxx@example.com"
 
-acme.sh --issue --dns dns_cf -d example.com --dnssleep 10 \
+acme.sh --issue --dns dns_cf -d example.com \
 --keylength ec-256 \
 --config-home /PATH/SOMEWHERE/ \
 --key-file /etc/ssl/private/DOMAIN.TLD.key \
@@ -37,7 +37,7 @@ Follow https://github.com/Neilpang/acme.sh/wiki/How-to-use-Amazon-Route53-API to
 export  AWS_ACCESS_KEY_ID=XXXXXXXXXX
 export  AWS_SECRET_ACCESS_KEY=XXXXXXXXXXXXXXX
 
-acme.sh --issue --dns dns_aws -d example.com --dnssleep 60 \
+acme.sh --issue --dns dns_aws -d example.com \
 --keylength ec-256 \
 --config-home /PATH/SOMEWHERE/ \
 --key-file /etc/ssl/private/DOMAIN.TLD.key \
@@ -52,7 +52,7 @@ acme.sh --issue --dns dns_aws -d example.com --dnssleep 60 \
 aws-vault --debug exec <PROFILE> --server
 ```
 ```
-acme.sh --issue --dns dns_aws -d example.com --dnssleep 60 \
+acme.sh --issue --dns dns_aws -d example.com \
 --keylength ec-256 \
 --config-home /PATH/SOMEWHERE/ \
 --key-file /etc/ssl/private/DOMAIN.TLD.key \
