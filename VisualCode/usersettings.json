@@ -1,31 +1,47 @@
 {
+    "breadcrumbs.enabled": false,
+    "docker.dockerComposeDetached": false,
+    "docker.showExplorer": false,
+    "editor.folding": false,
+    "editor.foldingStrategy": "indentation",
+    "editor.fontSize": 14,
+    "editor.formatOnSave": true,
+    "editor.glyphMargin": false,
+    "editor.insertSpaces": false,
     "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.showFoldingControls": "always",
+    "editor.tabCompletion": "on",
+    "editor.trimAutoWhitespace": true,
+    "editor.wordWrap": "on",
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
-    "editor.wordWrap": "on",
-    "editor.tabCompletion": "on",
-    "editor.fontSize": 14,
-    "editor.trimAutoWhitespace": true,
-    "editor.formatOnSave": true,
-    "editor.folding": false,
-    "editor.glyphMargin": false,
-    "editor.renderWhitespace": "all",
+    "git.alwaysSignOff": true,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.detectSubmodulesLimit": 100,
+    "git.enableSmartCommit": true,
+    "git.fetchOnPull": true,
     "json.format.enable": true,
-    "window.restoreWindows": "all",
-    "window.restoreFullscreen": true,
-    "window.newWindowDimensions": "fullscreen",
+    "markdown.preview.scrollEditorWithPreview": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
-    "git.enableSmartCommit": true,
-    "git.confirmSync": false,
-    "markdown.preview.scrollEditorWithPreview": true,
+    "terraform.telemetry.enabled": false,
+    "vsicons.projectDetection.disableDetect": true,
+    "window.newWindowDimensions": "fullscreen",
+    "window.restoreFullscreen": true,
+    "window.restoreWindows": "all",
     "workbench.editor.labelFormat": "default",
+    "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile",
-    "git.autofetch": true,
+    "workbench.statusBar.feedback.visible": false,
     "files.associations": {
         "Dockerfile-*": "dockerfile",
         "*.yml.*": "yaml",
         "*.tpl": "shellscript",
+        "*.tf": "terraform",
+        "*.tf_": "terraform",
+        "*.tf.override": "terraform",
     },
     "[terraform]": {
         "editor.formatOnSave": true
@@ -38,7 +54,7 @@
     "terraform.lintPath": "/usr/local/bin/tflint",
     "terraform.codelens.enabled": true,
     "terraform.indexing": {
-        "enabled": false,
+        "enabled": true,
         "liveIndexing": false,
         "delay": 500,
         "exclude": [
@@ -46,27 +62,13 @@
             "**/.terraform/**/*"
         ]
     },
-    "git.enableCommitSigning": false,
-    "git.detectSubmodulesLimit": 100,
-    "editor.foldingStrategy": "indentation",
-    "editor.showFoldingControls": "always",
-    "editor.insertSpaces": false,
-    "breadcrumbs.enabled": false,
-    "terraform.telemetry.enabled": false,
-    "window.zoomLevel": 0,
-    "docker.dockerComposeDetached": false,
-    "docker.showExplorer": false,
-    "workbench.iconTheme": "vscode-icons",
-    "vsicons.projectDetection.disableDetect": true,
-    "workbench.statusBar.feedback.visible": false,
-	"spellright.language": [
-		"en"
-	],
-	"spellright.documentTypes": [
-		"markdown",
-		"latex"
-	],
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ],
     "python.pythonPath": "/usr/local/bin/python3",
-    "workbench.colorTheme": "Default Light+",
     "files.eol": "\n"
 }
