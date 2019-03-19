@@ -4,125 +4,60 @@ sudo spctl --master-disable
 defaults write com.apple.finder AppleShowAllFiles YES
 chflags nohidden $HOME/Library
 
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-sudo defaults write com.apple.finder AppleShowAllFiles -bool true
-sudo defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-sudo defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-sudo defaults write com.apple.finder QuitMenuItem -bool true
-sudo defaults write com.apple.addressbook ABShowDebugMenu -bool true
-sudo defaults write com.apple.iCal IncludeDebugMenu -bool true
-sudo defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-sudo defaults write com.apple.finder AppleShowAllFiles TRUE
-sudo defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
-sudo chflags nohidden $HOME/Library
-
-
-
-
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-
-sudo defaults write com.apple.screensaver askForPassword -int 1
-sudo defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-
-sudo defaults write com.apple.BezelServices kDim -bool true
-
-sudo defaults write NSGlobalDomain KeyRepeat -int 0
-
-sudo defaults write com.apple.BezelServices kDimTime -int 300
-
-sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-sudo defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-sudo defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
-
-sudo chflags nohidden $HOME/Library
-
-sudo defaults write com.apple.finder AppleShowAllFiles -bool true
-
-sudo defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-sudo defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
-
-
-sudo defaults write com.apple.finder ShowPathbar -bool true
-
-sudo defaults write com.apple.finder ShowStatusBar -bool true
-
-sudo defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
-
-sudo defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
-sudo defaults write com.apple.finder QuitMenuItem -bool true
-
-sudo defaults write com.apple.finder WarnOnEmptyTrash -bool false
-
-sudo defaults write com.apple.finder QLEnableTextSelection -bool true
-
-sudo defaults write com.apple.Safari UniversalSearchEnabled -bool false
-
-sudo defaults write com.apple.addressbook ABShowDebugMenu -bool true
-
-sudo defaults write com.apple.iCal IncludeDebugMenu -bool true
-
-sudo defaults write com.apple.TextEdit RichText -int 0
-
-sudo defaults write com.apple.TextEdit PlainTextEncoding -int 4
-sudo defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
-
-sudo defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
-sudo defaults write com.apple.DiskUtility advanced-image-options -bool true
-
-sudo defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
-
-sudo defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-
-sudo defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-
-sudo defaults write com.apple.appstore WebKitDeveloperExtras -bool true
-
-sudo defaults write com.apple.appstore ShowDebugMenu -bool true
-
-sudo hash tmutil &> /dev/null && sudo tmutil disablelocal
-
-sudo defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
-
-sudo defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
-
-sudo defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
-
-sudo defaults write com.apple.finder AppleShowAllFiles TRUE
-
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :FK_StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 /usr/libexec/PlistBuddy -c "Set :StandardViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
-
-sudo defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
-
-sudo defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
-
-sudo defaults write com.apple.dock launchanim -bool false
-
+sudo chflags nohidden $HOME/Library
+sudo defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+sudo defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 sudo defaults write com.apple.ActivityMonitor ShowCategory -int 0
-
 sudo defaults write com.apple.ActivityMonitor SortColumn -string "CPUUsage"
 sudo defaults write com.apple.ActivityMonitor SortDirection -int 0
-
-sudo defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-sudo defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
-
+sudo defaults write com.apple.addressbook ABShowDebugMenu -bool true
+sudo defaults write com.apple.appstore ShowDebugMenu -bool true
+sudo defaults write com.apple.appstore WebKitDeveloperExtras -bool true
+sudo defaults write com.apple.BezelServices kDim -bool true
+sudo defaults write com.apple.BezelServices kDimTime -int 300
+sudo defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
+sudo defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+sudo defaults write com.apple.DiskUtility advanced-image-options -bool true
+sudo defaults write com.apple.DiskUtility DUDebugMenuEnabled -bool true
+sudo defaults write com.apple.dock launchanim -bool false
+sudo defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+sudo defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+sudo defaults write com.apple.finder AppleShowAllFiles -bool true
+sudo defaults write com.apple.finder AppleShowAllFiles TRUE
+sudo defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+sudo defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+sudo defaults write com.apple.finder QLEnableTextSelection -bool true
+sudo defaults write com.apple.finder QuitMenuItem -bool true
+sudo defaults write com.apple.finder ShowPathbar -bool true
+sudo defaults write com.apple.finder ShowStatusBar -bool true
+sudo defaults write com.apple.finder WarnOnEmptyTrash -bool false
+sudo defaults write com.apple.iCal IncludeDebugMenu -bool true
+sudo defaults write com.apple.messageshelper.MessageController SOInputLineSettings -dict-add "automaticEmojiSubstitutionEnablediMessage" -bool false
+sudo defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+sudo defaults write com.apple.Safari UniversalSearchEnabled -bool false
+sudo defaults write com.apple.screensaver askForPassword -int 1
+sudo defaults write com.apple.screensaver askForPasswordDelay -int 0
+sudo defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+sudo defaults write com.apple.TextEdit PlainTextEncoding -int 4
+sudo defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
+sudo defaults write com.apple.TextEdit RichText -int 0
+sudo defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+sudo defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+sudo defaults write NSGlobalDomain KeyRepeat -int 0
+sudo defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
+sudo defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
+sudo defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
 sudo defaults write org.m0k.transmission AutoImportDirectory -string "${HOME}/Downloads"
-
-sudo defaults write org.m0k.transmission DownloadAsk -bool false
-
-sudo defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-sudo defaults write org.m0k.transmission WarningDonate -bool false
-
-sudo defaults write org.m0k.transmission WarningLegal -bool false
-
 sudo defaults write org.m0k.transmission AutoSize -bool true
-
 sudo defaults write org.m0k.transmission AutoUpdateBeta -bool true
+sudo defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
+sudo defaults write org.m0k.transmission DownloadAsk -bool false
+sudo defaults write org.m0k.transmission IncompleteDownloadFolder -string "${HOME}/Downloads/Incomplete"
+sudo defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
+sudo defaults write org.m0k.transmission WarningDonate -bool false
+sudo defaults write org.m0k.transmission WarningLegal -bool false
