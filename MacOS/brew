@@ -1,6 +1,59 @@
-brew install aircrack-ng bind sqlmap aws-shell curl htop terraform youtube-dl awscli duti iftop midnight-commander openssl@1.1 screen bash jq ncdu speedtest-cli testssl bash-completion git nmap rclone wget amazon-ecs-cli chamber namebench vault sqlmap wifi-password goaccess terraform_landscape openssl p7zip sqlmap bind cloudflared python 
+brew install \
+aircrack-ng \
+aws-shell \
+awscli \
+bash \
+bash-completion \
+bind \
+brew-cask-completion \
+cloudflare/cloudflare/cloudflared \
+curl \
+docker-completion \
+docker-compose-completion \
+duti \
+git \
+goaccess \
+htop \
+iftop \
+jq \
+midnight-commander \
+namebench \
+ncdu \
+nmap \
+openssl \
+openssl@1.1 \
+p7zip \
+python@3 \
+rclone \
+screen \
+speedtest-cli \
+sqlmap \
+terraform \
+terraform_landscape \
+testssl \
+vault \
+wata727/tflint/tflint \
+wget \
+wifi-password \
+youtube-dl \
 
-brew tap wata727/tflint
-brew cask install android-platform-tools aws-vault docker iterm2-beta postman sourcetree tunnelblick-beta tflint
+
+
+brew cask install \
+android-platform-tools \
+authy \
+aws-vault \
+docker \
+google-chrome-beta \
+google-chrome-canary \
+google-featured-photos \
+iterm2-nightly \
+postman \
+slack-beta \
+sourcetree \
+telegram-alpha \
+tunnelblick-beta \
+tweeten \
+visual-studio-code-insiders \
 
 brew cleanup
