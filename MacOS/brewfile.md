@@ -1,0 +1,1 @@
+brew bundle install --verbose --global
