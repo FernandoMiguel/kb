@@ -24,6 +24,7 @@
     "git.fetchOnPull": true,
     "json.format.enable": true,
     "markdown.preview.scrollEditorWithPreview": true,
+    "scm.providers.visible": 0,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terraform.telemetry.enabled": false,
@@ -41,7 +42,7 @@
         "*.tpl": "shellscript",
         "*.tf": "terraform",
         "*.tf_": "terraform",
-        "*.tf.override": "terraform",
+        "*.tf.override": "terraform"
     },
     "[terraform]": {
         "editor.formatOnSave": true
@@ -54,7 +55,7 @@
     "terraform.lintPath": "/usr/local/bin/tflint",
     "terraform.codelens.enabled": true,
     "terraform.indexing": {
-        "enabled": true,
+        "enabled": false,
         "liveIndexing": false,
         "delay": 500,
         "exclude": [
