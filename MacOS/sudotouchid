@@ -1,0 +1,8 @@
+How to Use Touch ID for sudo Authentication in Mac OS
+Back up your Mac before beginning. From the Terminal (of course), you’ll want to edit /etc/pam.d/sudo by adding a new line to it. For our purposes here we’ll use nano but you’re free to use vim or emacs, or even a GUI app if you’re so inclined.
+
+Open Terminal app if you haven’t done so already, then enter the following command:
+`sudo nano /etc/pam.d/sudo`
+
+Hit Return and then add the following line to the top:
+`auth sufficient pam_tid.so`
