@@ -1,1 +1,97 @@
-/Users/fernando/Brewfile
+tap "cloudflare/cloudflare"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "wata727/tflint"
+# SSL/TLS cryptography library
+brew "openssl"
+# Next-generation aircrack with lots of new features
+brew "aircrack-ng"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3"
+# Integrated shell for working with the AWS CLI
+brew "aws-shell"
+# Official Amazon AWS command-line interface
+brew "awscli"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Programmable completion for Bash 3.2
+brew "bash-completion"
+# Implementation of the DNS protocols
+brew "bind"
+# Fish completion for brew-cask
+brew "brew-cask-completion"
+# CLI for managing secrets through AWS SSM Parameter Store
+brew "chamber"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Bash, Zsh and Fish completion for Docker
+brew "docker-completion"
+# Docker-compose completion script
+brew "docker-compose-completion"
+# Select default apps for documents and URL schemes on macOS
+brew "duti"
+# Distributed revision control system
+brew "git"
+# Log analyzer and interactive viewer for the Apache Webserver
+brew "goaccess"
+# Improved top (interactive process viewer)
+brew "htop"
+# Display an interface's bandwidth usage
+brew "iftop"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Terminal-based visual file manager
+brew "midnight-commander"
+# DNS benchmark utility
+brew "namebench"
+# NCurses Disk Usage
+brew "ncdu"
+# Port scanning utility for large networks
+brew "nmap"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
+# 7-Zip (high compression file archiver) implementation
+brew "p7zip"
+# Rsync for cloud storage
+brew "rclone"
+# Terminal multiplexer with VT100/ANSI terminal emulation
+brew "screen"
+# Command-line interface for https://speedtest.net bandwidth tests
+brew "speedtest-cli"
+# Penetration testing for SQL injection and database servers
+brew "sqlmap"
+# Tool to build, change, and version infrastructure
+brew "terraform"
+# Improve Terraform's plan output
+brew "terraform_landscape"
+# Tool which checks for the support of TLS/SSL ciphers and flaws
+brew "testssl"
+# Secures, stores, and tightly controls access to secrets
+brew "vault"
+# Internet file retriever
+brew "wget"
+# Show the current WiFi network password
+brew "wifi-password"
+# Download YouTube videos from the command-line
+brew "youtube-dl"
+# Argo Tunnel
+brew "cloudflare/cloudflare/cloudflared"
+# Terraform linter
+brew "wata727/tflint/tflint"
+cask "android-platform-tools"
+cask "authy"
+cask "aws-vault"
+cask "docker"
+cask "google-chrome-beta"
+cask "google-chrome-canary"
+cask "google-featured-photos"
+cask "iterm2-nightly"
+cask "postman"
+cask "slack-beta"
+cask "sourcetree"
+cask "telegram-alpha"
+cask "tunnelblick-beta"
+cask "tweeten"
+cask "visual-studio-code-insiders"
