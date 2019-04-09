@@ -1,8 +1,10 @@
+tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "wagoodman/dive"
 tap "wata727/tflint"
 # SSL/TLS cryptography library
 brew "openssl"
@@ -24,10 +26,16 @@ brew "bind"
 brew "brew-cask-completion"
 # CLI for managing secrets through AWS SSM Parameter Store
 brew "chamber"
+# Top-like interface for container metrics
+brew "ctop"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Clean Docker containers, images, networks, and volumes
+brew "docker-clean"
 # Bash, Zsh and Fish completion for Docker
 brew "docker-completion"
+# Isolated development environments using Docker
+brew "docker-compose"
 # Docker-compose completion script
 brew "docker-compose-completion"
 # Select default apps for documents and URL schemes on macOS
@@ -44,6 +52,10 @@ brew "iftop"
 brew "jq"
 # Terminal-based visual file manager
 brew "midnight-commander"
+# Multiple Repository management tool
+brew "mr"
+# 'traceroute' and 'ping' in a single tool
+brew "mtr"
 # DNS benchmark utility
 brew "namebench"
 # NCurses Disk Usage
@@ -66,31 +78,45 @@ brew "sqlmap"
 brew "terraform"
 # Improve Terraform's plan output
 brew "terraform_landscape"
+# Export existing AWS resources to Terraform style (tf, tfstate)
+brew "terraforming"
 # Tool which checks for the support of TLS/SSL ciphers and flaws
 brew "testssl"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
 # Secures, stores, and tightly controls access to secrets
 brew "vault"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Internet file retriever
 brew "wget"
 # Show the current WiFi network password
 brew "wifi-password"
+# Tools for the WireGuard secure network tunnel
+brew "wireguard-tools"
+# View colored diff with side by side and auto pager support
+brew "ydiff"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # Argo Tunnel
 brew "cloudflare/cloudflare/cloudflared"
+# A tool for exploring each layer in a docker image
+brew "wagoodman/dive/dive"
 # Terraform linter
 brew "wata727/tflint/tflint"
 cask "android-platform-tools"
 cask "authy"
 cask "aws-vault"
+cask "brave-browser-dev"
 cask "docker"
-cask "google-chrome-beta"
+# cask "google-chrome-beta"
 cask "google-chrome-canary"
 cask "google-featured-photos"
-cask "iterm2-nightly"
+cask "iterm2-beta"
 cask "postman"
 cask "slack-beta"
 cask "sourcetree"
+cask "station"
 cask "telegram-alpha"
 cask "tunnelblick-beta"
 cask "tweeten"
