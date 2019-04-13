@@ -4,10 +4,9 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "kryptco/tap"
 tap "wagoodman/dive"
 tap "wata727/tflint"
-# SSL/TLS cryptography library
-brew "openssl"
 # Next-generation aircrack with lots of new features
 brew "aircrack-ng"
 # Interpreted, interactive, object-oriented programming language
@@ -35,7 +34,7 @@ brew "docker-clean"
 # Bash, Zsh and Fish completion for Docker
 brew "docker-completion"
 # Isolated development environments using Docker
-brew "docker-compose"
+brew "docker-compose", link: false
 # Docker-compose completion script
 brew "docker-compose-completion"
 # Select default apps for documents and URL schemes on macOS
@@ -100,6 +99,8 @@ brew "ydiff"
 brew "youtube-dl"
 # Argo Tunnel
 brew "cloudflare/cloudflare/cloudflared"
+# Krypton command-line client, daemon, and SSH integration
+brew "kryptco/tap/kr"
 # A tool for exploring each layer in a docker image
 brew "wagoodman/dive/dive"
 # Terraform linter
@@ -109,6 +110,7 @@ cask "authy"
 cask "aws-vault"
 cask "brave-browser-dev"
 cask "docker"
+cask "firefox-developer-edition"
 # cask "google-chrome-beta"
 cask "google-chrome-canary"
 cask "google-featured-photos"
