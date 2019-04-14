@@ -16,22 +16,28 @@
     "editor.wordWrap": "on",
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
+    "files.eol": "\n",
     "git.alwaysSignOff": true,
     "git.autofetch": true,
     "git.confirmSync": false,
     "git.detectSubmodulesLimit": 100,
+    "git.enableCommitSigning": true,
     "git.enableSmartCommit": true,
     "git.fetchOnPull": true,
     "json.format.enable": true,
     "markdown.preview.scrollEditorWithPreview": true,
+    "python.pythonPath": "/usr/local/bin/python3",
     "scm.providers.visible": 0,
+    "sync.autoUpload": true,
+    "sync.gist": "",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terraform.telemetry.enabled": false,
-    "vsicons.projectDetection.disableDetect": true,
+    "vsicons.projectDetection.autoReload": true,
     "window.newWindowDimensions": "fullscreen",
     "window.restoreFullscreen": true,
     "window.restoreWindows": "all",
+    "window.zoomLevel": 0,
     "workbench.editor.labelFormat": "default",
     "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile",
@@ -69,7 +75,5 @@
     "spellright.documentTypes": [
         "markdown",
         "latex"
-    ],
-    "python.pythonPath": "/usr/local/bin/python3",
-    "files.eol": "\n"
+    ]
 }
