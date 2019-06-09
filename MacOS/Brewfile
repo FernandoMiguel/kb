@@ -4,17 +4,18 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "knqyf263/trivy"
 tap "kryptco/tap"
 tap "wagoodman/dive"
 tap "wata727/tflint"
 # Next-generation aircrack with lots of new features
 brew "aircrack-ng"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3"
+# CLI for Amazon ECS to manage clusters and tasks for development
+brew "amazon-ecs-cli"
 # Integrated shell for working with the AWS CLI
 brew "aws-shell"
 # Official Amazon AWS command-line interface
-brew "awscli"
+brew "awscli", args: ["HEAD"]
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 3.2
@@ -44,15 +45,13 @@ brew "git"
 # Log analyzer and interactive viewer for the Apache Webserver
 brew "goaccess"
 # Improved top (interactive process viewer)
-brew "htop"
+brew "htop", args: ["HEAD"]
 # Display an interface's bandwidth usage
 brew "iftop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Terminal-based visual file manager
 brew "midnight-commander"
-# Multiple Repository management tool
-brew "mr"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
 # DNS benchmark utility
@@ -69,6 +68,8 @@ brew "p7zip"
 brew "rclone"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Command-line interface for https://speedtest.net bandwidth tests
 brew "speedtest-cli"
 # Penetration testing for SQL injection and database servers
@@ -83,8 +84,6 @@ brew "terraforming"
 brew "testssl"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Secures, stores, and tightly controls access to secrets
-brew "vault"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
@@ -99,6 +98,7 @@ brew "ydiff"
 brew "youtube-dl"
 # Argo Tunnel
 brew "cloudflare/cloudflare/cloudflared"
+brew "knqyf263/trivy/trivy"
 # Krypton command-line client, daemon, and SSH integration
 brew "kryptco/tap/kr"
 # A tool for exploring each layer in a docker image
@@ -119,7 +119,8 @@ cask "postman"
 cask "slack-beta"
 cask "sourcetree"
 cask "station"
-cask "telegram-alpha"
+# cask "telegram-alpha"
 cask "tunnelblick-beta"
-cask "tweeten"
+cask "vlc"
+# cask "tweeten"
 cask "visual-studio-code-insiders"
