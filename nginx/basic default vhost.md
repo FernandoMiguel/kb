@@ -38,6 +38,7 @@ server {
 
     # HSTS (ngx_http_headers_module is required) (15768000 seconds = 6 months)
     add_header Strict-Transport-Security max-age=15768000;
+    # add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload";
 
     # OCSP Stapling ---
     # fetch OCSP records from URL in ssl_certificate and cache them
