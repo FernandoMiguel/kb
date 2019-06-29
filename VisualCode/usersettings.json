@@ -1,7 +1,5 @@
 {
     "breadcrumbs.enabled": false,
-    "docker.dockerComposeDetached": false,
-    "docker.showExplorer": false,
     "editor.folding": false,
     "editor.foldingStrategy": "indentation",
     "editor.fontSize": 14,
@@ -17,6 +15,8 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "files.eol": "\n",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "git.alwaysSignOff": true,
     "git.autofetch": true,
     "git.confirmSync": false,
@@ -26,8 +26,18 @@
     "git.fetchOnPull": true,
     "json.format.enable": true,
     "markdown.preview.scrollEditorWithPreview": true,
-    "python.pythonPath": "/usr/local/bin/python3",
+    "scm.alwaysShowProviders": true,
     "scm.providers.visible": 0,
+    "shellcheck.customArgs": [],
+    "shellcheck.enable": true,
+    "shellcheck.exclude": [
+        "SC2091"
+    ],
+    "search.useIgnoreFiles": false,
+    "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+    "shellcheck.ignorePatterns": {},
+    "shellcheck.run": "onSave",
+    "shellcheck.useWSL": false,
     "sync.autoUpload": true,
     "sync.gist": "",
     "telemetry.enableCrashReporter": false,
@@ -50,9 +60,13 @@
         "*.tf_": "terraform",
         "*.tf.override": "terraform"
     },
-    "[terraform]": {
-        "editor.formatOnSave": true
-    },
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ],
     "terraform.format": {
         "enable": true,
         "formatOnSave": true
@@ -61,7 +75,7 @@
     "terraform.lintPath": "/usr/local/bin/tflint",
     "terraform.codelens.enabled": true,
     "terraform.indexing": {
-        "enabled": false,
+        "enabled": true,
         "liveIndexing": false,
         "delay": 500,
         "exclude": [
@@ -69,11 +83,4 @@
             "**/.terraform/**/*"
         ]
     },
-    "spellright.language": [
-        "en"
-    ],
-    "spellright.documentTypes": [
-        "markdown",
-        "latex"
-    ]
 }
