@@ -49,11 +49,11 @@
     "window.restoreWindows": "all",
     "window.zoomLevel": 0,
     "workbench.editor.labelFormat": "default",
-    "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile",
-    "workbench.statusBar.feedback.visible": false,
     "files.associations": {
         "Dockerfile-*": "dockerfile",
+        "buildx*.yml": "yaml",
+        "buildx*": "dockerfile",
         "*.yml.*": "yaml",
         "*.tpl": "shellscript",
         "*.tf": "terraform",
@@ -83,4 +83,5 @@
             "**/.terraform/**/*"
         ]
     },
+    "workbench.iconTheme": "vscode-icons",
 }
