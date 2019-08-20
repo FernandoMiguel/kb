@@ -29,8 +29,9 @@
 
 # server_names = ['scaleway-fr', 'google', 'yandex', 'cloudflare']
 
-server_names = ['nextdns', 'adguard-dns-doh', 'cloudflare', 'google', 'quad9-doh-ip4-nofilter-alt', 'quad9-doh-ip6-nofilter-alt']
-# server_names = ['nextdns']
+# server_names = ['nextdns', 'cloudflare', 'google', 'quad9-doh-ip4-nofilter-alt', 'quad9-doh-ip6-nofilter-alt']
+# server_names = ['nextdns', 'adguard-dns-doh', 'cloudflare', 'google', 'quad9-doh-ip4-nofilter-alt', 'quad9-doh-ip6-nofilter-alt']
+server_names = ['nextdns']
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
 ## Note: When using systemd socket activation, choose an empty set (i.e. [] ).
@@ -302,7 +303,7 @@ cache_size = 128
 
 ## Minimum TTL for cached entries
 
-cache_min_ttl = 30
+cache_min_ttl = 5
 
 
 ## Maximum TTL for cached entries
@@ -551,4 +552,4 @@ cache_neg_max_ttl = 0
   # stamp = 'sdns://AgUAAAAAAAAAAAAOZG5zLmdvb2dsZS5jb20NL2V4cGVyaW1lbnRhbA'
 
   [static.'nextdns']
-  stamp = 'sdns://AgEAAAAAAAAACzUuMTgyLjIwOC4wAA5kbnMubmV4dGRucy5pbwcvOTZmNzM2'
+  stamp = 'sdns://AgEAAAAAAAAACjQ1LjkwLjI4LjAADmRucy5uZXh0ZG5zLmlvBy85NmY3MzY'
