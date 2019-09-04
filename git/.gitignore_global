@@ -1,24 +1,3 @@
-# Yopa docker-compose
-docker-compose.local-services.yml
-docker-compose.override.yml
-.data/
-
-/public/build
-/public/build/rev-manifest.json
-/public/v2/assets/js
-/public/v2/assets/css
-!/public/assets/ckeditor
-/coverage
-/report
-storage/properties.BLM
-/src/credentials/*
-!/src/main/resources/application.yml.devsdocker
-/src/main/resources/application.yml*
-/src/main/resources/application.yml
-
-src/credentials/*.json	
-src/credentials/*.pem
-
 # terraform
 *.tfstate
 *.tfstate.*.backup
@@ -33,11 +12,8 @@ terraform.tfvars
 *_override.tf
 
 # TLS in Dockerfile
-Docker/nginx/tls/*
-Dockerfile/tls/*
 tls/*
 traefik-acme.json
-/docker-compose
 
 # Google_authenticator codes
 *.google_authenticator
@@ -55,11 +31,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
 ## laravel ##
 storage/logs/*
-yconfig201702.json
-
 
 # Build assets
 #
@@ -83,6 +56,7 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
+/report
 
 # nyc test coverage
 .nyc_output
@@ -105,8 +79,6 @@ node_modules/
 jspm_packages/
 vendor
 public/storage
-Homestead.yaml
-Homestead.json
 
 # Typescript v1 declaration files
 typings/
