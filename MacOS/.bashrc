@@ -1,14 +1,12 @@
-export PATH=/usr/local/opt/curl/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:/usr/local/bin:/usr/local/opt:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin:/Applications/Sourcetree.app/Contents/MacOS:/Users/fernando/go/bin:$PATH
+export PATH=/usr/local/opt/curl/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:/usr/local/bin:/usr/local/opt:/Users/fernando/go/bin:$PATH
 
 complete -C aws_completer aws
-complete -C /usr/local/Cellar/terraform/0.11.13/bin/terraform terraform
 
 if [ -f "$(brew --prefix)"/etc/bash_completion ]; then
 . "$(brew --prefix)"/etc/bash_completion
 fi
 
-. "/Users/fernando/.acme.sh/acme.sh.env"
-
+alias code='code-insiders'
 alias nas='ssh nas.fernandomiguel.net -p 4444 -l root'
 alias byte='ssh -l fernandomiguel plex.imperialus.house'
 alias brewall='brew -v update && brew -v upgrade && brew cask upgrade --greedy && brew cu --all'
@@ -137,8 +135,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export HOMEBREW_GITHUB_API_TOKEN=XX
+# export HOMEBREW_GITHUB_API_TOKEN=XX
 export DOCKER_BUILDKIT=1
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # Added by Krypton
 export GPG_TTY=$(tty)
