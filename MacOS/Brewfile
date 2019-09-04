@@ -1,16 +1,15 @@
-tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
 tap "confluentinc/ccloud"
 tap "homebrew/bundle"
-tap "homebrew/cask-versions"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "jesseduffield/lazydocker"
-tap "aqua/trivy"
 tap "kryptco/tap"
 tap "wagoodman/dive"
 tap "wata727/tflint"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@1.1"
 # Next-generation aircrack with lots of new features
 brew "aircrack-ng"
 # CLI for Amazon ECS to manage clusters and tasks for development
@@ -19,7 +18,6 @@ brew "amazon-ecs-cli"
 brew "aws-shell"
 # Official Amazon AWS command-line interface
 brew "awscli"
-brew "bash-completion"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 3.2
@@ -39,9 +37,8 @@ brew "dnscrypt-proxy"
 brew "docker-clean"
 # Bash, Zsh and Fish completion for Docker
 brew "docker-completion"
-brew "docker-compose-completion"
 # Isolated development environments using Docker
-brew "docker-compose"
+brew "docker-compose", link: false
 # Docker-compose completion script
 brew "docker-compose-completion"
 # Select default apps for documents and URL schemes on macOS
@@ -58,8 +55,7 @@ brew "hub"
 brew "iftop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-brew "aqua/trivy/trivy"
-brew "kryptco/tap/kr"
+# brew "aqua/trivy/trivy"
 # Terminal-based visual file manager
 brew "midnight-commander"
 # 'traceroute' and 'ping' in a single tool
@@ -70,11 +66,8 @@ brew "namebench"
 brew "ncdu"
 # Port scanning utility for large networks
 brew "nmap"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@1.1"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
-# Rsync for cloud storage
 # brew "rclone"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
@@ -88,7 +81,6 @@ brew "sqlmap"
 brew "terraform"
 # Improve Terraform's plan output
 brew "terraform_landscape"
-brew "terraform"
 # Export existing AWS resources to Terraform style (tf, tfstate)
 brew "terraforming"
 # Tool which checks for the support of TLS/SSL ciphers and flaws
@@ -97,8 +89,6 @@ brew "testssl"
 brew "tflint"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# brew "wagoodman/dive/dive"
-brew "wata727/tflint/tflint"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
@@ -112,12 +102,11 @@ brew "ydiff"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # Process YAML documents from the CLI
-brew "yq"
+# brew "yq"
 # Argo Tunnel
 brew "cloudflare/cloudflare/cloudflared"
 # A simple terminal UI for docker, written in Go
 brew "jesseduffield/lazydocker/lazydocker"
-brew "aqua/trivy/trivy"
 # Krypton command-line client, daemon, and SSH integration
 brew "kryptco/tap/kr"
 # A tool for exploring each layer in a docker image
@@ -132,12 +121,13 @@ cask "google-chrome-beta"
 cask "google-chrome-canary"
 cask "google-featured-photos"
 cask "iterm2-beta"
+cask "maccy"
+cask "microsoft-teams"
 cask "postman"
 cask "slack-beta"
-cask "sourcetree"
+# cask "sourcetree"
 cask "station"
-# cask "telegram-alpha"
 cask "tunnelblick-beta"
+cask "visual-studio-code-insiders"
 cask "vlc"
 # cask "tweeten"
-cask "visual-studio-code-insiders"
