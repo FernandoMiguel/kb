@@ -1,3 +1,4 @@
+tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
 tap "confluentinc/ccloud"
 tap "homebrew/bundle"
@@ -6,6 +7,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "jesseduffield/lazydocker"
 tap "kryptco/tap"
+tap "versent/taps"
 tap "wagoodman/dive"
 tap "wata727/tflint"
 # Cryptography and SSL/TLS Toolkit
@@ -27,7 +29,6 @@ brew "bind"
 # Fish completion for brew-cask
 brew "brew-cask-completion"
 # Top-like interface for container metrics
-brew "cloudflare/cloudflare/cloudflared"
 brew "ctop"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
@@ -83,12 +84,16 @@ brew "terraform"
 brew "terraform_landscape"
 # Export existing AWS resources to Terraform style (tf, tfstate)
 brew "terraforming"
+# Thin wrapper for Terraform e.g. for locking state
+brew "terragrunt"
 # Tool which checks for the support of TLS/SSL ciphers and flaws
 brew "testssl"
 # Linter for Terraform files
 brew "tflint"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Secures, stores, and tightly controls access to secrets
+brew "vault"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
@@ -109,14 +114,18 @@ brew "cloudflare/cloudflare/cloudflared"
 brew "jesseduffield/lazydocker/lazydocker"
 # Krypton command-line client, daemon, and SSH integration
 brew "kryptco/tap/kr"
+brew "versent/taps/saml2aws"
 # A tool for exploring each layer in a docker image
 brew "wagoodman/dive/dive"
 cask "android-platform-tools"
 cask "authy"
 cask "aws-vault"
 cask "brave-browser-dev"
+cask "daisydisk"
 cask "docker"
+cask "dropbox"
 cask "firefox-developer-edition"
+cask "google-backup-and-sync"
 cask "google-chrome-beta"
 cask "google-chrome-canary"
 cask "google-featured-photos"
@@ -124,8 +133,10 @@ cask "iterm2-beta"
 cask "maccy"
 cask "microsoft-teams"
 cask "postman"
+cask "sequel-pro"
 cask "slack-beta"
 # cask "sourcetree"
+cask "spectacle"
 cask "station"
 cask "tunnelblick-beta"
 cask "visual-studio-code-insiders"
