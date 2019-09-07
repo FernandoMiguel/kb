@@ -268,7 +268,7 @@ block_ipv6 = false
 ## example.net 9.9.9.9,8.8.8.8,1.1.1.1
 
 # forwarding_rules = 'forwarding-rules.txt'
-
+forwarding_rules = 'forwarding-rules.txt'
 
 
 ###############################
