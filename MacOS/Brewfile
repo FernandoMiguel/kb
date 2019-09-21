@@ -5,6 +5,8 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
+tap "homebrew/services"
+tap "horar/openconnect-gui"
 tap "jesseduffield/lazydocker"
 tap "kryptco/tap"
 tap "versent/taps"
@@ -48,6 +50,8 @@ brew "duti"
 brew "git"
 # Log analyzer and interactive viewer for the Apache Webserver
 brew "goaccess"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
 # Improved top (interactive process viewer)
 brew "htop"
 # Add GitHub support to git on the command-line
@@ -56,7 +60,6 @@ brew "hub"
 brew "iftop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# brew "aqua/trivy/trivy"
 # Terminal-based visual file manager
 brew "midnight-commander"
 # 'traceroute' and 'ping' in a single tool
@@ -110,6 +113,8 @@ brew "youtube-dl"
 # brew "yq"
 # Argo Tunnel
 brew "cloudflare/cloudflare/cloudflared"
+# Graphical OpenConnect VPN client
+brew "horar/openconnect-gui/openconnect-gui"
 # A simple terminal UI for docker, written in Go
 brew "jesseduffield/lazydocker/lazydocker"
 # Krypton command-line client, daemon, and SSH integration
@@ -131,6 +136,7 @@ cask "google-chrome-canary"
 cask "google-featured-photos"
 cask "iterm2-beta"
 cask "maccy"
+cask "marshallofsound-google-play-music-player"
 cask "microsoft-teams"
 cask "postman"
 cask "sequel-pro"
