@@ -1,17 +1,3 @@
-
-##############################################
-#                                            #
-#        dnscrypt-proxy configuration        #
-#                                            #
-##############################################
-
-## This is an example configuration file.
-## You should adjust it to your needs, and save it as "dnscrypt-proxy.toml"
-##
-## Online documentation is available here: https://dnscrypt.info/doc
-
-
-
 ##################################
 #         Global settings        #
 ##################################
@@ -43,17 +29,6 @@ listen_addresses = ['[::1]:53', '127.0.0.1:53']
 
 max_clients = 250
 
-
-## Switch to a different system user after listening sockets have been created.
-## Note (1): this feature is currently unsupported on Windows.
-## Note (2): this feature is not compatible with systemd socket activation.
-## Note (3): when using -pidfile, the PID file directory must be writable by the new user
-
-# user_name = 'nobody'
-
-
-## Require servers (from static + remote sources) to satisfy specific properties
-
 # Use servers reachable over IPv4
 ipv4_servers = true
 
@@ -66,9 +41,6 @@ dnscrypt_servers = false
 # Use servers implementing the DNS-over-HTTPS protocol
 doh_servers = true
 
-
-## Require servers defined by remote sources to satisfy specific properties
-
 # Server must support DNS security extensions (DNSSEC)
 require_dnssec = true
 
@@ -78,32 +50,6 @@ require_nolog = false
 # Server must not enforce its own blacklist (for parental control, ads blocking...)
 require_nofilter = false
 
-# Server names to avoid even if they match all criteria
-disabled_server_names = []
-
-
-## Always use TCP to connect to upstream servers.
-## This can be useful if you need to route everything through Tor.
-## Otherwise, leave this to `false`, as it doesn't improve security
-## (dnscrypt-proxy will always encrypt everything even using UDP), and can
-## only increase latency.
-
-force_tcp = false
-
-
-## SOCKS proxy
-## Uncomment the following line to route all TCP connections to a local Tor node
-## Tor doesn't support UDP, so set `force_tcp` to `true` as well.
-
-# proxy = "socks5://127.0.0.1:9050"
-
-
-## HTTP/HTTPS proxy
-## Only for DoH servers
-
-# http_proxy = "http://127.0.0.1:8888"
-
-
 ## How long a DNS query will wait for a response, in milliseconds
 
 timeout = 2500
@@ -112,14 +58,6 @@ timeout = 2500
 ## Keepalive for HTTP (HTTPS, HTTP/2) queries, in seconds
 
 keepalive = 30
-
-
-## Use the REFUSED return code for blocked responses
-## Setting this to `false` means that some responses will be lies.
-## Unfortunately, `false` appears to be required for Android 8+
-
-refused_code_in_responses = false
-
 
 ## Load-balancing strategy: 'p2' (default), 'ph', 'first' or 'random'
 
@@ -142,45 +80,6 @@ log_level = 1
 
 log_file = '/var/log/dnscrypt-proxy.log'
 
-
-## Use the system logger (syslog on Unix, Event Log on Windows)
-
-# use_syslog = true
-
-
-## Delay, in minutes, after which certificates are reloaded
-
-cert_refresh_delay = 240
-
-
-## DNSCrypt: Create a new, unique key for every single DNS query
-## This may improve privacy but can also have a significant impact on CPU usage
-## Only enable if you don't have a lot of network load
-
-# dnscrypt_ephemeral_keys = false
-
-
-## DoH: Disable TLS session tickets - increases privacy but also latency
-
-# tls_disable_session_tickets = false
-
-
-## DoH: Use a specific cipher suite instead of the server preference
-## 49199 = TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
-## 49195 = TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
-## 52392 = TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305
-## 52393 = TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305
-##
-## On non-Intel CPUs such as MIPS routers and ARM systems (Android, Raspberry Pi...),
-## the following suite improves performance.
-## This may also help on Intel CPUs running 32-bit operating systems.
-##
-## Keep tls_cipher_suite empty if you have issues fetching sources or
-## connecting to some DoH servers. Google and Cloudflare are fine with it.
-
-# tls_cipher_suite = [52392, 49199]
-
-
 ## Fallback resolver
 ## This is a normal, non-encrypted DNS resolver, that will be only used
 ## for one-shot queries when retrieving the initial resolvers list, and
@@ -197,22 +96,6 @@ cert_refresh_delay = 240
 
 fallback_resolver = '1.0.0.1:53'
 
-
-## Never let dnscrypt-proxy try to use the system DNS settings;
-## unconditionally use the fallback resolver.
-
-ignore_system_dns = true
-
-
-## Maximum time (in seconds) to wait for network connectivity before
-## initializing the proxy.
-## Useful if the proxy is automatically started at boot, and network
-## connectivity is not guaranteed to be immediately available.
-## Use 0 to not test for connectivity at all,
-## and -1 to wait as much as possible.
-
-netprobe_timeout = 60
-
 ## Address and port to try initializing a connection to, just to check
 ## if the network is up. It can be any address and any port, even if
 ## there is nothing answering these on the other side. Just don't use
@@ -224,14 +107,6 @@ netprobe_timeout = 60
 
 netprobe_address = "1.0.0.1:53"
 
-
-## Offline mode - Do not use any remote encrypted servers.
-## The proxy will remain fully functional to respond to queries that
-## plugins can handle directly (forwarding, cloaking, ...)
-
-# offline_mode = false
-
-
 ## Automatic log files rotation
 
 # Maximum log files size in MB
@@ -242,8 +117,6 @@ log_files_max_age = 7
 
 # Maximum log files backups to keep (or 0 to keep all backups)
 log_files_max_backups = 1
-
-
 
 #########################
 #        Filters        #
@@ -269,23 +142,6 @@ block_ipv6 = false
 
 # forwarding_rules = 'forwarding-rules.txt'
 forwarding_rules = 'forwarding-rules.txt'
-
-
-###############################
-#        Cloaking rules       #
-###############################
-
-## Cloaking returns a predefined address for a specific name.
-## In addition to acting as a HOSTS file, it can also return the IP address
-## of a different name. It will also do CNAME flattening.
-##
-## Example map entries (one entry per line)
-## example.com     10.1.1.1
-## www.google.com  forcesafesearch.google.com
-
-# cloaking_rules = 'cloaking-rules.txt'
-
-
 
 ###########################
 #        DNS cache        #
@@ -364,135 +220,6 @@ cache_neg_max_ttl = 0
   ## Query log format (currently supported: tsv and ltsv)
 
   format = 'tsv'
-
-
-
-######################################################
-#        Pattern-based blocking (blacklists)        #
-######################################################
-
-## Blacklists are made of one pattern per line. Example of valid patterns:
-##
-##   example.com
-##   =example.com
-##   *sex*
-##   ads.*
-##   ads*.example.*
-##   ads*.example[0-9]*.com
-##
-## Example blacklist files can be found at https://download.dnscrypt.info/blacklists/
-## A script to build blacklists from public feeds can be found in the
-## `utils/generate-domains-blacklists` directory of the dnscrypt-proxy source code.
-
-[blacklist]
-
-  ## Path to the file of blocking rules (absolute, or relative to the same directory as the executable file)
-
-  # blacklist_file = 'blacklist.txt'
-
-
-  ## Optional path to a file logging blocked queries
-
-  # log_file = 'blocked.log'
-
-
-  ## Optional log format: tsv or ltsv (default: tsv)
-
-  # log_format = 'tsv'
-
-
-
-###########################################################
-#        Pattern-based IP blocking (IP blacklists)        #
-###########################################################
-
-## IP blacklists are made of one pattern per line. Example of valid patterns:
-##
-##   127.*
-##   fe80:abcd:*
-##   192.168.1.4
-
-[ip_blacklist]
-
-  ## Path to the file of blocking rules (absolute, or relative to the same directory as the executable file)
-
-  # blacklist_file = 'ip-blacklist.txt'
-
-
-  ## Optional path to a file logging blocked queries
-
-  # log_file = 'ip-blocked.log'
-
-
-  ## Optional log format: tsv or ltsv (default: tsv)
-
-  # log_format = 'tsv'
-
-
-
-######################################################
-#   Pattern-based whitelisting (blacklists bypass)   #
-######################################################
-
-## Whitelists support the same patterns as blacklists
-## If a name matches a whitelist entry, the corresponding session
-## will bypass names and IP filters.
-##
-## Time-based rules are also supported to make some websites only accessible at specific times of the day.
-
-[whitelist]
-
-  ## Path to the file of whitelisting rules (absolute, or relative to the same directory as the executable file)
-
-  # whitelist_file = 'whitelist.txt'
-
-
-  ## Optional path to a file logging whitelisted queries
-
-  # log_file = 'whitelisted.log'
-
-
-  ## Optional log format: tsv or ltsv (default: tsv)
-
-  # log_format = 'tsv'
-
-
-
-##########################################
-#        Time access restrictions        #
-##########################################
-
-## One or more weekly schedules can be defined here.
-## Patterns in the name-based blocklist can optionally be followed with @schedule_name
-## to apply the pattern 'schedule_name' only when it matches a time range of that schedule.
-##
-## For example, the following rule in a blacklist file:
-## *.youtube.* @time-to-sleep
-## would block access to YouTube only during the days, and period of the days
-## define by the 'time-to-sleep' schedule.
-##
-## {after='21:00', before= '7:00'} matches 0:00-7:00 and 21:00-0:00
-## {after= '9:00', before='18:00'} matches 9:00-18:00
-
-[schedules]
-
-  # [schedules.'time-to-sleep']
-  # mon = [{after='21:00', before='7:00'}]
-  # tue = [{after='21:00', before='7:00'}]
-  # wed = [{after='21:00', before='7:00'}]
-  # thu = [{after='21:00', before='7:00'}]
-  # fri = [{after='23:00', before='7:00'}]
-  # sat = [{after='23:00', before='7:00'}]
-  # sun = [{after='21:00', before='7:00'}]
-
-  # [schedules.'work']
-  # mon = [{after='9:00', before='18:00'}]
-  # tue = [{after='9:00', before='18:00'}]
-  # wed = [{after='9:00', before='18:00'}]
-  # thu = [{after='9:00', before='18:00'}]
-  # fri = [{after='9:00', before='17:00'}]
-
-
 
 #########################
 #        Servers        #
