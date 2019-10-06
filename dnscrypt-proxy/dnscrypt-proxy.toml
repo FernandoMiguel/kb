@@ -13,10 +13,9 @@
 ## The proxy will automatically pick the fastest, working servers from the list.
 ## Remove the leading # first to enable this; lines starting with # are ignored.
 
-# server_names = ['scaleway-fr', 'google', 'yandex', 'cloudflare']
-
 # server_names = ['nextdns', 'cloudflare', 'google', 'quad9-doh-ip4-nofilter-alt', 'quad9-doh-ip6-nofilter-alt']
 # server_names = ['nextdns', 'adguard-dns-doh', 'cloudflare', 'google', 'quad9-doh-ip4-nofilter-alt', 'quad9-doh-ip6-nofilter-alt']
+# server_names = ['cloudflare', 'cloudflare-ipv6']
 server_names = ['nextdns']
 
 ## List of local addresses and ports to listen to. Can be IPv4 and/or IPv6.
@@ -130,18 +129,12 @@ log_files_max_backups = 1
 
 block_ipv6 = false
 
-
-
 ##################################################################################
 #        Route queries for specific domains to a dedicated set of servers        #
 ##################################################################################
 
-## Example map entries (one entry per line):
-## example.com 9.9.9.9
-## example.net 9.9.9.9,8.8.8.8,1.1.1.1
-
-# forwarding_rules = 'forwarding-rules.txt'
 forwarding_rules = 'forwarding-rules.txt'
+cloaking_rules = 'cloaking-rules.txt'
 
 ###########################
 #        DNS cache        #
@@ -280,3 +273,6 @@ cache_neg_max_ttl = 0
 
   [static.'nextdns']
   stamp = 'sdns://AgEAAAAAAAAACjQ1LjkwLjI4LjAADmRucy5uZXh0ZG5zLmlvBy85NmY3MzY'
+
+  [static.'nextdns-test']
+  stamp = 'sdns://AgEAAAAAAAAACjQ1LjkwLjI4LjAADmRucy5uZXh0ZG5zLmlvBy8yZTk4NTM'
