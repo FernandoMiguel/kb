@@ -272,7 +272,5 @@ cache_neg_max_ttl = 0
   # stamp = 'sdns://AgUAAAAAAAAAAAAOZG5zLmdvb2dsZS5jb20NL2V4cGVyaW1lbnRhbA'
 
   [static.'nextdns']
-  stamp = 'sdns://AgEAAAAAAAAACjQ1LjkwLjI4LjAADmRucy5uZXh0ZG5zLmlvBy85NmY3MzY'
-
-  [static.'nextdns-test']
-  stamp = 'sdns://AgEAAAAAAAAACjQ1LjkwLjI4LjAADmRucy5uZXh0ZG5zLmlvBy8yZTk4NTM'
+  stamp = 'sdns://AgEAAAAAAAAACjQ1LjkwLjI4LjAADmRucy5uZXh0ZG5zLmlvDi85NmY3MzYvZm1NYWM2'
+  # stamp = 'sdns://AgEAAAAAAAAACjQ1LjkwLjI4LjAADmRucy5uZXh0ZG5zLmlvDy8yZTk4NTMvbWFjVGVzdA'
