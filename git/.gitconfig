@@ -21,3 +21,5 @@
 	program = /usr/local/bin/krgpg
 [tag]
 	forceSignAnnotated = true
+[help]
+	autocorrect = 1

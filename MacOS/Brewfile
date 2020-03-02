@@ -9,6 +9,7 @@ tap "homebrew/services"
 tap "horar/openconnect-gui"
 tap "jesseduffield/lazydocker"
 tap "kryptco/tap"
+tap "nextdns/tap"
 tap "versent/taps"
 tap "wagoodman/dive"
 tap "wata727/tflint"
@@ -30,6 +31,8 @@ brew "bash-completion"
 brew "bind"
 # Fish completion for brew-cask
 brew "brew-cask-completion"
+# Generic template rendering and notifications with Consul
+brew "consul-template"
 # Top-like interface for container metrics
 brew "ctop"
 # Get a file from an HTTP, HTTPS or FTP server
@@ -41,13 +44,17 @@ brew "docker-clean"
 # Bash, Zsh and Fish completion for Docker
 brew "docker-completion"
 # Isolated development environments using Docker
-brew "docker-compose", link: false
+brew "docker-compose"
 # Docker-compose completion script
 brew "docker-compose-completion"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
 # Distributed revision control system
 brew "git"
+# GNU Pretty Good Privacy (PGP) package
+brew "gnupg"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 # Log analyzer and interactive viewer for the Apache Webserver
 brew "goaccess"
 # Smarter Dockerfile linter to validate best practices
@@ -70,9 +77,13 @@ brew "namebench"
 brew "ncdu"
 # Port scanning utility for large networks
 brew "nmap"
+# Open client for Cisco AnyConnect VPN
+brew "openconnect"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # brew "rclone"
+# Open source hot backup tool for InnoDB and XtraDB databases
+brew "percona-xtrabackup"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -105,12 +116,12 @@ brew "wget"
 brew "wifi-password"
 # Tools for the WireGuard secure network tunnel
 brew "wireguard-tools"
+# Graphical network analyzer and capture tool
+brew "wireshark", link: false
 # View colored diff with side by side and auto pager support
 brew "ydiff"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
-# Process YAML documents from the CLI
-# brew "yq"
 # Argo Tunnel
 brew "cloudflare/cloudflare/cloudflared"
 # Graphical OpenConnect VPN client
@@ -119,6 +130,8 @@ brew "horar/openconnect-gui/openconnect-gui"
 brew "jesseduffield/lazydocker/lazydocker"
 # Krypton command-line client, daemon, and SSH integration
 brew "kryptco/tap/kr"
+# NextDNS DNS/53 to DoH Proxy
+brew "nextdns/tap/nextdns"
 brew "versent/taps/saml2aws"
 # A tool for exploring each layer in a docker image
 brew "wagoodman/dive/dive"
@@ -127,6 +140,7 @@ cask "authy"
 cask "aws-vault"
 cask "brave-browser-dev"
 cask "daisydisk"
+cask "diffmerge"
 cask "docker"
 cask "dropbox"
 cask "firefox-developer-edition"
@@ -140,11 +154,14 @@ cask "marshallofsound-google-play-music-player"
 cask "microsoft-teams"
 cask "postman"
 cask "sequel-pro"
+cask "servo"
 cask "slack-beta"
-# cask "sourcetree"
+cask "sourcetree"
 cask "spectacle"
 cask "station"
+cask "telegram-desktop-dev"
 cask "tunnelblick-beta"
+# cask "tweeten"
 cask "visual-studio-code-insiders"
 cask "vlc"
-# cask "tweeten"
+cask "wireshark"
