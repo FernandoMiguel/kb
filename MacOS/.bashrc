@@ -13,15 +13,20 @@ alias brewall='brew -v update && brew -v upgrade && brew cask upgrade --greedy &
 alias brewcleanup='brew cleanup && brew cu --cleanup'
 alias dockerupdateallimages='docker images --format "{{.Repository}}:{{.Tag}}" | xargs -L1 docker pull'
 alias chrome-dns='open /Applications/Google\ Chrome.app --args --disable-async-dns'
-alias chromeram='diskutil erasevolume HFS+ 'RAMDisk' `hdiutil attach -nomount ram://262144` &&  open -a "Google Chrome Canary" --args --no-first-run --disable-async-dns -disk-cache-dir=$(mktemp -d /Volumes/RAMDisk/chromecanary.XXXXXX) --user-data-dir=$(mktemp -d /Volumes/RAMDisk/chromecanary.XXXXXX)'
-alias setdns="networksetup -setdnsservers Wi-Fi 127.0.0.1 2a07:a8c0::96:f736 2a07:a8c1::96:f736 2606:4700:4700::1001 2606:4700:4700::1111 2620:0:ccd::2 2620:0:ccc::2 2001:4860:4860::8844 2001:4860:4860::8888 2620:fe::fe 2620:fe::9 1.0.0.1 1.1.1.1 208.67.220.220 208.67.222.222 8.8.4.4 8.8.8.8 149.112.112.112 9.9.9.9 176.103.130.131 176.103.130.130"
+alias chromeram='diskutil erasevolume HFS+ '"'RAMDisk'"' `hdiutil attach -nomount ram://262144` &&  open -a "Google Chrome Canary" --args --no-first-run --disable-async-dns -disk-cache-dir=$(mktemp -d /Volumes/RAMDisk/chromecanary.XXXXXX) --user-data-dir=$(mktemp -d /Volumes/RAMDisk/chromecanary.XXXXXX)'
+alias setdns='networksetup -setdnsservers Wi-Fi 127.0.0.1'
+alias setdnsall='networksetup -setdnsservers Wi-Fi 127.0.0.1 2a07:a8c0::96:f736 2a07:a8c1::96:f736 2606:4700:4700::1001 2606:4700:4700::1111 2620:0:ccd::2 2620:0:ccc::2 2001:4860:4860::8844 2001:4860:4860::8888 2620:fe::fe 2620:fe::9 1.0.0.1 1.1.1.1 208.67.220.220 208.67.222.222 8.8.4.4 8.8.8.8 149.112.112.112 9.9.9.9 176.103.130.131 176.103.130.130'
 alias getdns="networksetup -getdnsservers Wi-Fi && scutil --dns"
-alias dockertty="screen ${HOME}/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty"
-alias awswhoami="aws sts get-caller-identity"
+alias dockertty='screen ${HOME}/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty'
+alias awswhoami='aws sts get-caller-identity'
 alias awslogin='aws-vault --debug login --federation-token-ttl=8h --assume-role-ttl=1h --stdout --no-session $p | xargs -t /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --no-first-run --disable-async-dns --new-window -disk-cache-dir=$(mktemp -d /tmp/chromecanary.XXXXXX) --user-data-dir=$(mktemp -d /tmp/chromecanary.XXXXXX)'
 alias sshconverter='ssh-keygen -y -f '
 alias fuckmeraki='sudo profiles -R -p com.meraki.sm.629378047925028072'
 alias namebench-config='namebench --runs=3 --health_threads=2 --benchmark_threads=10 --ping_timeout=10 --input=chrome --invalidate_cache --query_count=100 --select_mode=chunk --open_webbrowser --enable-censorship-checks --only 127.0.0.1 2a0d:2406:1801::9f:19b8 2a0d:2406:1802::96:f736 2a00:5a60::ad2:0ff 2a00:5a60::ad1:0ff 2606:4700:4700::1001 2606:4700:4700::1111 2620:0:ccd::2 2620:0:ccc::2 2001:4860:4860::8844 2001:4860:4860::8888 2620:fe::fe 2620:fe::9 5.182.208.230 1.0.0.1 1.1.1.1 176.103.130.131 176.103.130.130 208.67.220.220 208.67.222.222 8.8.4.4 8.8.8.8 149.112.112.112 9.9.9.9'
+alias terragrunt-cleanup='find ~/work/ -type d -name ".terragrunt-cache" -prune -exec rm -rfv {} \;'
+alias terraform-cleanup='find ~/work/ -type d -name ".terraform" -prune -exec rm -rfv {} \;'
+alias gitfetchall='find ~/work/ -name .git -print -execdir git fetch --progress --all --no-tags --prune --prune-tags --verbose --jobs=200 \;'
+alias gitpullall='find ~/work/ -name .git -print -execdir git pull --ff-only --stat --progress --all --no-tags \;'
 
 alias ls='ls -h'
 alias ll="ls -lah"

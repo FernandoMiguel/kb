@@ -1,6 +1,6 @@
 {
     "breadcrumbs.enabled": true,
-    "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.ignoreTrimWhitespace": true,
     "editor.folding": false,
     "editor.foldingStrategy": "indentation",
     "editor.fontSize": 14,
@@ -17,6 +17,7 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "files.eol": "\n",
+    "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "git.alwaysSignOff": true,
@@ -39,10 +40,6 @@
     "shellcheck.ignorePatterns": {},
     "shellcheck.run": "onSave",
     "shellcheck.useWSL": false,
-    "sync.autoDownload": true,
-    "sync.autoUpload": true,
-    "sync.forceUpload": true,
-    "sync.gist": "",
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.external.osxExec": "iTerm.app",
@@ -61,21 +58,17 @@
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.labelFormat": "default",
     "workbench.enableExperiments": false,
-    "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile",
     "files.associations": {
         "Dockerfile-*": "dockerfile",
-        "buildx*.hcl": "hcl",
-        "buildx*.yml": "yaml",
         "buildx*": "dockerfile",
         "*.yml.*": "yaml",
-        "*.tpl": "shellscript",
         "terragrunt.hcl": "terraform",
         "*.tfvars": "terraform",
         "*.tf": "terraform",
         "*.tf_": "terraform",
         "*.tf.override": "terraform",
-        "*.ctmpl": "go"
+        "*.ctmpl": "gogo"
     },
     "shellcheck.exclude": [
         "SC2091"
@@ -103,16 +96,13 @@
             "**/.terragrunt-cache/**/*"
         ]
     },
-    "terraform.languageServer": {
-        "enabled": true,
-        "args": []
-    },
-    "files.exclude": {
-        "**/.git": false
-    },
-    "files.insertFinalNewline": true,
     "files.watcherExclude": {
         "**/.terraform/**": true,
         "**/.terragrunt-cache/**": true
     },
+    "terraform.languageServer": {
+        "enabled": true,
+        "args": []
+    },
+    "workbench.iconTheme": "vscode-icons",
 }

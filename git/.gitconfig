@@ -13,13 +13,30 @@
 	gpgSign = true
 [status]
 	submoduleSummary = true
-[url "https://github.com/"]
-	insteadOf = git@github.com:
-[url "https://"]
-	insteadOf = git://
 [gpg]
 	program = /usr/local/bin/krgpg
 [tag]
 	forceSignAnnotated = true
+[fetch]
+	prune = true
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[url "https://github.com/"]
+	insteadOf = ssh://git@github.com/
+
+[url "https://git.drillinginfo.com/"]
+	insteadOf = git@git.drillinginfo.com:
+[url "https://git.drillinginfo.com/"]
+	insteadOf = ssh://git@git.drillinginfo.com/
+
+[url "https://bitbucket.org/"]
+	insteadOf = git@bitbucket.org:
+
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
 [help]
 	autocorrect = 1
