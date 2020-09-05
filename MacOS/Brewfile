@@ -3,6 +3,7 @@ tap "cloudflare/cloudflare"
 tap "confluentinc/ccloud"
 tap "homebrew/bundle"
 tap "homebrew/cask"
+tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -18,10 +19,14 @@ tap "wata727/tflint"
 brew "openssl@1.1"
 # Next-generation aircrack with lots of new features
 brew "aircrack-ng"
+# Record and share terminal sessions
+brew "asciinema"
 # Integrated shell for working with the AWS CLI
 brew "aws-shell"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Microsoft Azure CLI 2.0
+brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Programmable completion for Bash 3.2
@@ -44,12 +49,14 @@ brew "docker-clean"
 brew "docker-completion"
 # Isolated development environments using Docker
 brew "docker-compose"
-# Docker-compose completion script
+# Completion script for docker-compose
 brew "docker-compose-completion"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
 # Distributed revision control system
 brew "git"
+# The official GitLab CI runner written in Go
+brew "gitlab-runner"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
@@ -74,15 +81,16 @@ brew "namebench"
 brew "ncdu"
 # Port scanning utility for large networks
 brew "nmap"
+# Distributed, Highly Available, Datacenter-Aware Scheduler
+brew "nomad"
 # Open client for Cisco AnyConnect VPN
 brew "openconnect"
 # Open Fortinet client for PPP+SSL VPN tunnel services
 brew "openfortivpn"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
-# brew "rclone"
-# Open source hot backup tool for InnoDB and XtraDB databases
-brew "percona-xtrabackup"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.7"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -93,12 +101,6 @@ brew "speedtest-cli"
 brew "sqlmap"
 # Tool to build, change, and version infrastructure
 brew "terraform"
-# Improve Terraform's plan output
-brew "terraform_landscape"
-# Export existing AWS resources to Terraform style (tf, tfstate)
-brew "terraforming"
-# Thin wrapper for Terraform e.g. for locking state
-brew "terragrunt"
 # Tool which checks for the support of TLS/SSL ciphers and flaws
 brew "testssl"
 # Linter for Terraform files
@@ -107,36 +109,30 @@ brew "tflint"
 brew "tree"
 # Secures, stores, and tightly controls access to secrets
 brew "vault"
+# Vpnc-script replacement for easy and secure split-tunnel VPN setup
+brew "vpn-slice"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
 brew "wget"
 # Show the current WiFi network password
 brew "wifi-password"
-# Tools for the WireGuard secure network tunnel
-brew "wireguard-tools"
-# Graphical network analyzer and capture tool
-brew "wireshark", link: false
 # View colored diff with side by side and auto pager support
 brew "ydiff"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
-# Argo Tunnel
-brew "cloudflare/cloudflare/cloudflared"
-# Graphical OpenConnect VPN client
-brew "horar/openconnect-gui/openconnect-gui"
 # A simple terminal UI for docker, written in Go
 brew "jesseduffield/lazydocker/lazydocker"
 # Krypton command-line client, daemon, and SSH integration
 brew "kryptco/tap/kr"
 # NextDNS DNS/53 to DoH Proxy
 brew "nextdns/tap/nextdns"
-brew "versent/taps/saml2aws"
 # A tool for exploring each layer in a docker image
 brew "wagoodman/dive/dive"
 cask "android-platform-tools"
 cask "authy"
 cask "aws-vault"
+cask "cloudflare-warp"
 cask "daisydisk"
 cask "diffmerge"
 cask "discord-ptb"
@@ -148,15 +144,19 @@ cask "google-chrome-canary"
 cask "iterm2-beta"
 cask "knockknock"
 cask "krisp"
+cask "logitech-camera-settings"
 cask "maccy"
 cask "microsoft-teams"
+cask "obs"
+cask "obs-virtualcam"
 cask "postman"
+cask "safari-technology-preview"
 cask "sequel-pro"
 cask "slack-beta"
 cask "sourcetree"
 cask "spectacle"
 cask "station"
-cask "telegram-desktop-dev"
+cask "telegram"
 cask "tunnelblick-beta"
 cask "visual-studio-code-insiders"
 cask "vlc"
