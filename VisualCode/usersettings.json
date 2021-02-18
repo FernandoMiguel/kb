@@ -1,7 +1,8 @@
 {
+    "azureTerraform.test.location": "eastus",
     "breadcrumbs.enabled": true,
-    "diffEditor.ignoreTrimWhitespace": true,
-    "editor.folding": false,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.folding": true,
     "editor.foldingStrategy": "indentation",
     "editor.fontSize": 14,
     "editor.formatOnSave": true,
@@ -27,48 +28,52 @@
     "git.enableCommitSigning": true,
     "git.enableSmartCommit": true,
     "git.fetchOnPull": true,
+    "git.pruneOnFetch": true,
+    "git.pullTags": false,
     "hadolint.hadolintPath": "/usr/local/bin/hadolint",
     "json.format.enable": true,
     "markdown.preview.breaks": true,
     "markdown.preview.scrollEditorWithPreview": true,
-    "scm.alwaysShowProviders": true,
-    "scm.providers.visible": 0,
+    "scm.alwaysShowActions": true,
+    "scm.alwaysShowRepositories": true,
+    "scm.defaultViewMode": "tree",
+    "scm.repositories.visible": 20,
+    "search.collapseResults": "auto",
     "search.useIgnoreFiles": false,
+    "settingsSync.ignoredExtensions": [],
+    "settingsSync.ignoredSettings": [],
     "shellcheck.customArgs": [],
     "shellcheck.enable": true,
     "shellcheck.executablePath": "/usr/local/bin/shellcheck",
     "shellcheck.ignorePatterns": {},
     "shellcheck.run": "onSave",
-    "shellcheck.useWSL": false,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.external.osxExec": "iTerm.app",
-    "terraform.codelens.enabled": true,
-    "terraform.lintPath": "/usr/local/bin/tflint",
-    "terraform.path": "/usr/local/bin/terraform",
-    "terraform.telemetry.enabled": false,
-    "vsicons.presets.jsonOfficial": true,
     "vsicons.projectDetection.autoReload": true,
     "window.nativeTabs": true,
     "window.newWindowDimensions": "fullscreen",
     "window.restoreFullscreen": true,
-    "window.restoreWindows": "all",
-    "window.titleBarStyle": "custom",
-    "window.zoomLevel": 0,
+    "window.titleBarStyle": "native",
     "workbench.editor.highlightModifiedTabs": true,
     "workbench.editor.labelFormat": "default",
     "workbench.enableExperiments": false,
+    "workbench.iconTheme": "vscode-icons",
     "workbench.startupEditor": "newUntitledFile",
     "files.associations": {
         "Dockerfile-*": "dockerfile",
         "buildx*": "dockerfile",
+        "*.json.*": "json",
+        "*.ps1.*": "powershell",
         "*.yml.*": "yaml",
+        "*.yaml.*": "yaml",
         "terragrunt.hcl": "terraform",
         "*.tfvars": "terraform",
         "*.tf": "terraform",
         "*.tf_": "terraform",
-        "*.tf.override": "terraform",
-        "*.ctmpl": "gogo"
+        "*.tf.*": "terraform",
+        "*.ctmpl": "go",
+        "*.hcl": "go"
     },
     "shellcheck.exclude": [
         "SC2091"
@@ -80,29 +85,26 @@
         "markdown",
         "latex"
     ],
-    "[terraform]": {},
-    "terraform.format": {
-        "enable": true,
-        "formatOnSave": true
-    },
-    "terraform.indexing": {
-        "enabled": false,
-        "liveIndexing": false,
-        "delay": 500,
-        "exclude": [
-            ".terraform/**/*",
-            "**/.terraform/**/*",
-            ".terragrunt-cache/**/*",
-            "**/.terragrunt-cache/**/*"
-        ]
-    },
     "files.watcherExclude": {
         "**/.terraform/**": true,
         "**/.terragrunt-cache/**": true
     },
-    "terraform.languageServer": {
-        "enabled": true,
-        "args": []
+    "[terraform]": {
+        "editor.formatOnSave": true
     },
-    "workbench.iconTheme": "vscode-icons",
+    "terraform.languageServer": {
+        "external": true,
+        "args": [
+            "serve"
+        ]
+    },
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.quickSuggestions": {
+            "other": true,
+            "comments": false,
+            "strings": true
+        }
+    },
 }
