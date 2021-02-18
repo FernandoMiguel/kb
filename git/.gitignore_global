@@ -8,7 +8,6 @@
 .terraform/
 
 # Variable values for development
-terraform.tfvars
 *_override.tf
 
 # TLS in Dockerfile

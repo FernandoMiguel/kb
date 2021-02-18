@@ -1,6 +1,8 @@
 tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
 tap "confluentinc/ccloud"
+tap "hashicorp/tap"
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -19,6 +21,10 @@ tap "wata727/tflint"
 brew "openssl@1.1"
 # Next-generation aircrack with lots of new features
 brew "aircrack-ng"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.7"
+# Automate deployment, configuration, and upgrading
+brew "ansible@2.8"
 # Record and share terminal sessions
 brew "asciinema"
 # Integrated shell for working with the AWS CLI
@@ -47,16 +53,12 @@ brew "dnscrypt-proxy"
 brew "docker-clean"
 # Bash, Zsh and Fish completion for Docker
 brew "docker-completion"
-# Isolated development environments using Docker
-brew "docker-compose"
 # Completion script for docker-compose
 brew "docker-compose-completion"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
 # Distributed revision control system
 brew "git"
-# The official GitLab CI runner written in Go
-brew "gitlab-runner"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
@@ -81,16 +83,12 @@ brew "namebench"
 brew "ncdu"
 # Port scanning utility for large networks
 brew "nmap"
-# Distributed, Highly Available, Datacenter-Aware Scheduler
-brew "nomad"
 # Open client for Cisco AnyConnect VPN
 brew "openconnect"
 # Open Fortinet client for PPP+SSL VPN tunnel services
 brew "openfortivpn"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.7"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -100,15 +98,13 @@ brew "speedtest-cli"
 # Penetration testing for SQL injection and database servers
 brew "sqlmap"
 # Tool to build, change, and version infrastructure
-brew "terraform"
+brew "terraform@0.12"
 # Tool which checks for the support of TLS/SSL ciphers and flaws
 brew "testssl"
 # Linter for Terraform files
 brew "tflint"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Secures, stores, and tightly controls access to secrets
-brew "vault"
 # Vpnc-script replacement for easy and secure split-tunnel VPN setup
 brew "vpn-slice"
 # Executes a program periodically, showing output fullscreen
@@ -117,10 +113,18 @@ brew "watch"
 brew "wget"
 # Show the current WiFi network password
 brew "wifi-password"
+# Linter for YAML files
+brew "yamllint"
 # View colored diff with side by side and auto pager support
 brew "ydiff"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Nomad
+brew "hashicorp/tap/nomad"
+# Terraform
+brew "hashicorp/tap/terraform"
+# Vault
+brew "hashicorp/tap/vault"
 # A simple terminal UI for docker, written in Go
 brew "jesseduffield/lazydocker/lazydocker"
 # Krypton command-line client, daemon, and SSH integration
@@ -129,35 +133,54 @@ brew "kryptco/tap/kr"
 brew "nextdns/tap/nextdns"
 # A tool for exploring each layer in a docker image
 brew "wagoodman/dive/dive"
+# Android SDK component
 cask "android-platform-tools"
+# Two-factor authentication software
 cask "authy"
 cask "aws-vault"
-cask "cloudflare-warp"
+# Disk space visualizer
 cask "daisydisk"
+# Visually compare and merge files
 cask "diffmerge"
 cask "discord-ptb"
-cask "docker"
-cask "dropbox"
+# App to build and share containerized applications and microservices
+cask "docker-edge"
 cask "firefox-developer-edition"
 cask "google-backup-and-sync"
 cask "google-chrome-canary"
+# Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2-beta"
+# Tool to show what is persistently installed on the computer
 cask "knockknock"
-cask "krisp"
 cask "logitech-camera-settings"
+# Clipboard manager
 cask "maccy"
 cask "microsoft-teams"
+# Open-source software for live streaming and screen recording
 cask "obs"
 cask "obs-virtualcam"
+# File system integration
+cask "osxfuse"
+# Collaboration platform for API development
 cask "postman"
+# Web browser
 cask "safari-technology-preview"
+# MySQL/MariaDB database management platform
 cask "sequel-pro"
+# Team communication and collaboration software
 cask "slack-beta"
+cask "sonarr-beta"
+# Graphical client for Git version control
 cask "sourcetree"
+# Move and resize windows with ease
 cask "spectacle"
 cask "station"
+# Messaging app with a focus on speed and security
 cask "telegram"
+# Free and open source graphic user interface for OpenVPN
 cask "tunnelblick-beta"
 cask "visual-studio-code-insiders"
+# Multimedia player
 cask "vlc"
+# Network protocol analyzer
 cask "wireshark"
