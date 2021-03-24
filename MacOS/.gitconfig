@@ -1,0 +1,46 @@
+[user]
+	name = Fernando Pereira
+	email = Fernando.Pereira@enverus.com
+[core]
+	editor = nano -w
+	excludesfile = /Users/fernando/.gitignore_global
+[color]
+	ui = auto
+[credential]
+	helper = osxkeychain
+[commit]
+	template = /Users/fernando/.stCommitMsg
+	gpgSign = true
+[status]
+	submoduleSummary = true
+[gpg]
+	program = /usr/local/bin/krgpg
+[tag]
+	forceSignAnnotated = true
+[fetch]
+	prune = true
+	pruneTags = true
+
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[url "https://github.com/"]
+	insteadOf = ssh://git@github.com/
+
+[url "https://git.drillinginfo.com/"]
+	insteadOf = git@git.drillinginfo.com:
+[url "https://git.drillinginfo.com/"]
+	insteadOf = ssh://git@git.drillinginfo.com/
+
+[url "https://bitbucket.org/"]
+	insteadOf = git@bitbucket.org:
+[url "https://bitbucket.org/"]
+	insteadOf = ssh://git@bitbucket.org/
+
+[help]
+	autocorrect = 1
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
