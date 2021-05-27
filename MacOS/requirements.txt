@@ -1,0 +1,13 @@
+ansible
+aws-amicleaner
+awscli
+boto3
+botocore
+pip3
+pipupgrade
+psphere
+pyOpenSSL
+setuptools
+vSphere-Automation-SDK @ git+https://github.com/vmware/vsphere-automation-sdk-python.git
+wheel
+yamlfmt

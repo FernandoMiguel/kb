@@ -1,3 +1,4 @@
+tap "agrinman/tap"
 tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
 tap "confluentinc/ccloud"
@@ -10,6 +11,7 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
 tap "horar/openconnect-gui"
+tap "iann0036/iamlive"
 tap "jesseduffield/lazydocker"
 tap "kryptco/tap"
 tap "nextdns/tap"
@@ -21,6 +23,8 @@ tap "wata727/tflint"
 brew "openssl@1.1"
 # Next-generation aircrack with lots of new features
 brew "aircrack-ng"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.7"
 # Automate deployment, configuration, and upgrading
@@ -59,6 +63,8 @@ brew "docker-compose-completion"
 brew "duti"
 # Distributed revision control system
 brew "git"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
@@ -89,6 +95,8 @@ brew "openconnect"
 brew "openfortivpn"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
+# Rsync for cloud storage
+brew "rclone"
 # Terminal multiplexer with VT100/ANSI terminal emulation
 brew "screen"
 # Static analysis and lint tool, for (ba)sh scripts
@@ -99,6 +107,8 @@ brew "speedtest-cli"
 brew "sqlmap"
 # Tool to build, change, and version infrastructure
 brew "terraform@0.12"
+# Tool to build, change, and version infrastructure
+brew "terraform@0.13"
 # Tool which checks for the support of TLS/SSL ciphers and flaws
 brew "testssl"
 # Linter for Terraform files
@@ -125,6 +135,8 @@ brew "hashicorp/tap/nomad"
 brew "hashicorp/tap/terraform"
 # Vault
 brew "hashicorp/tap/vault"
+# Generate an IAM policy from AWS calls using client-side monitoring (CSM) or embedded proxy.
+brew "iann0036/iamlive/iamlive"
 # A simple terminal UI for docker, written in Go
 brew "jesseduffield/lazydocker/lazydocker"
 # Krypton command-line client, daemon, and SSH integration
@@ -137,11 +149,17 @@ brew "wagoodman/dive/dive"
 cask "android-platform-tools"
 # Two-factor authentication software
 cask "authy"
+# Securely stores and accesses AWS credentials in a development environment
 cask "aws-vault"
+# Audio utility
+cask "background-music-pre"
+# Install and configure chronyd
+cask "chronycontrol"
 # Disk space visualizer
 cask "daisydisk"
 # Visually compare and merge files
 cask "diffmerge"
+# Voice and text chat software
 cask "discord-ptb"
 # App to build and share containerized applications and microservices
 cask "docker-edge"
@@ -150,8 +168,11 @@ cask "google-backup-and-sync"
 cask "google-chrome-canary"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2-beta"
+# Software to create and productionize data science
+cask "knime"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
+# Provides access to camera controls
 cask "logitech-camera-settings"
 # Clipboard manager
 cask "maccy"
@@ -174,7 +195,8 @@ cask "sonarr-beta"
 cask "sourcetree"
 # Move and resize windows with ease
 cask "spectacle"
-cask "station"
+# Workspace to manage all your productivity apps from one place
+cask "stack-stack"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Free and open source graphic user interface for OpenVPN

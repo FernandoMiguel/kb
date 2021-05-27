@@ -1,11 +1,15 @@
 # terraform
+!terraform.tfvars
+.terraform
+.terraform.lock.hcl
+.terraform.tfstate.lock
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
-.terraform.tfstate.lock
-
-# Module directory
-.terraform/
+plan.json
+terraform.tfstate
+terraform.tfstate*
+TEST.tf
 
 # Variable values for development
 *_override.tf
