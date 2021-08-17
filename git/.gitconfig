@@ -19,6 +19,10 @@
 	forceSignAnnotated = true
 [fetch]
 	prune = true
+	pruneTags = true
+[submodule]
+	recurse = true
+
 [url "https://github.com/"]
 	insteadOf = git@github.com:
 [url "https://github.com/"]
@@ -31,12 +35,14 @@
 
 [url "https://bitbucket.org/"]
 	insteadOf = git@bitbucket.org:
+[url "https://bitbucket.org/"]
+	insteadOf = ssh://git@bitbucket.org/
 
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+# [url "https://dev.azure.com/"]
+# 	insteadOf = git@ssh.dev.azure.com:v3/
+# [url "https://dev.azure.com/"]
+# 	insteadOf = ssh://git@ssh.dev.azure.com:v3/
+
+
 [help]
 	autocorrect = 1
