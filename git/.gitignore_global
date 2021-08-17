@@ -229,3 +229,6 @@ Temporary Items
 
 # python
 *.pyc
+
+# git gc
+.trash
