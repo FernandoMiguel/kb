@@ -1,7 +1,9 @@
 {
+    "azure.showSignedInEmail": true,
     "azureTerraform.test.location": "eastus",
     "breadcrumbs.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
+    "editor.bracketPairColorization.enabled": true,
     "editor.folding": true,
     "editor.foldingStrategy": "indentation",
     "editor.fontSize": 14,
@@ -30,28 +32,35 @@
     "git.fetchOnPull": true,
     "git.pruneOnFetch": true,
     "git.pullTags": false,
+    "git.supportCancellation": true,
     "hadolint.hadolintPath": "/usr/local/bin/hadolint",
     "json.format.enable": true,
     "markdown.preview.breaks": true,
     "markdown.preview.scrollEditorWithPreview": true,
-    "scm.alwaysShowActions": true,
+    "redhat.telemetry.enabled": false,
     "scm.alwaysShowRepositories": true,
     "scm.defaultViewMode": "tree",
-    "scm.repositories.visible": 20,
+    "scm.providerCountBadge": "visible",
+    "scm.repositories.visible": 0,
     "search.collapseResults": "auto",
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
     "search.useIgnoreFiles": false,
+    "security.workspace.trust.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
     "settingsSync.ignoredExtensions": [],
     "settingsSync.ignoredSettings": [],
     "shellcheck.customArgs": [],
     "shellcheck.enable": true,
-    "shellcheck.executablePath": "/usr/local/bin/shellcheck",
     "shellcheck.ignorePatterns": {},
     "shellcheck.run": "onSave",
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "telemetry.telemetryLevel": "off",
     "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.persistentSessionExperimentalSerializer": false,
+    "terminal.integrated.persistentSessionScrollback": 100,
     "vsicons.projectDetection.autoReload": true,
-    "window.nativeTabs": true,
+    "window.autoDetectHighContrast": false,
     "window.newWindowDimensions": "fullscreen",
     "window.restoreFullscreen": true,
     "window.titleBarStyle": "native",
@@ -59,12 +68,14 @@
     "workbench.editor.labelFormat": "default",
     "workbench.enableExperiments": false,
     "workbench.iconTheme": "vscode-icons",
+    "workbench.list.smoothScrolling": true,
     "workbench.startupEditor": "newUntitledFile",
     "files.associations": {
         "Dockerfile-*": "dockerfile",
         "buildx*": "dockerfile",
         "*.json.*": "json",
         "*.ps1.*": "powershell",
+        "**/azure-pipelines*.yml": "azure-pipelines",
         "*.yml.*": "yaml",
         "*.yaml.*": "yaml",
         "terragrunt.hcl": "terraform",
@@ -73,7 +84,8 @@
         "*.tf_": "terraform",
         "*.tf.*": "terraform",
         "*.ctmpl": "go",
-        "*.hcl": "go"
+        "*.hcl": "go",
+        ".terraformrc": "ini"
     },
     "shellcheck.exclude": [
         "SC2091"
@@ -81,10 +93,7 @@
     "spellright.language": [
         "en"
     ],
-    "spellright.documentTypes": [
-        "markdown",
-        "latex"
-    ],
+    "spellright.documentTypes": [],
     "files.watcherExclude": {
         "**/.terraform/**": true,
         "**/.terragrunt-cache/**": true
@@ -107,4 +116,5 @@
             "strings": true
         }
     },
+    "scm.showActionButton": false
 }

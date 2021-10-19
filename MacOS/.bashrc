@@ -14,7 +14,7 @@ export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 alias code='code-insiders'
 alias nas='ssh nas.fernandomiguel.net -p 4444 -l root'
 alias byte='ssh -l fernandomiguel plex.imperialus.house'
-alias brewall='brew -v update && brew -v upgrade --display-times && brew upgrade --cask --greedy && brew cu --all'
+alias brewall='brew -v update && brew -v upgrade --display-times && brew upgrade --cask --greedy && brew cu --all && pipupgrade --latest --yes'
 alias brewcleanup='brew cleanup && brew cu --cleanup'
 alias dockerupdateallimages='docker images --format "{{.Repository}}:{{.Tag}}" | xargs -L1 docker pull'
 alias chrome-dns='open /Applications/Google\ Chrome.app --args --disable-async-dns'
@@ -27,12 +27,18 @@ alias dockertty='screen ${HOME}/Library/Containers/com.docker.docker/Data/com.do
 alias awswhoami='aws sts get-caller-identity'
 alias awslogin='aws-vault --debug login --federation-token-ttl=8h --assume-role-ttl=1h --stdout --no-session $p | xargs -t /Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary --args --no-first-run --disable-async-dns --new-window -disk-cache-dir=$(mktemp -d /tmp/chromecanary.XXXXXX) --user-data-dir=$(mktemp -d /tmp/chromecanary.XXXXXX)'
 alias sshconverter='ssh-keygen -y -f '
+alias fmeraki='sudo profiles -R -p com.meraki.sm.629378047925028072'
 alias pulsedns='sudo scutil < ~/dpulse.sh'
 alias namebench-config='namebench --runs=3 --health_threads=2 --benchmark_threads=10 --ping_timeout=10 --input=chrome --invalidate_cache --query_count=100 --select_mode=chunk --open_webbrowser --enable-censorship-checks --only 127.0.0.1 2a0d:2406:1801::9f:19b8 2a0d:2406:1802::96:f736 2a00:5a60::ad2:0ff 2a00:5a60::ad1:0ff 2606:4700:4700::1001 2606:4700:4700::1111 2620:0:ccd::2 2620:0:ccc::2 2001:4860:4860::8844 2001:4860:4860::8888 2620:fe::fe 2620:fe::9 5.182.208.230 1.0.0.1 1.1.1.1 176.103.130.131 176.103.130.130 208.67.220.220 208.67.222.222 8.8.4.4 8.8.8.8 149.112.112.112 9.9.9.9'
 #alias terragrunt-cleanup='find ~/work/ -type d -name ".terragrunt-cache" -prune -exec rm -rfv {} \;'
 alias terraform-cleanup='find ~/work/ -type d -name ".terraform" -prune -exec rm -rfv {} \; && find ~/work/ -type f -name ".terraform.lock.hcl" -prune -exec rm -fv {} \;'
-alias gitfetchall='find ~/work/ -name .git -print -execdir git fetch --progress --all --no-tags --prune --prune-tags --verbose --jobs=200 \;'
-alias gitpullall='find ~/work/ -name .git -print -execdir git pull --ff-only --stat --progress --all --no-tags \;'
+alias terraform-fmt-recursive='terraform fmt -diff -recursive .'
+alias terraform-docs-recursive='find ~/work/TF-Modules -type f -name "Makefile" -print -execdir make \; ; find ~/work/SRE -type f -name "Makefile" -print -execdir make \;'
+alias gitfetchall='find ~/work/ -name .git -print -execdir git fetch --progress --all --no-tags --prune --prune-tags --verbose --jobs=200 --recurse-submodules \;'
+alias gitpullall='find ~/work/ -name .git -print -execdir git pull --ff-only --stat --progress --all --no-tags --jobs=20 --show-forced-updates --recurse-submodules \;'
+
+alias vault8h='export VAULT_TOKEN=`vault token create -ttl=8h -field=token`'
+alias vault-resultant-acl='vault read -format=json sys/internal/ui/resultant-acl'
 
 alias ls='ls -h'
 alias ll="ls -lah"
@@ -166,3 +172,24 @@ complete -o default -F _pip_completion pip3
 # pip bash completion end
 
 complete -C /usr/local/bin/terraform terraform
+
+# _limactl_bash_autocomplete is forked from https://github.com/urfave/cli/blob/v2.3.0/autocomplete/bash_autocomplete (MIT License)
+_limactl_bash_autocomplete() {
+  if [[ "${COMP_WORDS[0]}" != "source" ]]; then
+    local cur opts base
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    local args="${COMP_WORDS[@]:0:$COMP_CWORD}"
+    # make {"limactl", "--foo", "=", "bar"} into {"limactl", "--foo=bar"}
+    args="$(echo $args | sed -e 's/ = /=/g')"
+    if [[ "$cur" == "-"* ]]; then
+      opts=$( ${args} ${cur} --generate-bash-completion )
+    else
+      opts=$( ${args} --generate-bash-completion )
+    fi
+    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+    return 0
+  fi
+}
+
+complete -o bashdefault -o default -o nospace -F _limactl_bash_autocomplete limactl
