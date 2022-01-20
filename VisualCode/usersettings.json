@@ -3,6 +3,7 @@
     "azureTerraform.test.location": "eastus",
     "breadcrumbs.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": true,
     "editor.folding": true,
     "editor.foldingStrategy": "indentation",
@@ -11,18 +12,42 @@
     "editor.glyphMargin": false,
     "editor.insertSpaces": false,
     "editor.minimap.enabled": false,
+    "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "all",
     "editor.showFoldingControls": "always",
     "editor.tabCompletion": "on",
     "editor.trimAutoWhitespace": true,
     "editor.wordWrap": "on",
     "explorer.compactFolders": false,
+    "files.associations": {
+      "*.hcl": "go",
+      "*.ps1.*": "powershell",
+      "*.tf_": "terraform",
+      "*.json.*": "json",
+      "*.tf.*": "terraform",
+      ".terraformrc": "ini",
+      "*.yml.*": "yaml",
+      "azure-pipelines*.yml": "azure-pipelines",
+      "*.tf": "terraform",
+      "*.ctmpl": "go",
+      "Dockerfile*": "dockerfile",
+      "buildx*": "dockerfile",
+      "*.yaml.*": "yaml",
+      "*.tfvars": "terraform",
+      "terragrunt.hcl": "terraform"
+    },
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 1000,
     "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "files.watcherExclude": {
+      "**\/.terraform\/**": true,
+      "**\/.terragrunt-cache\/**": true
+    },
+    "git.allowForcePush": true,
+    "git.alwaysShowStagedChangesResourceGroup": true,
     "git.alwaysSignOff": true,
     "git.autofetch": true,
     "git.confirmSync": false,
@@ -30,34 +55,52 @@
     "git.enableCommitSigning": true,
     "git.enableSmartCommit": true,
     "git.fetchOnPull": true,
+    "git.inputValidation": "off",
     "git.pruneOnFetch": true,
     "git.pullTags": false,
-    "git.supportCancellation": true,
-    "hadolint.hadolintPath": "/usr/local/bin/hadolint",
+    "git.smartCommitChanges": "tracked",
+    "git.terminalAuthentication": false,
+    "git.untrackedChanges": "separate",
+    "github-enterprise.uri": "git.drillinginfo.com",
+    "github.gitAuthentication": false,
+    "gitweblinks.gitHubEnterprise": [
+      {
+        "http": "https:\/\/git.drillinginfo.com"
+      }
+    ],
+    "hadolint.hadolintPath": "\/usr\/local\/bin\/hadolint",
     "json.format.enable": true,
     "markdown.preview.breaks": true,
     "markdown.preview.scrollEditorWithPreview": true,
     "redhat.telemetry.enabled": false,
+    "remoteHub.autoFetch.interval": 180,
+    "remoteHub.experimental.prefetch": false,
+    "scm.alwaysShowActions": true,
     "scm.alwaysShowRepositories": true,
     "scm.defaultViewMode": "tree",
     "scm.providerCountBadge": "visible",
     "scm.repositories.visible": 0,
+    "scm.showActionButton": false,
     "search.collapseResults": "auto",
     "search.showLineNumbers": true,
     "search.smartCase": true,
     "search.useIgnoreFiles": false,
     "security.workspace.trust.enabled": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "settingsSync.ignoredExtensions": [],
-    "settingsSync.ignoredSettings": [],
     "shellcheck.customArgs": [],
+    "shellcheck.exclude": [
+      "SC2091"
+    ],
     "shellcheck.enable": true,
     "shellcheck.ignorePatterns": {},
     "shellcheck.run": "onSave",
+    "spellright.documentTypes": [],
+    "spellright.language": [
+      "en"
+    ],
     "telemetry.telemetryLevel": "off",
     "terminal.external.osxExec": "iTerm.app",
     "terminal.integrated.enablePersistentSessions": false,
-    "terminal.integrated.persistentSessionExperimentalSerializer": false,
     "terminal.integrated.persistentSessionScrollback": 100,
     "vsicons.projectDetection.autoReload": true,
     "window.autoDetectHighContrast": false,
@@ -70,51 +113,50 @@
     "workbench.iconTheme": "vscode-icons",
     "workbench.list.smoothScrolling": true,
     "workbench.startupEditor": "newUntitledFile",
-    "files.associations": {
-        "Dockerfile-*": "dockerfile",
-        "buildx*": "dockerfile",
-        "*.json.*": "json",
-        "*.ps1.*": "powershell",
-        "**/azure-pipelines*.yml": "azure-pipelines",
-        "*.yml.*": "yaml",
-        "*.yaml.*": "yaml",
-        "terragrunt.hcl": "terraform",
-        "*.tfvars": "terraform",
-        "*.tf": "terraform",
-        "*.tf_": "terraform",
-        "*.tf.*": "terraform",
-        "*.ctmpl": "go",
-        "*.hcl": "go",
-        ".terraformrc": "ini"
-    },
-    "shellcheck.exclude": [
-        "SC2091"
-    ],
-    "spellright.language": [
-        "en"
-    ],
-    "spellright.documentTypes": [],
-    "files.watcherExclude": {
-        "**/.terraform/**": true,
-        "**/.terragrunt-cache/**": true
-    },
-    "[terraform]": {
-        "editor.formatOnSave": true
+    "[yaml]": {
+      "editor.insertSpaces": true,
+      "editor.tabSize": 2,
+      "editor.quickSuggestions": {
+        "other": true,
+        "strings": true,
+        "comments": false
+      }
     },
     "terraform.languageServer": {
-        "external": true,
-        "args": [
-            "serve"
-        ]
+      "external": true,
+      "args": [
+        "serve"
+      ]
     },
-    "[yaml]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": true
-        }
+    "[terraform]": {
+      "editor.defaultFormatter": "hashicorp.terraform",
+      "editor.formatOnSave": true,
+      "editor.formatOnSaveMode": "file",
+      "editor.codeActionsOnSave": {
+        "source.formatAll.terraform": true
+      }
     },
-    "scm.showActionButton": false
-}
+    "[terraform-vars]": {
+      "editor.defaultFormatter": "hashicorp.terraform",
+      "editor.formatOnSave": true,
+      "editor.formatOnSaveMode": "file",
+      "editor.codeActionsOnSave": {
+        "source.formatAll.terraform": true
+      }
+    },
+    "terraform-ls.experimentalFeatures": {
+      "validateOnSave": true
+    },
+    "terminal.integrated.env.osx": {
+      "FIG_NEW_SESSION": "1"
+    },
+    "terraform.codelens.referenceCount": true,
+    "cSpell.ignoreWords": [
+      "allocs",
+      "datasource",
+      "grafanacloud",
+      "templating",
+      "textbox",
+      "timeseries"
+    ]
+  }
