@@ -2,7 +2,7 @@
 !terraform.tfvars
 .terraform
 .terraform.lock.hcl
-.terraform.tfstate.lock
+.terraform.tfstate.lock*
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
