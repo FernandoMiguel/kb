@@ -2,6 +2,7 @@ tap "agrinman/tap"
 tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
 tap "confluentinc/ccloud"
+tap "derailed/k9s"
 tap "hashicorp/tap"
 tap "heroku/brew"
 tap "homebrew/bundle"
@@ -15,6 +16,7 @@ tap "iann0036/iamlive"
 tap "jesseduffield/lazydocker"
 tap "kryptco/tap"
 tap "nextdns/tap"
+tap "pirj/noclamshell"
 tap "transcend-io/tap"
 tap "versent/taps"
 tap "wagoodman/dive"
@@ -25,10 +27,6 @@ brew "openssl@1.1"
 brew "aircrack-ng"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.7"
-# Automate deployment, configuration, and upgrading
-brew "ansible@2.8"
 # Record and share terminal sessions
 brew "asciinema"
 # Integrated shell for working with the AWS CLI
@@ -45,40 +43,42 @@ brew "bash-completion"
 brew "bind"
 # Fish completion for brew-cask
 brew "brew-cask-completion"
-# Generic template rendering and notifications with Consul
-brew "consul-template"
 # Top-like interface for container metrics
 brew "ctop"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Secure communications between a client and a DNS resolver
-brew "dnscrypt-proxy"
 # Clean Docker containers, images, networks, and volumes
 brew "docker-clean"
-# Bash, Zsh and Fish completion for Docker
-brew "docker-completion"
-# Completion script for docker-compose
-brew "docker-compose-completion"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
+# Simple command-line tool for creating clusters on Amazon EKS
+brew "eksctl"
 # Distributed revision control system
 brew "git"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# GNU Pretty Good Privacy (PGP) package
-brew "gnupg"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Log analyzer and interactive viewer for the Apache Webserver
 brew "goaccess"
+# GNU grep, egrep and fgrep
+brew "grep"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Kubernetes package manager
+brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # Display an interface's bandwidth usage
 brew "iftop"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Run local Kubernetes cluster in Docker
+brew "kind"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
+# Lazier way to manage everything docker
+brew "lazydocker"
 # Terminal-based visual file manager
 brew "midnight-commander"
 # 'traceroute' and 'ping' in a single tool
@@ -89,8 +89,6 @@ brew "namebench"
 brew "ncdu"
 # Port scanning utility for large networks
 brew "nmap"
-# Open client for Cisco AnyConnect VPN
-brew "openconnect"
 # Open Fortinet client for PPP+SSL VPN tunnel services
 brew "openfortivpn"
 # 7-Zip (high compression file archiver) implementation
@@ -101,18 +99,16 @@ brew "rclone"
 brew "screen"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Command-line interface for https://speedtest.net bandwidth tests
-brew "speedtest-cli"
 # Penetration testing for SQL injection and database servers
 brew "sqlmap"
-# Tool to build, change, and version infrastructure
-brew "terraform@0.12"
-# Tool to build, change, and version infrastructure
-brew "terraform@0.13"
 # Tool which checks for the support of TLS/SSL ciphers and flaws
 brew "testssl"
+# Terraform version manager inspired by rbenv
+brew "tfenv"
 # Linter for Terraform files
 brew "tflint"
+# Static analysis security scanner for your terraform code
+brew "tfsec"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Vpnc-script replacement for easy and secure split-tunnel VPN setup
@@ -129,20 +125,20 @@ brew "yamllint"
 brew "ydiff"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "derailed/k9s/k9s"
 # Nomad
 brew "hashicorp/tap/nomad"
-# Terraform
-brew "hashicorp/tap/terraform"
 # Vault
 brew "hashicorp/tap/vault"
 # Generate an IAM policy from AWS calls using client-side monitoring (CSM) or embedded proxy.
 brew "iann0036/iamlive/iamlive"
-# A simple terminal UI for docker, written in Go
-brew "jesseduffield/lazydocker/lazydocker"
 # Krypton command-line client, daemon, and SSH integration
 brew "kryptco/tap/kr"
 # NextDNS DNS/53 to DoH Proxy
 brew "nextdns/tap/nextdns"
+# Sleep despite annoying clamshell mode
+brew "pirj/noclamshell/noclamshell"
 # A tool for exploring each layer in a docker image
 brew "wagoodman/dive/dive"
 # Android SDK component
@@ -151,10 +147,7 @@ cask "android-platform-tools"
 cask "authy"
 # Securely stores and accesses AWS credentials in a development environment
 cask "aws-vault"
-# Audio utility
-cask "background-music-pre"
-# Install and configure chronyd
-cask "chronycontrol"
+cask "caldigit-docking-utility"
 # Disk space visualizer
 cask "daisydisk"
 # Visually compare and merge files
@@ -164,33 +157,28 @@ cask "discord-ptb"
 # App to build and share containerized applications and microservices
 cask "docker-edge"
 cask "firefox-developer-edition"
-cask "google-backup-and-sync"
-cask "google-chrome-canary"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2-beta"
-# Software to create and productionize data science
-cask "knime"
+cask "google-backup-and-sync"
+cask "google-chrome-canary"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
 # Provides access to camera controls
 cask "logitech-camera-settings"
 # Clipboard manager
 cask "maccy"
+# Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Open-source software for live streaming and screen recording
-cask "obs"
-cask "obs-virtualcam"
-# File system integration
-cask "osxfuse"
-# Collaboration platform for API development
-cask "postman"
 # Web browser
 cask "safari-technology-preview"
+# Store SSH keys in the Secure Enclave
+cask "secretive"
 # MySQL/MariaDB database management platform
 cask "sequel-pro"
 # Team communication and collaboration software
 cask "slack-beta"
-cask "sonarr-beta"
+# Control your Sonos system
+cask "sonos"
 # Graphical client for Git version control
 cask "sourcetree"
 # Move and resize windows with ease
@@ -199,6 +187,8 @@ cask "spectacle"
 cask "stack-stack"
 # Messaging app with a focus on speed and security
 cask "telegram"
+# Music streaming service with high fidelity sound and hi-def video quality
+cask "tidal"
 # Free and open source graphic user interface for OpenVPN
 cask "tunnelblick-beta"
 cask "visual-studio-code-insiders"
