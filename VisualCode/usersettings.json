@@ -1,162 +1,166 @@
 {
-    "azure.showSignedInEmail": true,
-    "azureTerraform.test.location": "eastus",
-    "breadcrumbs.enabled": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.accessibilitySupport": "off",
-    "editor.bracketPairColorization.enabled": true,
-    "editor.folding": true,
-    "editor.foldingStrategy": "indentation",
-    "editor.fontSize": 14,
-    "editor.formatOnSave": true,
-    "editor.glyphMargin": false,
-    "editor.insertSpaces": false,
-    "editor.minimap.enabled": false,
-    "editor.renderControlCharacters": true,
-    "editor.renderWhitespace": "all",
-    "editor.showFoldingControls": "always",
-    "editor.tabCompletion": "on",
-    "editor.trimAutoWhitespace": true,
-    "editor.wordWrap": "on",
-    "explorer.compactFolders": false,
-    "files.associations": {
-      "*.hcl": "go",
-      "*.ps1.*": "powershell",
-      "*.tf_": "terraform",
-      "*.json.*": "json",
-      "*.tf.*": "terraform",
-      ".terraformrc": "ini",
-      "*.yml.*": "yaml",
-      "azure-pipelines*.yml": "azure-pipelines",
-      "*.tf": "terraform",
-      "*.ctmpl": "go",
-      "Dockerfile*": "dockerfile",
-      "buildx*": "dockerfile",
-      "*.yaml.*": "yaml",
-      "*.tfvars": "terraform",
-      "terragrunt.hcl": "terraform"
-    },
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000,
-    "files.eol": "\n",
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "files.watcherExclude": {
-      "**\/.terraform\/**": true,
-      "**\/.terragrunt-cache\/**": true
-    },
-    "git.allowForcePush": true,
-    "git.alwaysShowStagedChangesResourceGroup": true,
-    "git.alwaysSignOff": true,
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.detectSubmodulesLimit": 100,
-    "git.enableCommitSigning": true,
-    "git.enableSmartCommit": true,
-    "git.fetchOnPull": true,
-    "git.inputValidation": "off",
-    "git.pruneOnFetch": true,
-    "git.pullTags": false,
-    "git.smartCommitChanges": "tracked",
-    "git.terminalAuthentication": false,
-    "git.untrackedChanges": "separate",
-    "github-enterprise.uri": "git.drillinginfo.com",
-    "github.gitAuthentication": false,
-    "gitweblinks.gitHubEnterprise": [
-      {
-        "http": "https:\/\/git.drillinginfo.com"
-      }
-    ],
-    "hadolint.hadolintPath": "\/usr\/local\/bin\/hadolint",
-    "json.format.enable": true,
-    "markdown.preview.breaks": true,
-    "markdown.preview.scrollEditorWithPreview": true,
-    "redhat.telemetry.enabled": false,
-    "remoteHub.autoFetch.interval": 180,
-    "remoteHub.experimental.prefetch": false,
-    "scm.alwaysShowActions": true,
-    "scm.alwaysShowRepositories": true,
-    "scm.defaultViewMode": "tree",
-    "scm.providerCountBadge": "visible",
-    "scm.repositories.visible": 0,
-    "scm.showActionButton": false,
-    "search.collapseResults": "auto",
-    "search.showLineNumbers": true,
-    "search.smartCase": true,
-    "search.useIgnoreFiles": false,
-    "security.workspace.trust.enabled": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "shellcheck.customArgs": [],
-    "shellcheck.exclude": [
-      "SC2091"
-    ],
-    "shellcheck.enable": true,
-    "shellcheck.ignorePatterns": {},
-    "shellcheck.run": "onSave",
-    "spellright.documentTypes": [],
-    "spellright.language": [
-      "en"
-    ],
-    "telemetry.telemetryLevel": "off",
-    "terminal.external.osxExec": "iTerm.app",
-    "terminal.integrated.enablePersistentSessions": false,
-    "terminal.integrated.persistentSessionScrollback": 100,
-    "vsicons.projectDetection.autoReload": true,
-    "window.autoDetectHighContrast": false,
-    "window.newWindowDimensions": "fullscreen",
-    "window.restoreFullscreen": true,
-    "window.titleBarStyle": "native",
-    "workbench.editor.highlightModifiedTabs": true,
-    "workbench.editor.labelFormat": "default",
-    "workbench.enableExperiments": false,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.list.smoothScrolling": true,
-    "workbench.startupEditor": "newUntitledFile",
-    "[yaml]": {
-      "editor.insertSpaces": true,
-      "editor.tabSize": 2,
-      "editor.quickSuggestions": {
-        "other": true,
-        "strings": true,
-        "comments": false
-      }
-    },
-    "terraform.languageServer": {
-      "external": true,
-      "args": [
-        "serve"
-      ]
-    },
-    "[terraform]": {
-      "editor.defaultFormatter": "hashicorp.terraform",
-      "editor.formatOnSave": true,
-      "editor.formatOnSaveMode": "file",
-      "editor.codeActionsOnSave": {
-        "source.formatAll.terraform": true
-      }
-    },
-    "[terraform-vars]": {
-      "editor.defaultFormatter": "hashicorp.terraform",
-      "editor.formatOnSave": true,
-      "editor.formatOnSaveMode": "file",
-      "editor.codeActionsOnSave": {
-        "source.formatAll.terraform": true
-      }
-    },
-    "terraform-ls.experimentalFeatures": {
-      "validateOnSave": true
-    },
-    "terminal.integrated.env.osx": {
-      "FIG_NEW_SESSION": "1"
-    },
-    "terraform.codelens.referenceCount": true,
-    "cSpell.ignoreWords": [
-      "allocs",
-      "datasource",
-      "grafanacloud",
-      "templating",
-      "textbox",
-      "timeseries"
+  "azure.showSignedInEmail": true,
+  "azureTerraform.test.location": "eastus",
+  "breadcrumbs.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.folding": true,
+  "editor.foldingStrategy": "indentation",
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.glyphMargin": false,
+  "editor.minimap.enabled": false,
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.showFoldingControls": "always",
+  "editor.tabCompletion": "on",
+  "editor.trimAutoWhitespace": true,
+  "editor.wordWrap": "on",
+  "explorer.compactFolders": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.eol": "\n",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.allowForcePush": true,
+  "git.alwaysShowStagedChangesResourceGroup": true,
+  "git.alwaysSignOff": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.detectSubmodulesLimit": 100,
+  "git.enableCommitSigning": true,
+  "git.enableSmartCommit": true,
+  "git.fetchOnPull": true,
+  "git.inputValidation": "off",
+  "git.pruneOnFetch": true,
+  "git.pullTags": false,
+  "git.smartCommitChanges": "tracked",
+  "git.supportCancellation": true,
+  "git.terminalAuthentication": false,
+  "git.untrackedChanges": "separate",
+  "github-enterprise.uri": "git.drillinginfo.com",
+  "github.gitAuthentication": false,
+  "hadolint.hadolintPath": "\/usr\/local\/bin\/hadolint",
+  "json.format.enable": true,
+  "markdown.preview.breaks": true,
+  "markdown.preview.scrollEditorWithPreview": true,
+  "redhat.telemetry.enabled": false,
+  "remoteHub.autoFetch.interval": 180,
+  "remoteHub.experimental.prefetch": true,
+  "scm.alwaysShowActions": true,
+  "scm.alwaysShowRepositories": true,
+  "scm.defaultViewMode": "tree",
+  "scm.providerCountBadge": "visible",
+  "scm.repositories.visible": 0,
+  "scm.showActionButton": false,
+  "search.collapseResults": "auto",
+  "search.showLineNumbers": true,
+  "search.smartCase": false,
+  "search.useIgnoreFiles": false,
+  "security.workspace.trust.enabled": false,
+  "security.workspace.trust.untrustedFiles": "open",
+  "shellcheck.customArgs": [],
+  "shellcheck.enable": true,
+  "shellcheck.ignorePatterns": {},
+  "shellcheck.run": "onSave",
+  "spellright.documentTypes": [],
+  "spellright.language": [
+    "en"
+  ],
+  "telemetry.telemetryLevel": "off",
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "iTerm.app",
+  "terminal.integrated.enablePersistentSessions": false,
+  "terminal.integrated.persistentSessionScrollback": 100,
+  "vsicons.projectDetection.autoReload": true,
+  "window.autoDetectHighContrast": false,
+  "window.newWindowDimensions": "fullscreen",
+  "window.restoreFullscreen": true,
+  "window.titleBarStyle": "native",
+  "workbench.colorTheme": "Witch Hazel Hypercolor",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.editor.labelFormat": "default",
+  "workbench.enableExperiments": false,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.list.smoothScrolling": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "[yaml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.quickSuggestions": {
+      "other": true,
+      "strings": true,
+      "comments": false
+    }
+  },
+  "terraform.languageServer": {
+    "external": true,
+    "args": [
+      "serve"
     ]
-  }
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+      "source.formatAll.terraform": true
+    }
+  },
+  "[terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    "editor.codeActionsOnSave": {
+      "source.formatAll.terraform": true
+    }
+  },
+  "terraform-ls.experimentalFeatures": {
+    "validateOnSave": true
+  },
+  "terraform.codelens.referenceCount": true,
+  "cSpell.ignoreWords": [
+    "JOBNAME",
+    "allocs",
+    "bottomk",
+    "datasource",
+    "decgbytes",
+    "dedupStrategy",
+    "drillinginfo",
+    "grafanacloud",
+    "hashi",
+    "templating",
+    "textbox",
+    "timeseries",
+    "topk"
+  ],
+  "files.associations": {
+    "*.hcl": "go",
+    "*.ps1.*": "powershell",
+    "*.tf_": "terraform",
+    "*.json.*": "json",
+    "*.tf.*": "terraform",
+    ".terraformrc": "ini",
+    "*.yml.*": "yaml",
+    "azure-pipelines*.yml": "azure-pipelines",
+    "*.tf": "terraform",
+    "*.ctmpl": "go",
+    "Dockerfile*": "dockerfile",
+    "buildx*": "dockerfile",
+    "*.yaml.*": "yaml",
+    "*.tfvars": "terraform",
+    "terragrunt.hcl": "terraform"
+  },
+  "files.watcherExclude": {
+    "**\/.terraform\/**": true,
+    "**\/.terragrunt-cache\/**": true
+  },
+  "gitweblinks.gitHubEnterprise": [
+    {
+      "http": "https:\/\/git.drillinginfo.com"
+    }
+  ]
+}
