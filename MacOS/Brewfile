@@ -11,9 +11,7 @@ tap "homebrew/cask-drivers"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "horar/openconnect-gui"
 tap "iann0036/iamlive"
-tap "jesseduffield/lazydocker"
 tap "kryptco/tap"
 tap "nextdns/tap"
 tap "pirj/noclamshell"
@@ -37,8 +35,8 @@ brew "awscli"
 brew "azure-cli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
-# Programmable completion for Bash 3.2
-brew "bash-completion"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
 # Implementation of the DNS protocols
 brew "bind"
 # Fish completion for brew-cask
@@ -77,8 +75,12 @@ brew "jq"
 brew "kind"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# Template-free customization of Kubernetes YAML manifests
+brew "kustomize"
 # Lazier way to manage everything docker
 brew "lazydocker"
+# Version of the SSL/TLS protocol forked from OpenSSL
+brew "libressl"
 # Terminal-based visual file manager
 brew "midnight-commander"
 # 'traceroute' and 'ping' in a single tool
@@ -91,6 +93,8 @@ brew "ncdu"
 brew "nmap"
 # Open Fortinet client for PPP+SSL VPN tunnel services
 brew "openfortivpn"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # Rsync for cloud storage
@@ -133,8 +137,6 @@ brew "hashicorp/tap/nomad"
 brew "hashicorp/tap/vault"
 # Generate an IAM policy from AWS calls using client-side monitoring (CSM) or embedded proxy.
 brew "iann0036/iamlive/iamlive"
-# Krypton command-line client, daemon, and SSH integration
-brew "kryptco/tap/kr"
 # NextDNS DNS/53 to DoH Proxy
 brew "nextdns/tap/nextdns"
 # Sleep despite annoying clamshell mode
@@ -156,11 +158,14 @@ cask "diffmerge"
 cask "discord-ptb"
 # App to build and share containerized applications and microservices
 cask "docker-edge"
+# Web browser
 cask "firefox-developer-edition"
+# Web browser
+cask "google-chrome-canary"
+# Web browser
+cask "google-chrome-dev"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2-beta"
-cask "google-backup-and-sync"
-cask "google-chrome-canary"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
 # Provides access to camera controls
@@ -191,6 +196,7 @@ cask "telegram"
 cask "tidal"
 # Free and open source graphic user interface for OpenVPN
 cask "tunnelblick-beta"
+# Code editor
 cask "visual-studio-code-insiders"
 # Multimedia player
 cask "vlc"

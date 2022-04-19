@@ -36,9 +36,12 @@ alias terraform-fmt-recursive='terraform fmt -diff -recursive .'
 alias terraform-docs-recursive='find ~/work/TF-Modules -type f -name "Makefile" -print -execdir make \; ; find ~/work/SRE -type f -name "Makefile" -print -execdir make \;'
 alias gitfetchall='find ~/work/ -name .git -print -execdir git fetch --progress --all --no-tags --prune --prune-tags --verbose --jobs=200 --recurse-submodules \;'
 alias gitpullall='find ~/work/ -name .git -print -execdir git pull --ff-only --stat --progress --all --no-tags --jobs=20 --show-forced-updates --recurse-submodules \;'
-
+alias gitremote='git remote -v'
+alias update-kubeconfig='aws eks --region us-east-1 update-kubeconfig --name '
 alias vault8h='export VAULT_TOKEN=`vault token create -ttl=8h -field=token`'
 alias vault-resultant-acl='vault read -format=json sys/internal/ui/resultant-acl'
+alias vault-resultant-acl='vault read -format=json sys/internal/ui/resultant-acl'
+
 
 alias ls='ls -h'
 alias ll="ls -lah"
