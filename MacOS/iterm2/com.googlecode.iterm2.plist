@@ -19,7 +19,7 @@
 	<key>CheckTestRelease</key>
 	<true/>
 	<key>Command</key>
-	<string></string>
+	<string>/opt/homebrew/bin/bash</string>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>SpaceGray Eighties Dull</key>
@@ -1098,6 +1098,8 @@
 	<real>100</real>
 	<key>MinRunningTime</key>
 	<real>0.0</real>
+	<key>NeverWarnAboutShortLivedSessions_401B5C3B-8A3D-4CE9-9B3E-54CF82D9B140</key>
+	<true/>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1851,7 +1853,7 @@
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Place Prompt at First Column</key>
-			<false/>
+			<true/>
 			<key>Prompt Before Closing 2</key>
 			<integer>2</integer>
 			<key>Right Option Key Sends</key>
@@ -1884,10 +1886,16 @@
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
+			<key>Set Local Environment Vars</key>
+			<false/>
 			<key>Shortcut</key>
 			<string></string>
+			<key>Show Mark Indicators</key>
+			<false/>
 			<key>Show Status Bar</key>
 			<false/>
+			<key>Show Timestamps</key>
+			<integer>2</integer>
 			<key>Silence Bell</key>
 			<true/>
 			<key>Space</key>
@@ -2028,6 +2036,8 @@
 	<true/>
 	<key>SlowFrameRate</key>
 	<real>100</real>
+	<key>SmartPlacement</key>
+	<false/>
 	<key>SoundForEsc</key>
 	<true/>
 	<key>SplitPaneDimmingAmount</key>
@@ -2046,6 +2056,8 @@
 	<true/>
 	<key>UIElementRequiresHotkeys</key>
 	<true/>
+	<key>UseBorder</key>
+	<false/>
 	<key>UseNewContentFormat</key>
 	<false/>
 	<key>UseRestorableStateController</key>

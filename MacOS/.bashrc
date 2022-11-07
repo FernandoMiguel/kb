@@ -1,16 +1,9 @@
-export PATH=/usr/local/opt/curl/bin:/usr/local/opt/openssl@1.1/bin:/usr/local/sbin:/usr/local/bin:/usr/local/opt:/Users/fernando/go/bin:$PATH
-
-complete -C aws_completer aws
-
-if [ -f "$(brew --prefix)"/etc/bash_completion ]; then
-. "$(brew --prefix)"/etc/bash_completion
-fi
-
-export AZDO_ORG_SERVICE_URL=
-export AZDO_PERSONAL_ACCESS_TOKEN=
+export PATH=/usr/local/bin:/opt/homebrew/opt:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/fernando/go/bin:/opt/homebrew/opt/python@3.10/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/openssl@3/bin:${HOME}/.krew/bin:$PATH
 export AWS_SDK_LOAD_CONFIG=1
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
+export TFENV_AUTO_INSTALL=true
 
+alias git='LC_ALL=c git'
 alias code='code-insiders'
 alias nas='ssh nas.fernandomiguel.net -p 4444 -l root'
 alias byte='ssh -l fernandomiguel plex.imperialus.house'
@@ -31,17 +24,17 @@ alias fmeraki='sudo profiles -R -p com.meraki.sm.629378047925028072'
 alias pulsedns='sudo scutil < ~/dpulse.sh'
 alias namebench-config='namebench --runs=3 --health_threads=2 --benchmark_threads=10 --ping_timeout=10 --input=chrome --invalidate_cache --query_count=100 --select_mode=chunk --open_webbrowser --enable-censorship-checks --only 127.0.0.1 2a0d:2406:1801::9f:19b8 2a0d:2406:1802::96:f736 2a00:5a60::ad2:0ff 2a00:5a60::ad1:0ff 2606:4700:4700::1001 2606:4700:4700::1111 2620:0:ccd::2 2620:0:ccc::2 2001:4860:4860::8844 2001:4860:4860::8888 2620:fe::fe 2620:fe::9 5.182.208.230 1.0.0.1 1.1.1.1 176.103.130.131 176.103.130.130 208.67.220.220 208.67.222.222 8.8.4.4 8.8.8.8 149.112.112.112 9.9.9.9'
 #alias terragrunt-cleanup='find ~/work/ -type d -name ".terragrunt-cache" -prune -exec rm -rfv {} \;'
-alias terraform-cleanup='find ~/work/ -type d -name ".terraform" -prune -exec rm -rfv {} \; && find ~/work/ -type f -name ".terraform.lock.hcl" -prune -exec rm -fv {} \;'
+alias terraform-cleanup='find ~/work -type d -name ".terraform" -prune -exec rm -rfv {} \; && find ~/work -type f -name ".terraform.lock.hcl" -prune -exec rm -fv {} \; && rm -rfv ~/Library/Caches/helm/repository/'
 alias terraform-fmt-recursive='terraform fmt -diff -recursive .'
-alias terraform-docs-recursive='find ~/work/TF-Modules -type f -name "Makefile" -print -execdir make \; ; find ~/work/SRE -type f -name "Makefile" -print -execdir make \;'
+alias terraform-docs-recursive='find ~/work/TF-Modules -type f -name "Makefile" -print -execdir make \; ; find ~/work/SRE/*terraform* -type f -name "Makefile" -print -execdir make \; ; find ~/work/githubcom/**/*terraform* -type f -name "Makefile" -print -execdir make \;'
 alias gitfetchall='find ~/work/ -name .git -print -execdir git fetch --progress --all --no-tags --prune --prune-tags --verbose --jobs=200 --recurse-submodules \;'
 alias gitpullall='find ~/work/ -name .git -print -execdir git pull --ff-only --stat --progress --all --no-tags --jobs=20 --show-forced-updates --recurse-submodules \;'
 alias gitremote='git remote -v'
-alias update-kubeconfig='aws eks --region us-east-1 update-kubeconfig --name '
+
 alias vault8h='export VAULT_TOKEN=`vault token create -ttl=8h -field=token`'
 alias vault-resultant-acl='vault read -format=json sys/internal/ui/resultant-acl'
-alias vault-resultant-acl='vault read -format=json sys/internal/ui/resultant-acl'
 
+alias update-kubeconfig='aws eks --region us-east-1 update-kubeconfig --name '
 
 alias ls='ls -h'
 alias ll="ls -lah"
@@ -49,7 +42,6 @@ alias lm='ll |more'        #  Pipe through 'more'
 #alias lr='ll -lvrta'
 alias la='ls -lahtr'       #  Show hidden files.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
-
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
@@ -162,8 +154,6 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 # Added by Krypton
 export GPG_TTY=$(tty)
 
-complete -C /usr/local/bin/vault vault
-
 # pip bash completion start
 _pip_completion()
 {
@@ -174,25 +164,26 @@ _pip_completion()
 complete -o default -F _pip_completion pip3
 # pip bash completion end
 
-complete -C /usr/local/bin/terraform terraform
+complete -C aws_completer aws
 
-# _limactl_bash_autocomplete is forked from https://github.com/urfave/cli/blob/v2.3.0/autocomplete/bash_autocomplete (MIT License)
-_limactl_bash_autocomplete() {
-  if [[ "${COMP_WORDS[0]}" != "source" ]]; then
-    local cur opts base
-    COMPREPLY=()
-    cur="${COMP_WORDS[COMP_CWORD]}"
-    local args="${COMP_WORDS[@]:0:$COMP_CWORD}"
-    # make {"limactl", "--foo", "=", "bar"} into {"limactl", "--foo=bar"}
-    args="$(echo $args | sed -e 's/ = /=/g')"
-    if [[ "$cur" == "-"* ]]; then
-      opts=$( ${args} ${cur} --generate-bash-completion )
-    else
-      opts=$( ${args} --generate-bash-completion )
-    fi
-    COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
-    return 0
+if [ -f "$(brew --prefix)"/etc/bash_completion ]; then
+. "$(brew --prefix)"/etc/bash_completion
+fi
+
+if type brew &>/dev/null
+then
+  HOMEBREW_PREFIX="$(brew --prefix)"
+  if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]
+  then
+    source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
+  else
+    for COMPLETION in "${HOMEBREW_PREFIX}/etc/bash_completion.d/"*
+    do
+      [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+    done
   fi
-}
+fi
 
-complete -o bashdefault -o default -o nospace -F _limactl_bash_autocomplete limactl
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+alias assume="source assume"
