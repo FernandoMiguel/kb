@@ -1,12 +1,14 @@
-export PATH=/usr/local/bin:/opt/homebrew/opt:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/fernando/go/bin:/opt/homebrew/opt/python@3.10/bin:/opt/homebrew/opt/curl/bin:/opt/homebrew/opt/openssl@3/bin:${HOME}/.krew/bin:$PATH
+export PATH=/usr/local/bin:/opt/homebrew/opt:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/fernando/go/bin:/opt/homebrew/opt/python@3.11/bin:/opt/homebrew/opt/curl/bin:$PATH
+
+# export AZDO_PERSONAL_ACCESS_TOKEN=
 export AWS_SDK_LOAD_CONFIG=1
 export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 export TFENV_AUTO_INSTALL=true
+export TF_VAR_enable_aws_telemetry="false"
 
 alias git='LC_ALL=c git'
 alias code='code-insiders'
 alias nas='ssh nas.fernandomiguel.net -p 4444 -l root'
-alias byte='ssh -l fernandomiguel plex.imperialus.house'
 alias brewall='brew -v update && brew -v upgrade --display-times && brew upgrade --cask --greedy && brew cu --all && pipupgrade --latest --yes'
 alias brewcleanup='brew cleanup && brew cu --cleanup'
 alias dockerupdateallimages='docker images --format "{{.Repository}}:{{.Tag}}" | xargs -L1 docker pull'
@@ -26,7 +28,6 @@ alias namebench-config='namebench --runs=3 --health_threads=2 --benchmark_thread
 #alias terragrunt-cleanup='find ~/work/ -type d -name ".terragrunt-cache" -prune -exec rm -rfv {} \;'
 alias terraform-cleanup='find ~/work -type d -name ".terraform" -prune -exec rm -rfv {} \; && find ~/work -type f -name ".terraform.lock.hcl" -prune -exec rm -fv {} \; && rm -rfv ~/Library/Caches/helm/repository/'
 alias terraform-fmt-recursive='terraform fmt -diff -recursive .'
-alias terraform-docs-recursive='find ~/work/TF-Modules -type f -name "Makefile" -print -execdir make \; ; find ~/work/SRE/*terraform* -type f -name "Makefile" -print -execdir make \; ; find ~/work/githubcom/**/*terraform* -type f -name "Makefile" -print -execdir make \;'
 alias gitfetchall='find ~/work/ -name .git -print -execdir git fetch --progress --all --no-tags --prune --prune-tags --verbose --jobs=200 --recurse-submodules \;'
 alias gitpullall='find ~/work/ -name .git -print -execdir git pull --ff-only --stat --progress --all --no-tags --jobs=20 --show-forced-updates --recurse-submodules \;'
 alias gitremote='git remote -v'
@@ -151,9 +152,6 @@ fi
 export DOCKER_BUILDKIT=1
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-# Added by Krypton
-export GPG_TTY=$(tty)
-
 # pip bash completion start
 _pip_completion()
 {
@@ -185,5 +183,3 @@ then
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-alias assume="source assume"
