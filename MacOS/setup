@@ -46,6 +46,8 @@ sudo defaults write com.apple.TextEdit PlainTextEncoding -int 4
 sudo defaults write com.apple.TextEdit PlainTextEncodingForWrite -int 4
 sudo defaults write com.apple.TextEdit RichText -int 0
 sudo defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
+sudo defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "1" "yyyy/MM/dd"
+sudo defaults write NSGlobalDomain AppleICUDateFormatStrings -dict-add "2" "yyyy/MM/dd"
 sudo defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 sudo defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 sudo defaults write NSGlobalDomain KeyRepeat -int 0
