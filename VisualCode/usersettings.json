@@ -4,7 +4,6 @@
   "breadcrumbs.enabled": true,
   "cSpell.language": "en,lorem",
   "diffEditor.codeLens": true,
-  "diffEditor.diffAlgorithm": "experimental",
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.maxComputationTime": 0,
   "editor.accessibilitySupport": "off",
@@ -17,6 +16,7 @@
   "editor.glyphMargin": false,
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": true,
+  "editor.renderFinalNewline": "dimmed",
   "editor.renderWhitespace": "all",
   "editor.showFoldingControls": "always",
   "editor.suggest.preview": true,
@@ -31,15 +31,15 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "git.allowForcePush": true,
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": "all",
-  "git.autofetchPeriod": 1200,
   "git.confirmSync": false,
   "git.detectSubmodulesLimit": 100,
   "git.enableSmartCommit": true,
   "git.fetchOnPull": true,
-  "git.inputValidation": "off",
+  "git.inputValidation": true,
+  "git.inputValidationLength": 0,
+  "git.inputValidationSubjectLength": null,
   "git.mergeEditor": true,
   "git.openRepositoryInParentFolders": "always",
   "git.path": "/opt/homebrew/bin/git",
@@ -52,8 +52,8 @@
   "git.terminalGitEditor": true,
   "git.timeline.showUncommitted": true,
   "git.untrackedChanges": "separate",
-  "gitHistory.includeRemoteBranches": true,
-  "github-enterprise.uri": "git.drillinginfo.com",
+  "git.useEditorAsCommitInput": false,
+  "github-enterprise.uri": "https://git.drillinginfo.com/",
   "gitweblinks.defaultBranch": "main",
   "gitweblinks.showOpen": true,
   "gitweblinks.useShortHash": true,
@@ -63,10 +63,7 @@
   "markdown.preview.breaks": true,
   "markdown.preview.scrollEditorWithPreview": true,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
-  "mergeEditor.diffAlgorithm": "experimental",
   "redhat.telemetry.enabled": false,
-  "remoteHub.autoFetch.interval": 180,
-  "remoteHub.experimental.prefetch": true,
   "scm.alwaysShowActions": true,
   "scm.alwaysShowRepositories": true,
   "scm.defaultViewMode": "tree",
@@ -74,9 +71,9 @@
   "scm.providerCountBadge": "visible",
   "scm.repositories.sortOrder": "path",
   "scm.repositories.visible": 0,
-  "scm.showActionButton": false,
   "search.collapseResults": "auto",
   "search.globalFindClipboard": true,
+  "search.searchEditor.reusePriorSearchConfiguration": true,
   "search.showLineNumbers": true,
   "search.smartCase": false,
   "search.useIgnoreFiles": false,
@@ -97,10 +94,9 @@
   "terraform.codelens.referenceCount": true,
   "terraform.experimentalFeatures.prefillRequiredFields": true,
   "terraform.experimentalFeatures.validateOnSave": true,
-  "vsicons.dontShowNewVersionMessage": true,
-  "vsicons.presets.jsonOfficial": true,
   "vsicons.projectDetection.autoReload": true,
   "window.autoDetectHighContrast": false,
+  "window.customTitleBarVisibility": "never",
   "window.newWindowDimensions": "fullscreen",
   "window.restoreFullscreen": true,
   "window.titleBarStyle": "native",
@@ -111,6 +107,7 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.list.smoothScrolling": true,
   "workbench.startupEditor": "newUntitledFile",
+  "yaml.format.printWidth": 600,
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
@@ -128,12 +125,12 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "[terraform]": {
-    "editor.defaultFormatter": "hashicorp.terraform-preview",
+    "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file"
   },
   "[terraform-vars]": {
-    "editor.defaultFormatter": "hashicorp.terraform-preview",
+    "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file"
   },
@@ -177,7 +174,7 @@
   },
   "gitweblinks.gitHubEnterprise": [
     {
-      "http": "https://git.drillinginfo.com",
+      "http": "https://git.drillinginfo.com/",
     }
   ],
   "files.exclude": {
@@ -218,6 +215,7 @@
     "cloudinit",
     "cloudprovider",
     "clusterdomain",
+    "clustername",
     "clusterrole",
     "clusterrolebinding",
     "CNCF",
@@ -359,5 +357,17 @@
   },
   "explorer.autoRevealExclude": {
     "**/status": true
-  }
+  },
+  "terminal.sourceControlRepositoriesKind": "external",
+  "github.copilot.advanced": {},
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "git.branchProtection": [
+    "main",
+    "master"
+  ]
 }
