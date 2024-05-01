@@ -11,9 +11,7 @@ tap "hashicorp/tap"
 tap "heroku/brew"
 tap "hidetatz/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
 tap "homebrew/cask-versions"
-tap "homebrew/core"
 tap "homebrew/services"
 tap "iann0036/iamlive"
 tap "joemiller/taps"
@@ -21,12 +19,17 @@ tap "microsoft/git"
 tap "minamijoyo/tfupdate"
 tap "nextdns/tap"
 tap "pirj/noclamshell"
+tap "thombashi/sqlitebiter"
 tap "tomanthony/brews"
 tap "transcend-io/tap"
 tap "turbot/tap"
 tap "versent/taps"
 tap "wagoodman/dive"
 tap "wata727/tflint"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # GitOps Continuous Delivery for Kubernetes
@@ -35,8 +38,6 @@ brew "argocd"
 brew "asciinema"
 # Integrated shell for working with the AWS CLI
 brew "aws-shell"
-# Text processing system for reStructuredText
-brew "docutils"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Microsoft Azure CLI 2.0
@@ -53,6 +54,8 @@ brew "csvq"
 brew "ctop"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
+# Tool for exploring each layer in a docker image
+brew "dive"
 # Clean Docker containers, images, networks, and volumes
 brew "docker-clean"
 # Platform keystore credential helper for Docker
@@ -61,6 +64,8 @@ brew "docker-credential-helper"
 brew "docker-credential-helper-ecr"
 # Select default apps for documents and URL schemes on macOS
 brew "duti"
+# Simple command-line tool for creating clusters on Amazon EKS
+brew "eksctl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Distributed revision control system
@@ -85,6 +90,8 @@ brew "iftop"
 brew "jq"
 # Run local Kubernetes cluster in Docker
 brew "kind"
+# FAST Kubernetes manifests validator, with support for Custom Resources!
+brew "kubeconform"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
 # Lazier way to manage everything docker
@@ -143,8 +150,6 @@ brew "watch"
 brew "wget"
 # Linter for YAML files
 brew "yamllint"
-# View colored diff with side by side and auto pager support
-brew "ydiff"
 # Download YouTube videos from the command-line
 brew "youtube-dl"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
@@ -157,7 +162,7 @@ brew "aws/tap/eks-node-viewer"
 brew "boz/repo/kail"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
-# Generate an IAM policy from AWS calls using client-side monitoring (CSM) or embedded proxy.
+# Generate an IAM policy from AWS, Azure, or Google Cloud (GCP) calls using client-side monitoring (CSM) or embedded proxy.
 brew "iann0036/iamlive/iamlive"
 # Cross-platform @hashicorp Vault token helper
 brew "joemiller/taps/vault-token-helper"
@@ -167,17 +172,15 @@ brew "minamijoyo/tfupdate/tfupdate"
 brew "nextdns/tap/nextdns"
 # Sleep despite annoying clamshell mode
 brew "pirj/noclamshell/noclamshell"
-# A tool for exploring layers in a docker image
-brew "wagoodman/dive/dive"
+# sqlitebiter is a CLI tool to convert CSV / Excel / HTML / JSON / Jupyter Notebook / LDJSON / LTSV / Markdown / SQLite / SSV / TSV / Google-Sheets to a SQLite database file.
+brew "thombashi/sqlitebiter/sqlitebiter"
 # Android SDK component
 cask "android-platform-tools"
-# Two-factor authentication software
-cask "authy"
 # Securely stores and accesses AWS credentials in a development environment
 cask "aws-vault"
 # Utility to disconnect all drives connected to a Caldigit dock
 cask "caldigit-docking-utility"
-# Disk space visualizer
+# Disk space visualiser
 cask "daisydisk"
 # Photography workflow application and raw developer
 cask "darktable"
@@ -186,55 +189,57 @@ cask "dbeaver-community"
 # Visually compare and merge files
 cask "diffmerge"
 # Voice and text chat software
-cask "discord-ptb"
+cask "discord@ptb"
 # Open source container development tool
 cask "finch"
 # Web browser
-cask "firefox-developer-edition"
-cask "git-credential-manager-core"
+cask "firefox@beta"
 # Web browser
-cask "google-chrome-canary"
+cask "firefox@developer-edition"
+cask "git-credential-manager"
 # Web browser
-cask "google-chrome-dev"
+cask "google-chrome@canary"
+# Web browser
+cask "google-chrome@dev"
 # Terminal emulator as alternative to Apple's Terminal app
-cask "iterm2-beta"
+cask "iterm2@beta"
+# Utility for comparing and merging files and directories
+cask "kdiff3"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
 # Provides access to camera controls
 cask "logitech-camera-settings"
 # Clipboard manager
 cask "maccy"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# GitHub and Linear notifications on your desktop and menu bar
-cask "neat"
 # Web browser
 cask "safari-technology-preview"
-# MySQL/MariaDB database management platform
-cask "sequel-pro"
+# MySQL/MariaDB database management
+cask "sequel-ace"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
 cask "session-manager-plugin"
+# Automatically checks computer's security
+cask "silentknight"
 # Team communication and collaboration software
-cask "slack-beta"
+cask "slack@beta"
 # Control your Sonos system
 cask "sonos"
 # Graphical client for Git version control
 cask "sourcetree"
-# Move and resize windows with ease
-cask "spectacle"
 # Video game digital distribution service
 cask "steam"
 # Messaging app with a focus on speed and security
 cask "telegram"
-# Music streaming service with high fidelity sound and hi-def video quality
-cask "tidal"
+# Virtual machines UI using QEMU
+cask "utm@beta"
 # Code editor
-cask "visual-studio-code-insiders"
+cask "visual-studio-code@insiders"
 # Multimedia player
 cask "vlc"
 mas "Disk Speed Test", id: 425264550
-mas "Enpass", id: 732710998
-mas "feedly", id: 865500966
 mas "Infuse", id: 1136220934
 mas "Meeter", id: 1510445899
 mas "TestFlight", id: 899247664
