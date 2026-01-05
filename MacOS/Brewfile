@@ -1,20 +1,23 @@
 tap "agrinman/tap"
 tap "akamai/mfa"
 tap "aws/tap"
+tap "azure/kubelogin"
 tap "blendle/blendle"
 tap "boz/repo"
-tap "buo/cask-upgrade"
 tap "cloudflare/cloudflare"
+tap "common-fate/granted"
 tap "confluentinc/ccloud"
 tap "derailed/k9s"
 tap "hashicorp/tap"
 tap "heroku/brew"
 tap "hidetatz/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-versions"
 tap "homebrew/services"
 tap "iann0036/iamlive"
 tap "joemiller/taps"
+tap "kryptco/tap"
+tap "kubescape/tap"
+tap "loft-sh/tap"
 tap "microsoft/git"
 tap "minamijoyo/tfupdate"
 tap "nextdns/tap"
@@ -26,18 +29,12 @@ tap "turbot/tap"
 tap "versent/taps"
 tap "wagoodman/dive"
 tap "wata727/tflint"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3"
-# Automate deployment, configuration, and upgrading
-brew "ansible"
-# GitOps Continuous Delivery for Kubernetes
-brew "argocd"
 # Record and share terminal sessions
 brew "asciinema"
-# Integrated shell for working with the AWS CLI
-brew "aws-shell"
+# Securely store and access AWS credentials in development environments
+brew "aws-vault"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Microsoft Azure CLI 2.0
@@ -46,33 +43,28 @@ brew "azure-cli"
 brew "bash"
 # Implementation of the DNS protocols
 brew "bind"
-# Suite of command-line tools for converting to and working with CSV
-brew "csvkit"
-# SQL-like query language for csv
-brew "csvq"
+# Mozilla CA bundle for Python
+brew "certifi"
+# CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
+brew "cilium-cli"
+# Cryptographic recipes and primitives for Python
+brew "cryptography"
 # Top-like interface for container metrics
 brew "ctop"
 # Get a file from an HTTP, HTTPS or FTP server
 brew "curl"
-# Tool for exploring each layer in a docker image
-brew "dive"
-# Clean Docker containers, images, networks, and volumes
-brew "docker-clean"
 # Platform keystore credential helper for Docker
 brew "docker-credential-helper"
 # Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
-# Select default apps for documents and URL schemes on macOS
-brew "duti"
-# Simple command-line tool for creating clusters on Amazon EKS
-brew "eksctl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Distributed revision control system
 brew "git"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# Log analyzer and interactive viewer for the Apache Webserver
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
 brew "goaccess"
 # GNU grep, egrep and fgrep
 brew "grep"
@@ -80,6 +72,8 @@ brew "grep"
 brew "hadolint"
 # Kubernetes package manager
 brew "helm"
+# Kubernetes package manager
+brew "helm@3"
 # Improved top (interactive process viewer)
 brew "htop"
 # Convert a JSON IAM Policy into terraform
@@ -90,10 +84,14 @@ brew "iftop"
 brew "jq"
 # Run local Kubernetes cluster in Docker
 brew "kind"
-# FAST Kubernetes manifests validator, with support for Custom Resources!
-brew "kubeconform"
+# Static analysis tool for Kubernetes YAML files and Helm charts
+brew "kube-linter"
+# Easily check your clusters for use of deprecated APIs
+brew "kubent"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# Kubernetes testing according to Hardening Guidance by NSA and CISA
+brew "kubescape"
 # Lazier way to manage everything docker
 brew "lazydocker"
 # Version of the SSL/TLS protocol forked from OpenSSL
@@ -110,10 +108,22 @@ brew "namebench"
 brew "ncdu"
 # Port scanning utility for large networks
 brew "nmap"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node@24"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Python library for creating static, animated, and interactive visualizations
+brew "python-matplotlib"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
 # Makes shims aware of bundle install paths
 brew "rbenv-bundler"
 # Rsync for cloud storage
@@ -122,10 +132,6 @@ brew "rclone"
 brew "screen"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
-# Work with remote images registries
-brew "skopeo"
-# Penetration testing for SQL injection and database servers
-brew "sqlmap"
 # Proxy server that works as a poor man's VPN
 brew "sshuttle"
 # Use SQL to instantly query your cloud services
@@ -140,14 +146,14 @@ brew "tfenv"
 brew "tfk8s"
 # Linter for Terraform files
 brew "tflint"
-# Static analysis security scanner for your terraform code
-brew "tfsec"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
 brew "wget"
+# Extensible command-line tool to format YAML files
+brew "yamlfmt", args: ["HEAD"]
 # Linter for YAML files
 brew "yamllint"
 # Download YouTube videos from the command-line
@@ -158,6 +164,8 @@ brew "yq"
 brew "aws/tap/ec2-instance-selector"
 # eks-node-viewer is a tool for visualizing dynamic node usage within an EKS cluster.
 brew "aws/tap/eks-node-viewer"
+# A Kubernetes credential (exec) plugin implementing azure authentication
+brew "azure/kubelogin/kubelogin"
 # kubernetes tail - pod log viewer
 brew "boz/repo/kail"
 # Kubernetes CLI To Manage Your Clusters In Style!
@@ -166,20 +174,16 @@ brew "derailed/k9s/k9s"
 brew "iann0036/iamlive/iamlive"
 # Cross-platform @hashicorp Vault token helper
 brew "joemiller/taps/vault-token-helper"
-# Update version constraints in your Terraform configurations
-brew "minamijoyo/tfupdate/tfupdate"
 # NextDNS DNS/53 to DoH Proxy
 brew "nextdns/tap/nextdns"
 # Sleep despite annoying clamshell mode
 brew "pirj/noclamshell/noclamshell"
-# sqlitebiter is a CLI tool to convert CSV / Excel / HTML / JSON / Jupyter Notebook / LDJSON / LTSV / Markdown / SQLite / SSV / TSV / Google-Sheets to a SQLite database file.
-brew "thombashi/sqlitebiter/sqlitebiter"
 # Android SDK component
 cask "android-platform-tools"
-# Securely stores and accesses AWS credentials in a development environment
-cask "aws-vault"
 # Utility to disconnect all drives connected to a Caldigit dock
 cask "caldigit-docking-utility"
+# All-in-one installer for the tools you need to manage your Chef infrastructure
+cask "chef-workstation"
 # Disk space visualiser
 cask "daisydisk"
 # Photography workflow application and raw developer
@@ -190,15 +194,14 @@ cask "dbeaver-community"
 cask "diffmerge"
 # Voice and text chat software
 cask "discord@ptb"
-# Open source container development tool
-cask "finch"
 # Web browser
 cask "firefox@beta"
 # Web browser
 cask "firefox@developer-edition"
+# Cross-platform Git credential storage for multiple hosting providers
 cask "git-credential-manager"
-# Web browser
-cask "google-chrome@canary"
+# Cross-platform Git credential storage for multiple hosting providers
+cask "git-credential-manager"
 # Web browser
 cask "google-chrome@dev"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -211,12 +214,16 @@ cask "knockknock"
 cask "logitech-camera-settings"
 # Clipboard manager
 cask "maccy"
+# Visual diff and merge tool
+cask "meld"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Web browser
-cask "safari-technology-preview"
+# Command-line shell and scripting language
+cask "powershell"
+# Kubernetes and container management on the desktop
+cask "rancher"
 # MySQL/MariaDB database management
 cask "sequel-ace"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
@@ -225,21 +232,65 @@ cask "session-manager-plugin"
 cask "silentknight"
 # Team communication and collaboration software
 cask "slack@beta"
-# Control your Sonos system
-cask "sonos"
 # Graphical client for Git version control
 cask "sourcetree"
 # Video game digital distribution service
 cask "steam"
 # Messaging app with a focus on speed and security
 cask "telegram"
-# Virtual machines UI using QEMU
-cask "utm@beta"
-# Code editor
+# Open-source code editor
 cask "visual-studio-code@insiders"
 # Multimedia player
 cask "vlc"
-mas "Disk Speed Test", id: 425264550
+mas "Blackmagic Disk Speed Test", id: 425264550
+mas "Enpass", id: 0
+mas "feedly", id: 865500966
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
 mas "Infuse", id: 1136220934
+mas "Keynote", id: 409183694
 mas "Meeter", id: 1510445899
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "TestFlight", id: 899247664
+mas "Windows App", id: 1295203466
+vscode "adamhartford.vscode-base64"
+vscode "alexguirre.inline-hasher"
+vscode "ban.spellright"
+vscode "bin3377.iam-policy"
+vscode "docker.docker"
+vscode "exiasr.hadolint"
+vscode "github.copilot"
+vscode "github.copilot-chat"
+vscode "hashicorp.terraform"
+vscode "huntertran.auto-markdown-toc"
+vscode "kachick.vscode-yamlfmt"
+vscode "ms-azuretools.vscode-azureterraform"
+vscode "ms-azuretools.vscode-bicep"
+vscode "ms-azuretools.vscode-containers"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-dotnettools.vscode-dotnet-runtime"
+vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "oderwat.indent-rainbow"
+vscode "pascalreitermann93.vscode-yaml-sort"
+vscode "phil9909.ytt-lint"
+vscode "redhat.vscode-xml"
+vscode "redhat.vscode-yaml"
+vscode "reduckted.vscode-gitweblinks"
+vscode "sebastianbille.iam-legend"
+vscode "shanoor.vscode-nginx"
+vscode "slightc.pip-manager"
+vscode "smpio.kubernator-vscode"
+vscode "streetsidesoftware.code-spell-checker"
+vscode "theaflowers.witch-hazel"
+vscode "tim-koehler.helm-intellisense"
+vscode "timonwong.shellcheck"
+vscode "tyriar.sort-lines"
+vscode "usernamehw.errorlens"
+vscode "vscode-icons-team.vscode-icons"
+vscode "zainchen.json"
