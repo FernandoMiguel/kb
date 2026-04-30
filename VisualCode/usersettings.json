@@ -1,11 +1,30 @@
 {
+  "$schema": "vscode://schemas/settings/user",
+  "@azure.argTenant": "",
   "azure.showSignedInEmail": true,
   "azureTerraform.test.location": "eastus",
+  "bicep.enableSurveys": false,
   "breadcrumbs.enabled": true,
+  "chat.checkpoints.showFileChanges": true,
+  "chat.editing.explainChanges.enabled": true,
+  "chat.editMode.hidden": false,
+  "chat.exploreAgent.defaultModel": "Claude Opus 4.7 (claude-code)",
+  "chat.fontSize": 16,
+  "chat.notifyWindowOnConfirmation": "always",
+  "chat.notifyWindowOnResponseReceived": "always",
+  "chat.planAgent.defaultModel": "Claude Opus 4.7 (claude-code)",
+  "chat.statusWidget.sku": "free",
+  "chat.viewProgressBadge.enabled": true,
+  "claudeCode.preferredLocation": "panel",
+  "claudeCode.selectedModel": "opus",
   "cSpell.language": "en,lorem",
   "diffEditor.codeLens": true,
-  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "diffEditor.maxComputationTime": 0,
+  "docker.extension.dockerEngineAvailabilityPrompt": false,
+  "docker.extension.enableComposeLanguageServer": false,
+  "docker.lsp.telemetry": "off",
+  "dotnetAcquisitionExtension.enableTelemetry": false,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.folding": true,
@@ -14,17 +33,21 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "editor.glyphMargin": false,
+  "editor.indentSize": "tabSize",
   "editor.minimap.enabled": false,
   "editor.renderControlCharacters": true,
   "editor.renderFinalNewline": "dimmed",
   "editor.renderWhitespace": "all",
   "editor.showFoldingControls": "always",
   "editor.suggest.preview": true,
+  "editor.suggest.showStatusBar": true,
   "editor.tabCompletion": "on",
+  "editor.tabSize": 2,
   "editor.trimAutoWhitespace": true,
   "editor.wordWrap": "on",
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
+  "extensions.allowOpenInModalEditor": false,
   "files.autoSave": "onFocusChange",
   "files.autoSaveDelay": 1000,
   "files.eol": "\n",
@@ -33,10 +56,12 @@
   "files.trimTrailingWhitespace": true,
   "git.alwaysShowStagedChangesResourceGroup": true,
   "git.autofetch": "all",
+  "git.branchProtectionPrompt": "alwaysCommit",
   "git.confirmSync": false,
   "git.detectSubmodulesLimit": 100,
   "git.enableSmartCommit": true,
   "git.fetchOnPull": true,
+  "git.ignoreRebaseWarning": true,
   "git.inputValidation": true,
   "git.inputValidationLength": 0,
   "git.inputValidationSubjectLength": null,
@@ -53,22 +78,55 @@
   "git.timeline.showUncommitted": true,
   "git.untrackedChanges": "separate",
   "git.useEditorAsCommitInput": false,
-  "github-enterprise.uri": "https://git.drillinginfo.com/",
+  "github.copilot.chat.agent.largeToolResultsToDisk.enabled": true,
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.agentCustomizationSkill.enabled": true,
+  "github.copilot.chat.anthropic.contextEditing.enabled": true,
+  "github.copilot.chat.anthropic.tools.websearch.enabled": true,
+  "github.copilot.chat.backgroundCompaction": true,
+  "github.copilot.chat.cli.branchSupport.enabled": true,
+  "github.copilot.chat.cli.mcp.enabled": true,
+  "github.copilot.chat.cli.sessionController.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.copilotMemory.enabled": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.chat.enableUserPreferences": true,
+  "github.copilot.chat.generateTests.codeLens": true,
+  "github.copilot.chat.githubMcpServer.enabled": true,
+  "github.copilot.chat.inlineEdits.chatSessionContextProvider.enabled": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.chat.reasoningEffort": "medium",
+  "github.copilot.chat.searchSubagent.enabled": true,
+  "github.copilot.chat.setupTests.enabled": false,
+  "github.copilot.chat.startDebugging.enabled": false,
+  "github.copilot.chat.switchAgent.enabled": true,
+  "github.copilot.chat.thinkingBudget": "auto",
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "githubIssues.createInsertFormat": "url",
+  "githubPullRequests.pullBranch": "never",
   "gitweblinks.defaultBranch": "main",
   "gitweblinks.showOpen": true,
   "gitweblinks.useShortHash": true,
   "hadolint.hadolintPath": "\/usr\/local\/bin\/hadolint",
+  "inlineChat.defaultModel": "Claude Sonnet 4 (claude-code)",
+  "inlineChat.enableV2": true,
   "json.format.enable": true,
   "kubernator.expandUndottedGroups": false,
   "markdown.preview.breaks": true,
   "markdown.preview.scrollEditorWithPreview": true,
   "merge-conflict.autoNavigateNextConflict.enabled": true,
+  "problems.showCurrentInStatus": true,
+  "python.experiments.enabled": false,
   "redhat.telemetry.enabled": false,
   "scm.alwaysShowActions": true,
   "scm.alwaysShowRepositories": true,
+  "scm.compactFolders": false,
   "scm.defaultViewMode": "tree",
   "scm.defaultViewSortKey": "status",
   "scm.providerCountBadge": "visible",
+  "scm.repositories.selectionMode": "multiple",
   "scm.repositories.sortOrder": "path",
   "scm.repositories.visible": 0,
   "search.collapseResults": "auto",
@@ -83,7 +141,11 @@
   "shellcheck.enable": true,
   "shellcheck.ignorePatterns": {},
   "shellcheck.run": "onSave",
+  "sortLines.filterBlankLines": true,
   "spellright.documentTypes": [],
+  "task.allowAutomaticTasks": "on",
+  "telemetry.editStats.enabled": false,
+  "telemetry.feedback.enabled": false,
   "telemetry.telemetryLevel": "off",
   "terminal.explorerKind": "external",
   "terminal.external.osxExec": "iTerm.app",
@@ -96,18 +158,30 @@
   "terraform.experimentalFeatures.validateOnSave": true,
   "vsicons.projectDetection.autoReload": true,
   "window.autoDetectHighContrast": false,
-  "window.customTitleBarVisibility": "never",
+  "window.confirmBeforeClose": "always",
+  "window.confirmSaveUntitledWorkspace": false,
+  "window.customTitleBarVisibility": "windowed",
   "window.newWindowDimensions": "fullscreen",
+  "window.newWindowProfile": "Default",
+  "window.openFilesInNewWindow": "default",
   "window.restoreFullscreen": true,
+  "window.restoreWindows": "preserve",
   "window.titleBarStyle": "native",
+  "workbench.browser.dataStorage": "ephemeral",
+  "workbench.browser.enableChatTools": true,
   "workbench.colorTheme": "Witch Hazel Hypercolor",
+  "workbench.editor.allowOpenInModalEditor": false,
   "workbench.editor.highlightModifiedTabs": true,
   "workbench.editor.labelFormat": "default",
-  "workbench.enableExperiments": false,
+  "workbench.editor.useModal": "off",
   "workbench.iconTheme": "vscode-icons",
   "workbench.list.smoothScrolling": true,
-  "workbench.startupEditor": "newUntitledFile",
-  "yaml.format.printWidth": 600,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "yaml.format.enable": true,
+  "chat.tools.terminal.autoApprove": {
+    "uniq": true,
+    "helm": true
+  },
   "[markdown]": {
     "files.trimTrailingWhitespace": false
   },
@@ -141,7 +215,6 @@
     "datasource",
     "decgbytes",
     "dedupStrategy",
-    "drillinginfo",
     "grafanacloud",
     "hashi",
     "templating",
@@ -150,16 +223,22 @@
     "topk"
   ],
   "files.associations": {
+    "_helpers.tpl": "helm-template",
     ".terraformrc": "ini",
     "*.ctmpl": "go",
     "*.hcl": "go",
+    "*.helmtpl": "helm",
     "*.json.*": "json",
     "*.ps1.*": "powershell",
     "*.tf_": "terraform",
     "*.tf.*": "terraform",
     "*.tf": "terraform",
-    "*.tfvars": "terraform",
-    "*.tpl": "go",
+    "*.tfvars_EXAMPLE": "terraform-vars",
+    "*.tfvars_EXAMPLES": "terraform-vars",
+    "*.tfvars_REPLACEME": "terraform-vars",
+    "*.tfvars_UPDATEME": "terraform-vars",
+    "*.tfvars": "terraform-vars",
+    "*.tpl": "helm",
     "*.yaml.*": "yaml",
     "*.yml.*": "yaml",
     "azure-pipelines*.yml": "azure-pipelines",
@@ -172,17 +251,13 @@
     "**/.terragrunt-cache/**": true,
     "**/status": true
   },
-  "gitweblinks.gitHubEnterprise": [
-    {
-      "http": "https://git.drillinginfo.com/",
-    }
-  ],
   "files.exclude": {
     "**/.git": false
   },
   "vs-kubernetes": {
     "vscode-kubernetes.kubectl-path.mac": "/Users/fernando/.vs-kubernetes/tools/kubectl/kubectl",
-    "vscode-kubernetes.minikube-path.mac": "/Users/fernando/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+    "vscode-kubernetes.minikube-path.mac": "/Users/fernando/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
+    "vs-kubernetes.crd-code-completion": "enabled"
   },
   "cSpell.userWords": [
     "aarch",
@@ -191,9 +266,9 @@
     "amazonlinux",
     "amazonvpc",
     "amiselector",
-    "andrewz",
     "annotations",
     "apiserver",
+    "argjson",
     "argocd",
     "argoproj",
     "ASG's",
@@ -203,21 +278,26 @@
     "awslbc",
     "awsnodetemplate",
     "awsnodetemplates",
+    "awxee",
     "binpacking",
     "binpacks",
     "bitnami",
     "bootstrappers",
     "Bottlerocket",
+    "buildx",
     "burstable",
     "Capabilities",
     "CAPI",
     "cidrsubnet",
+    "clickhouse",
     "cloudinit",
     "cloudprovider",
+    "clowdhaus",
     "clusterdomain",
     "clustername",
     "clusterrole",
     "clusterrolebinding",
+    "clustersgroup",
     "CNCF",
     "coalescelist",
     "concat",
@@ -230,6 +310,7 @@
     "cwlog",
     "daemonset",
     "daemonsets",
+    "datacenter",
     "Datacenters",
     "dbsecret",
     "defaultbackend",
@@ -241,7 +322,6 @@
     "eksblueprints",
     "ekscluster",
     "eksctl",
-    "enverus",
     "externaldns",
     "externalsecret",
     "fargate",
@@ -268,6 +348,7 @@
     "ipamd",
     "irsa",
     "Istio",
+    "journalctl",
     "jsonencode",
     "jsonpath",
     "Karpenter",
@@ -281,11 +362,14 @@
     "kubelets",
     "Kubernetes",
     "kustomize",
+    "kyaml",
     "Kyverno",
+    "lancedb",
     "letsencrypt",
     "loadbalancer",
     "LOGLEVEL",
     "mebibytes",
+    "multiarch",
     "networking",
     "nindent",
     "nodefs",
@@ -305,13 +389,18 @@
     "protobuf",
     "Pubkey",
     "Rebalance",
+    "recursors",
     "relref",
     "replicaset",
+    "reviewdog",
     "rolearn",
     "rolebinding",
+    "rsyslog",
     "schedulable",
     "secretstore",
     "serviceaccount",
+    "statefulset",
+    "stefanzweifel",
     "storageclasses",
     "subchart",
     "substr",
@@ -343,15 +432,6 @@
   "scm.diffDecorationsGutterPattern": {
     "added": true
   },
-  "cSpell.enableFiletypes": [
-    "dockerfile",
-  ],
-  "git.ignoredRepositories": [
-    "status",
-    "enverus-cts/cygnus*",
-    "cygnus",
-    "cygnus*"
-  ],
   "search.exclude": {
     "**/status": true
   },
@@ -359,7 +439,6 @@
     "**/status": true
   },
   "terminal.sourceControlRepositoriesKind": "external",
-  "github.copilot.advanced": {},
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
@@ -369,5 +448,263 @@
   "git.branchProtection": [
     "main",
     "master"
-  ]
+  ],
+  "extensions.trustedPublishers": [
+    "adamhartford",
+    "alexguirre",
+    "ban",
+    "bee",
+    "bin3377",
+    "donjayamanne",
+    "exiasr",
+    "hangxingliu",
+    "hashicorp",
+    "huntertran",
+    "kddejong",
+    "mdickin",
+    "mechatroner",
+    "oderwat",
+    "pascalreitermann93",
+    "phil9909",
+    "pomber",
+    "redhat",
+    "reduckted",
+    "sebastianbille",
+    "shanoor",
+    "slightc",
+    "smpio",
+    "streetsidesoftware",
+    "theaflowers",
+    "timonwong",
+    "tyriar",
+    "usernamehw",
+    "vscode-icons-team",
+    "zainchen"
+  ],
+  "helm-intellisense.customValueFileNames": [
+    "values.yaml",
+  ],
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "chat.tools.urls.autoApprove": {
+    "https://code.visualstudio.com": true,
+    "https://github.com/microsoft/vscode/wiki/*": true,
+    "https://github.com": true,
+    "https://raw.githubusercontent.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://grafana.com": true,
+    "https://registry.terraform.io": true,
+    "https://*.terraform.io": true,
+    "https://docs.cilium.io": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://mcp-atlassian.soomiles.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://repost.aws": true,
+    "https://aws.amazon.com": true,
+    "https://clouddocs.f5.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    },
+    "https://iii.dev": true
+  },
+  "[shellscript]": {
+    "files.eol": "\n",
+    "editor.defaultColorDecorators": "never"
+  },
+  "chat.mcp.serverSampling": {
+    "Global in Code - Insiders: kubernetes": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: github/github-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: atlassian-confluence-jira/atlassian-mcp-server-legacy-sse": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: argocd-mcp": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: terraform": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: grafana": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: aws-mcp": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: aws-documentation-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: aws-pricing-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: cdk-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: terraform-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: aws-knowledge-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: eks-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: aws-iac-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: iam-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: aws-diagram-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: cloudwatch-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: billing-cost-management-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: aws-api-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: aws-network-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: cloudtrail-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: netbox": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: atlassian-mcp-server": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: argocd-prod-mcp": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    },
+    "Global in Code - Insiders: goldfish-node": {
+      "allowedModels": [
+        "claude-code/claude-opus-4.6",
+        "claude-code/claude-opus-4.7"
+      ]
+    }
+  },
+  "github.copilot.chat.anthropic.tools.websearch.userLocation": {
+    "country": "PT",
+    "city": "Porto",
+    "timezone": "Europe/Lisbon"
+  },
+  "claudeCode.spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Thinking",
+    ]
+  },
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "settings.json"
+      ],
+      "url": "vscode://schemas/settings/user"
+    }
+  ],
+  "github.copilot.chat.githubMcpServer.channel": "insiders",
+  "workbench.startupEditor": "none",
+  "chat.useClaudeHooks": true,
+  "chat.mcp.discovery.enabled": {
+    "claude-desktop": true
+  },
+  "chat.viewSessions.orientation": "stacked",
 }

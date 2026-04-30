@@ -5,17 +5,19 @@
 	<key>AIFeatureFunctionCalling</key>
 	<true/>
 	<key>AIFeatureHostedCodeInterpeter</key>
-	<true/>
+	<false/>
 	<key>AIFeatureHostedFileSearch</key>
-	<true/>
+	<false/>
 	<key>AIFeatureHostedWebSearch</key>
-	<true/>
+	<false/>
 	<key>AIFeatureStreamingResponses</key>
 	<true/>
 	<key>AITermAPI</key>
-	<integer>2</integer>
+	<integer>7</integer>
 	<key>AIVectorStore</key>
-	<integer>1</integer>
+	<integer>0</integer>
+	<key>AIVendor</key>
+	<integer>4</integer>
 	<key>ActiveUpdateCadence</key>
 	<real>144</real>
 	<key>AdjustWindowForFontSizeChange</key>
@@ -23,13 +25,13 @@
 	<key>AggressiveFocusFollowsMouse</key>
 	<true/>
 	<key>AiMaxTokens</key>
-	<integer>1000000</integer>
+	<integer>200000</integer>
 	<key>AiModel</key>
-	<string>gpt-4.1</string>
+	<string>claude-opus-4-6</string>
 	<key>AiResponseMaxTokens</key>
-	<integer>32768</integer>
+	<integer>128000</integer>
 	<key>AitermURL</key>
-	<string>https://api.openai.com/v1/responses</string>
+	<string>https://api.anthropic.com/v1/messages</string>
 	<key>AllowClipboardAccess</key>
 	<true/>
 	<key>AlternateMouseScroll</key>
@@ -981,6 +983,8 @@
 	<string>init network</string>
 	<key>Default Bookmark Guid</key>
 	<string>401B5C3B-8A3D-4CE9-9B3E-54CF82D9B140</string>
+	<key>Default Browser Profile Guid</key>
+	<string>401B5C3B-8A3D-4CE9-9B3E-54CF82D9B140</string>
 	<key>DimBackgroundWindows</key>
 	<true/>
 	<key>DisableAdaptiveFrameRateInInteractiveApps</key>
@@ -1045,13 +1049,13 @@
 	<key>Hotkey</key>
 	<false/>
 	<key>HotkeyChar</key>
-	<integer>32</integer>
+	<integer>60</integer>
 	<key>HotkeyCode</key>
-	<integer>49</integer>
+	<integer>50</integer>
 	<key>HotkeyMigratedFromSingleToMulti</key>
 	<true/>
 	<key>HotkeyModifiers</key>
-	<integer>524288</integer>
+	<integer>262144</integer>
 	<key>IncludePasteHistoryInAdvancedPaste</key>
 	<false/>
 	<key>LoadFromFindPasteboard</key>
@@ -1334,6 +1338,8 @@
 			<string>401B5C3B-8A3D-4CE9-9B3E-54CF82D9B140</string>
 			<key>Has Hotkey</key>
 			<true/>
+			<key>Height Percentage</key>
+			<integer>99</integer>
 			<key>Horizontal Spacing</key>
 			<real>1</real>
 			<key>HotKey Activated By Modifier</key>
@@ -1627,7 +1633,7 @@
 			<key>Silence Bell</key>
 			<true/>
 			<key>Space</key>
-			<integer>0</integer>
+			<integer>-1</integer>
 			<key>Status Bar Layout</key>
 			<dict>
 				<key>advanced configuration</key>
@@ -1707,8 +1713,10 @@
 			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
+			<key>Width Percentage</key>
+			<integer>99</integer>
 			<key>Window Type</key>
-			<integer>2</integer>
+			<integer>12</integer>
 			<key>Working Directory</key>
 			<string>/Users/fernando</string>
 		</dict>
@@ -1801,7 +1809,7 @@
 	<key>disableMetalWhenUnplugged</key>
 	<false/>
 	<key>findMode_iTerm</key>
-	<integer>0</integer>
+	<integer>1</integer>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>1</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>

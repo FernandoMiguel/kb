@@ -1,10 +1,10 @@
 tap "agrinman/tap"
-tap "akamai/mfa"
 tap "aws/tap"
 tap "azure/kubelogin"
 tap "blendle/blendle"
 tap "boz/repo"
 tap "cloudflare/cloudflare"
+tap "clowdhaus/taps"
 tap "common-fate/granted"
 tap "confluentinc/ccloud"
 tap "derailed/k9s"
@@ -15,6 +15,7 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "iann0036/iamlive"
 tap "joemiller/taps"
+tap "jundot/omlx"
 tap "kryptco/tap"
 tap "kubescape/tap"
 tap "loft-sh/tap"
@@ -26,7 +27,6 @@ tap "thombashi/sqlitebiter"
 tap "tomanthony/brews"
 tap "transcend-io/tap"
 tap "turbot/tap"
-tap "versent/taps"
 tap "wagoodman/dive"
 tap "wata727/tflint"
 # Record and share terminal sessions
@@ -47,6 +47,12 @@ brew "bind"
 brew "certifi"
 # CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
 brew "cilium-cli"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# AI-powered coding agent for complex work
+brew "cline"
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
 # Cryptographic recipes and primitives for Python
 brew "cryptography"
 # Top-like interface for container metrics
@@ -59,13 +65,14 @@ brew "docker-credential-helper"
 brew "docker-credential-helper-ecr"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
+brew "gh"
 # Distributed revision control system
 brew "git"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-brew "goaccess"
 # GNU grep, egrep and fgrep
 brew "grep"
 # Smarter Dockerfile linter to validate best practices
@@ -86,10 +93,10 @@ brew "jq"
 brew "kind"
 # Static analysis tool for Kubernetes YAML files and Helm charts
 brew "kube-linter"
-# Easily check your clusters for use of deprecated APIs
-brew "kubent"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
+# MCP server for Kubernetes
+brew "kubernetes-mcp-server"
 # Kubernetes testing according to Hardening Guidance by NSA and CISA
 brew "kubescape"
 # Lazier way to manage everything docker
@@ -98,6 +105,10 @@ brew "lazydocker"
 brew "libressl"
 # Mac App Store command-line interface
 brew "mas"
+# MCP server for Atlassian tools (Confluence, Jira)
+brew "mcp-atlassian"
+# MCP server for Grafana
+brew "mcp-grafana"
 # Terminal-based visual file manager
 brew "midnight-commander"
 # 'traceroute' and 'ping' in a single tool
@@ -112,20 +123,14 @@ brew "nmap"
 brew "node"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node@24"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
 # 7-Zip (high compression file archiver) implementation
 brew "p7zip"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
-# Package compiler and linker metadata toolkit
-brew "pkgconf"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
-# Python library for creating static, animated, and interactive visualizations
-brew "python-matplotlib"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
-# Makes shims aware of bundle install paths
-brew "rbenv-bundler"
 # Rsync for cloud storage
 brew "rclone"
 # Terminal multiplexer with VT100/ANSI terminal emulation
@@ -138,6 +143,8 @@ brew "sshuttle"
 brew "steampipe"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
+# MCP server for Terraform
+brew "terraform-mcp-server"
 # Tool which checks for the support of TLS/SSL ciphers and flaws
 brew "testssl"
 # Terraform version manager inspired by rbenv
@@ -148,16 +155,14 @@ brew "tfk8s"
 brew "tflint"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
 brew "wget"
 # Extensible command-line tool to format YAML files
-brew "yamlfmt", args: ["HEAD"]
-# Linter for YAML files
-brew "yamllint"
-# Download YouTube videos from the command-line
-brew "youtube-dl"
+brew "yamlfmt"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # EC2 Instance Selector is a tool to filter EC2 instance types based on resource criteria
@@ -168,12 +173,16 @@ brew "aws/tap/eks-node-viewer"
 brew "azure/kubelogin/kubelogin"
 # kubernetes tail - pod log viewer
 brew "boz/repo/kail"
+# A CLI to aid in upgrading Amazon EKS clusters
+brew "clowdhaus/taps/eksup"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
 # Generate an IAM policy from AWS, Azure, or Google Cloud (GCP) calls using client-side monitoring (CSM) or embedded proxy.
 brew "iann0036/iamlive/iamlive"
 # Cross-platform @hashicorp Vault token helper
 brew "joemiller/taps/vault-token-helper"
+# LLM inference server optimized for Apple Silicon
+brew "jundot/omlx/omlx", args: ["HEAD", "with-grammar"]
 # NextDNS DNS/53 to DoH Proxy
 brew "nextdns/tap/nextdns"
 # Sleep despite annoying clamshell mode
@@ -184,6 +193,10 @@ cask "android-platform-tools"
 cask "caldigit-docking-utility"
 # All-in-one installer for the tools you need to manage your Chef infrastructure
 cask "chef-workstation"
+# Anthropic's official Claude AI desktop app
+cask "claude"
+# Terminal-based AI coding assistant
+cask "claude-code@latest"
 # Disk space visualiser
 cask "daisydisk"
 # Photography workflow application and raw developer
@@ -195,21 +208,19 @@ cask "diffmerge"
 # Voice and text chat software
 cask "discord@ptb"
 # Web browser
-cask "firefox@beta"
+cask "firefox"
 # Web browser
 cask "firefox@developer-edition"
-# Cross-platform Git credential storage for multiple hosting providers
-cask "git-credential-manager"
-# Cross-platform Git credential storage for multiple hosting providers
-cask "git-credential-manager"
 # Web browser
 cask "google-chrome@dev"
+# Client for the Google Drive storage service
+cask "google-drive"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2@beta"
-# Utility for comparing and merging files and directories
-cask "kdiff3"
 # Tool to show what is persistently installed on the computer
 cask "knockknock"
+# Discover, download, and run local LLMs
+cask "lm-studio"
 # Provides access to camera controls
 cask "logitech-camera-settings"
 # Clipboard manager
@@ -220,10 +231,8 @@ cask "meld"
 cask "microsoft-auto-update"
 # Meet, chat, call, and collaborate in just one place
 cask "microsoft-teams"
-# Command-line shell and scripting language
-cask "powershell"
-# Kubernetes and container management on the desktop
-cask "rancher"
+# LLM server built on MLX
+cask "osaurus"
 # MySQL/MariaDB database management
 cask "sequel-ace"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
@@ -236,6 +245,8 @@ cask "slack@beta"
 cask "sourcetree"
 # Video game digital distribution service
 cask "steam"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Open-source code editor
@@ -243,52 +254,35 @@ cask "visual-studio-code@insiders"
 # Multimedia player
 cask "vlc"
 mas "Blackmagic Disk Speed Test", id: 425264550
-mas "Enpass", id: 0
+mas "Enpass", id: 732710998
 mas "feedly", id: 865500966
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
 mas "Infuse", id: 1136220934
 mas "Keynote", id: 409183694
 mas "Meeter", id: 1510445899
-mas "Microsoft Excel", id: 462058435
-mas "Microsoft PowerPoint", id: 462062816
-mas "Microsoft Word", id: 462054704
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "TestFlight", id: 899247664
-mas "Windows App", id: 1295203466
 vscode "adamhartford.vscode-base64"
 vscode "alexguirre.inline-hasher"
+vscode "anthropic.claude-code"
 vscode "ban.spellright"
 vscode "bin3377.iam-policy"
-vscode "docker.docker"
 vscode "exiasr.hadolint"
-vscode "github.copilot"
-vscode "github.copilot-chat"
 vscode "hashicorp.terraform"
 vscode "huntertran.auto-markdown-toc"
 vscode "kachick.vscode-yamlfmt"
-vscode "ms-azuretools.vscode-azureterraform"
+vscode "ms-azuretools.vscode-azure-mcp-server"
 vscode "ms-azuretools.vscode-bicep"
-vscode "ms-azuretools.vscode-containers"
-vscode "ms-azuretools.vscode-docker"
 vscode "ms-dotnettools.vscode-dotnet-runtime"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
-vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "oderwat.indent-rainbow"
 vscode "pascalreitermann93.vscode-yaml-sort"
-vscode "phil9909.ytt-lint"
-vscode "redhat.vscode-xml"
 vscode "redhat.vscode-yaml"
 vscode "reduckted.vscode-gitweblinks"
-vscode "sebastianbille.iam-legend"
-vscode "shanoor.vscode-nginx"
+vscode "saoudrizwan.claude-dev"
 vscode "slightc.pip-manager"
 vscode "smpio.kubernator-vscode"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "theaflowers.witch-hazel"
-vscode "tim-koehler.helm-intellisense"
 vscode "timonwong.shellcheck"
 vscode "tyriar.sort-lines"
 vscode "usernamehw.errorlens"
