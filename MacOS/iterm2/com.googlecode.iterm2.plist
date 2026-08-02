@@ -42,6 +42,35 @@
 	<false/>
 	<key>CheckTestRelease</key>
 	<true/>
+	<key>ClaudeCodeTriggersInstalled</key>
+	<false/>
+	<key>CodeReviewSavedPrompts</key>
+	<data>
+	W3sibmFtZSI6IkRlZmF1bHQiLCJ0ZXh0IjoiUmV2aWV3IHRoZSBwZW5kaW5nIGNoYW5n
+	ZXMgaW4gdGhpcyByZXBvLiBGbGFnIGlzc3VlcyBhIGNhcmVmdWwgbWFpbnRhaW5lciB3
+	b3VsZCBibG9jayBvbiBiZWZvcmUgbWVyZ2UsIGluIHJvdWdobHkgdGhpcyBvcmRlcjpc
+	biAgMS4gQ29ycmVjdG5lc3Mg4oCUIGxvZ2ljIGVycm9ycywgYnJva2VuIGludmFyaWFu
+	dHMsIG1pc3NlZCBlZGdlIGNhc2VzLCBvZmYtYnktb25lLCByYWNlcywgbGlmZXRpbWVc
+	L21lbW9yeSBidWdzLCBlcnJvciBwYXRocyB0aGF0IHN3YWxsb3cgZmFpbHVyZXMuXG4g
+	IDIuIFNlY3VyaXR5IOKAlCBpbmplY3Rpb24sIGF1dGhuXC9hdXRoeiBtaXN0YWtlcywg
+	c2VjcmV0IGhhbmRsaW5nLCB1bnNhZmUgZGVzZXJpYWxpemF0aW9uLCB1bnNhZmUgZGVm
+	YXVsdHMsIFRPQ1RPVS5cbiAgMy4gUmVsaWFiaWxpdHkgJiBwZXJmb3JtYW5jZSDigJQg
+	YmxvY2tpbmcgdGhlIHdyb25nIHRocmVhZCwgdW5ib3VuZGVkIHJlc291cmNlIHVzZSwg
+	YWNjaWRlbnRhbCBPKE7CsiksIHJldHJpZXMgd2l0aG91dCBiYWNrb2ZmLCBzaWxlbnQg
+	ZmFpbHVyZSBwYXRocy5cbiAgNC4gQ29udHJhY3QgcmlzayDigJQgYmVoYXZpb3IgY2hh
+	bmdlcyBjYWxsZXJzIHJlbHkgb24sIHNpbGVudGx5IGNoYW5nZWQgZGVmYXVsdHMsIGJy
+	b2tlbiBiYWNrd2FyZCBjb21wYXRpYmlsaXR5LCBtaXNzaW5nIG1pZ3JhdGlvbnMuXG5c
+	bkZvciBlYWNoIGZpbmRpbmcgY2l0ZSBgZmlsZTpsaW5lYCwgZXhwbGFpbiAqd2h5KiBp
+	dCBpcyB3cm9uZyAobm90IHdoYXQgdGhlIGNvZGUgZG9lcyksIGFuZCBwcm9wb3NlIGEg
+	Y29uY3JldGUgZml4IHdoZW4gb25lIGlzIG9idmlvdXMuIEJlIGNhbGlicmF0ZWQ6IGlm
+	IGEgZmluZGluZyBpcyBub3QgaGlnaC1jb25maWRlbmNlLCBzYXkgc28gb3Igc2tpcCBp
+	dC4gVmVyaWZ5IGNsYWltcyBhZ2FpbnN0IHRoZSBhY3R1YWwgY29kZSByYXRoZXIgdGhh
+	biBpbmZlcnJpbmcgZnJvbSBuYW1lcy5cblxuU2tpcCBwdXJlIHN0eWxlLCBmb3JtYXR0
+	aW5nLCBuYW1pbmcsIGFuZCBhbnl0aGluZyBhIGxpbnRlciBvciBDSSBhbHJlYWR5IGVu
+	Zm9yY2VzLlxuXG5JZiB5b3UgZmluZCBub3RoaW5nIHdvcnRoIGZpeGluZywgc2F5IHNv
+	IHBsYWlubHkuIiwidXVpZCI6IjhBRTQwMkQ2LUREN0EtNDgwMi04OTczLUZDOTM3RkMx
+	NDI1QiJ9XQ==
+	</data>
 	<key>Command</key>
 	<string>/bin/zsh</string>
 	<key>Custom Color Presets</key>
@@ -986,7 +1015,9 @@
 	<key>Default Browser Profile Guid</key>
 	<string>401B5C3B-8A3D-4CE9-9B3E-54CF82D9B140</string>
 	<key>DimBackgroundWindows</key>
-	<true/>
+	<false/>
+	<key>DimInactiveSplitPanes</key>
+	<false/>
 	<key>DisableAdaptiveFrameRateInInteractiveApps</key>
 	<false/>
 	<key>DisableFullscreenTransparency</key>
@@ -1000,7 +1031,7 @@
 	<key>DoubleClickTabToEdit</key>
 	<false/>
 	<key>EnableAPIServer</key>
-	<false/>
+	<true/>
 	<key>FastTrackpad</key>
 	<true/>
 	<key>FocusFollowsMouse</key>
@@ -1324,7 +1355,7 @@
 			<key>Enable Triggers in Interactive Apps</key>
 			<false/>
 			<key>Flashing Bell</key>
-			<true/>
+			<false/>
 			<key>Foreground Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1780,6 +1811,8 @@
 	<true/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.01</real>
+	<key>StatusBarPosition</key>
+	<integer>0</integer>
 	<key>SwapFindNextPrevious</key>
 	<true/>
 	<key>SwitchPaneModifier</key>
@@ -1788,13 +1821,22 @@
 	<integer>9</integer>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>1</integer>
+	<key>TabViewType</key>
+	<integer>0</integer>
 	<key>TabsHaveCloseButton</key>
 	<true/>
 	<key>ThreeFingerEmulates</key>
 	<true/>
+	<key>ToolbeltTools</key>
+	<array>
+		<string>Profiles</string>
+		<string>Session Status</string>
+	</array>
 	<key>UIElementRequiresHotkeys</key>
 	<false/>
 	<key>UseBorder</key>
+	<false/>
+	<key>UseLionStyleFullscreen</key>
 	<false/>
 	<key>UseNewContentFormat</key>
 	<false/>
@@ -1806,6 +1848,37 @@
 	<dict/>
 	<key>WorkAroundBigSurBug</key>
 	<true/>
+	<key>Workgroups</key>
+	<data>
+	W3sibmFtZSI6IkNsYXVkZSBDb2RlIiwic2Vzc2lvbnMiOlt7ImRpc3BsYXlOYW1lIjoi
+	Q2hhdCIsIm1vZGUiOiJyZWd1bGFyIiwiY29tbWFuZCI6IiIsInRvb2xiYXJJdGVtcyI6
+	W3sia2luZCI6Im1vZGVTd2l0Y2hlciJ9LHsia2luZCI6ImdpdFN0YXR1cyJ9LHsia2lu
+	ZCI6ImF1dG9SZXF1ZXN0UmV2aWV3V2hlbklkbGUifV0sInBlckZpbGVDb21tYW5kIjoi
+	IiwidW5pcXVlSWRlbnRpZmllciI6ImJ1aWx0aW4uY2xhdWRlQ29kZS5tYWluIiwia2lu
+	ZCI6eyJraW5kIjoicm9vdCJ9LCJ1cmxTdHJpbmciOiIifSx7InVybFN0cmluZyI6IiIs
+	ImRpc3BsYXlOYW1lIjoiRGlmZiIsIm1vZGUiOiJkaWZmIiwiY29tbWFuZCI6ImdpdCBk
+	aWZmdG9vbCAteSAteCB2aW1kaWZmIFxcKGdpdEJhc2UpIiwidG9vbGJhckl0ZW1zIjpb
+	eyJraW5kIjoibW9kZVN3aXRjaGVyIn0seyJraW5kIjoiY2hhbmdlZEZpbGVTZWxlY3Rv
+	ciJ9LHsia2luZCI6ImdpdEJhc2VTZWxlY3RvciJ9LHsicmVsb2FkU2hvcnRjdXQiOnsi
+	c2VyaWFsaXplZCI6IjB4NzItMHgxMDAwMDAtMHhmIn0sImZvcndhcmRTaG9ydGN1dCI6
+	eyJzZXJpYWxpemVkIjoiMHhmNzAzLTB4MzQwMDAwLTB4N2MifSwia2luZCI6Im5hdmln
+	YXRpb24iLCJiYWNrU2hvcnRjdXQiOnsic2VyaWFsaXplZCI6IjB4ZjcwMi0weDM0MDAw
+	MC0weDdiIn19XSwicGVyRmlsZUNvbW1hbmQiOiJnaXQgZGlmZnRvb2wgLXkgLXggdmlt
+	ZGlmZiBcXChnaXRCYXNlKSAtLSBcXChmaWxlKSIsInVuaXF1ZUlkZW50aWZpZXIiOiJi
+	dWlsdGluLmNsYXVkZUNvZGUuZGlmZiIsImtpbmQiOnsia2luZCI6InBlZXIifSwicGFy
+	ZW50SUQiOiJidWlsdGluLmNsYXVkZUNvZGUubWFpbiJ9LHsidXJsU3RyaW5nIjoiIiwi
+	ZGlzcGxheU5hbWUiOiJDb2RlIFJldmlldyIsIm1vZGUiOiJjb2RlUmV2aWV3IiwiY29t
+	bWFuZCI6ImNsYXVkZSBcXChjb2RlUmV2aWV3UHJvbXB0KSAtLWFwcGVuZC1zeXN0ZW0t
+	cHJvbXB0LWZpbGUgJ1xcKGNvZGVSZXZpZXdTeXN0ZW1Qcm9tcHRGaWxlKScgLS1zZXR0
+	aW5ncyAnXFwoaXRlcm0yLmFwcEJ1bmRsZVBhdGgpXC9Db250ZW50c1wvUmVzb3VyY2Vz
+	XC9jb2RlLXJldmlldy1zZXR0aW5ncy50eHQnIiwidG9vbGJhckl0ZW1zIjpbeyJraW5k
+	IjoibW9kZVN3aXRjaGVyIn0seyJzaG9ydGN1dCI6eyJzZXJpYWxpemVkIjoiMHg3Mi0w
+	eDEwMDAwMC0weGYifSwia2luZCI6InJlbG9hZCJ9LHsia2luZCI6ImF1dG9TZW5kQ2xp
+	cHBpbmdzV2hlbklkbGUifV0sInBlckZpbGVDb21tYW5kIjoiIiwidW5pcXVlSWRlbnRp
+	ZmllciI6ImJ1aWx0aW4uY2xhdWRlQ29kZS5yZXZpZXciLCJraW5kIjp7ImtpbmQiOiJw
+	ZWVyIn0sInBhcmVudElEIjoiYnVpbHRpbi5jbGF1ZGVDb2RlLm1haW4ifV0sInVuaXF1
+	ZUlkZW50aWZpZXIiOiJidWlsdGluLmNsYXVkZUNvZGUifV0=
+	</data>
 	<key>disableMetalWhenUnplugged</key>
 	<false/>
 	<key>findMode_iTerm</key>
